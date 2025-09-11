@@ -171,7 +171,8 @@ def suggVerbInfi (sFlex):
     return "|".join([ sStem  for sStem in _oSpellChecker.getLemma(sFlex)  if conj.isVerb(sStem) ])
 
 
-_dQuiEst = { "je": ":1s", "j’": ":1s", "tu": ":2s", "il": ":3s", "on": ":3s", "elle": ":3s", "iel": ":3s", \
+_dQuiEst = { "je": ":1s", "j’": ":1s", "tu": ":2s", \
+             "il": ":3s", "on": ":3s", "elle": ":3s", "iel": ":3s", "ce": ":3s", "ça": ":3s", "cela": ":3s", "ceci": ":3s", \
              "nous": ":1p", "vous": ":2p", "ils": ":3p", "elles": ":3p", "iels": ":3p" }
 
 _dModeSugg = { "es": "aies", "aies": "es", "est": "ait", "ait": "est" }

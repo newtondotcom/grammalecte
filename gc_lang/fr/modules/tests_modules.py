@@ -69,6 +69,8 @@ class TestDictionary (unittest.TestCase):
             ("coeur", "cœur"),
             ("trèèèèèèèèès", "très"),
             ("vraaaaiiiimeeeeennnt", "vraiment"),
+            ("oeil", "œil"),
+            ("Oeil", "Œil"),
             ("apele", "appel"),
             ("Co2", "CO₂"),
             ("emmppâiiiller", "empailler"),

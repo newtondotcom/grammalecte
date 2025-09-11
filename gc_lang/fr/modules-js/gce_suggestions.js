@@ -222,7 +222,8 @@ function suggVerbInfi (sFlex) {
 
 
 const _dQuiEst = new Map ([
-    ["je", ":1s"], ["j’", ":1s"], ["tu", ":2s"], ["il", ":3s"], ["on", ":3s"], ["elle", ":3s"], ["iel", ":3s"],
+    ["je", ":1s"], ["j’", ":1s"], ["tu", ":2s"],
+    ["il", ":3s"], ["on", ":3s"], ["elle", ":3s"], ["iel", ":3s"], ["ce", ":3s"], ["ça", ":3s"], ["cela", ":3s"], ["ceci", ":3s"],
     ["nous", ":1p"], ["vous", ":2p"], ["ils", ":3p"], ["elles", ":3p"], ["iels", ":3p"]
 ]);
 
