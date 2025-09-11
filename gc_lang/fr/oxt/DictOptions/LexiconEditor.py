@@ -328,9 +328,7 @@ class LexiconEditor (unohelper.Base, XActionListener, XTopWindowListener, XKeyLi
             elif xActionEvent.ActionCommand == 'Info':
                 pass
             elif xActionEvent.ActionCommand == "Close":
-                self.bClosed = True
-                self.xContainer.dispose()           # Non modal dialog
-                #self.xContainer.endExecute()       # Modal dialog
+                self.closeWindow()
         except:
             traceback.print_exc()
 
@@ -339,7 +337,7 @@ class LexiconEditor (unohelper.Base, XActionListener, XTopWindowListener, XKeyLi
         return
 
     def windowClosing (self, xEvent):
-        self.xContainer.dispose()           # Non modal dialog
+        self.closeWindow()
 
     def windowClosed (self, xEvent):
         return
@@ -670,6 +668,11 @@ class LexiconEditor (unohelper.Base, XActionListener, XTopWindowListener, XKeyLi
                 xGridDataModel.removeRow(i)
         self.xGridControlLex.deselectAllRows()
         self.xNumLex.Label = str(xGridDataModel.RowCount)
+
+    def closeWindow (self):
+        self.bClosed = True
+        self.xContainer.dispose()           # Non modal dialog
+        #self.xContainer.endExecute()       # Modal dialog
 
 
 #g_ImplementationHelper = unohelper.ImplementationHelper()
