@@ -3918,6 +3918,10 @@ __fusions_noms_communs__
         <<- ~>> ␣
         <<- =>> define(\1, ":LA:e:i")
 
+    bouche bée
+        <<- ~>> ␣
+        <<- =>> define(\1, ":LA:e:i")
+
     jusqu’ [au-boutiste+s|au-boutisme+s]
         <<- ~>> ␣
         <<- =>> setmeta(\1, "WORD")
@@ -3955,6 +3959,7 @@ TEST: elles sont cul et chemise
 TEST: ils sont frère et sœur
 TEST: iels étaient mari et femme
 TEST: au revoir
+TEST: ils restèrent bouche bée
 
 
 __fusions_noms_communs_séparés_slash__
@@ -37865,6 +37870,7 @@ TEST: Du sable fin grippe les rouages (accord avec ce qui précède).
 TEST: Du monde noir sortent les envahisseurs (accord avec ce qui suit).
 
 !!! Autres tests                                                                                  !!
+TEST: deux mois et demi
 TEST: si nous savons être justes
 TEST: Les femmes aussi, bien entendu.
 TEST: ils sont l’un à l’autre fidèles
