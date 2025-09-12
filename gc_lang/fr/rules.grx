@@ -27364,24 +27364,29 @@ TEST: puis il y a entre 4 à 1 millions d’années sous une forme proche de la 
 
 ##  det nom et det nom adj
 __gn_det_nom_mas_et_det_nom_mas__
-    [le|la|l’|un|une|ce|cet|cette|mon|ton|son|ma|ta|sa|notre|votre|leur]  *WORD  [et|ou]  [le|un|ce|cet]  *WORD  @:A.*¬:(?:A.*:[me]|3[sp]|P|G)
+    [le|la|l’|un|une|ce|cet|cette|mon|ton|son|ma|ta|sa|notre|votre|leur]  *WORD  [et|ou]  [le|un|ce|cet]         *WORD      @:A.*¬:(?:A.*:[me]|3[sp]|P|G)
         <<- /gn/ morph(\2, ":[NA].*:[si]", ":V0") and morph(\5, ":[NA].*:[me]:[si]", ":V0") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
         --1>> =suggMasSing(\-1) + "|" + suggMasPlur(\-1)                            && Soit cet adjectif doit être accordé avec “\5” ou bien “\2” et “\5” (masculin singulier ou pluriel).
 
-    [le|la|l’|un|une|ce|cet|cette|mon|ton|son|ma|ta|sa|notre|votre|leur]  *WORD  [et|ou]  [mon|ton|son]  *WORD  @:A.*¬:(?:A.*:[me]|3[sp]|P|G)
-        <<- /gn/ morph(\2, ":[NA].*:[si]", ":V0") and morph(\5, ":[NA].*:[me]:[si]", ":(?:>[aâeéèêiîoôuœæh].*:[ef]|V0|G)") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
+    [le|la|l’|un|une|ce|cet|cette|mon|ton|son|ma|ta|sa|notre|votre|leur]  *WORD  [et|ou]  [mon|ton|son]          *WORD      @:A.*¬:(?:A.*:[me]|3[sp]|P|G)
+        <<- /gn/ morph(\2, ":[NA].*:[si]", ":V0") and morph(\5, ":[NA].*:[me]:[si]", "(?:>[aâeéèêiîoôuœæh].*:[ef]|:V0|:G)") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
         --1>> =suggMasSing(\-1) + "|" + suggMasPlur(\-1)                            && Soit cet adjectif doit être accordé avec “\5” ou bien “\2” et “\5” (masculin singulier ou pluriel).
 
-    [le|la|l’|un|une|ce|cet|cette|mon|ton|son|ma|ta|sa|notre|votre|leur]  *WORD  [et|ou]  [l’|notre|votre|leur]  *WORD  @:A.*¬:(?:A.*:[me]|3[sp]|P|G)
+    [le|la|l’|un|une|ce|cet|cette|mon|ton|son|ma|ta|sa|notre|votre|leur]  *WORD  [et|ou]  [l’|notre|votre|leur]  *WORD      @:A.*¬:(?:A.*:[me]|3[sp]|P|G)
         <<- /gn/ morph(\2, ":[NA].*:[si]", ":V0") and morph(\5, ":[NA].*:m:[si]", ":(?:[fe]|V0)") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
         --1>> =suggMasSing(\-1) + "|" + suggMasPlur(\-1)                            && Soit cet adjectif doit être accordé avec “\5” ou bien “\2” et “\5” (masculin singulier ou pluriel).
 
 TEST: avec ce fils et notre neveu {{arrogante}}                                     ->> arrogant|arrogants
 TEST: la force et le talent {{reconnues}}                                           ->> reconnu|reconnus
 TEST: ma haine et mon amour {{mêlée}}                                               ->> mêlé|mêlés
+TEST: ma passion et mon action mêlées
+TEST: ma fureur et son action étonnante
 TEST: une sœur et un frère décédés
 TEST: l’islamisme et l’extrême droite.
 TEST: un discours sur la divinité et son œuvre purificatrice.
+TEST: un discours sur la parentalité et son enfant détestable.
+TEST: un discours sur la parentalité et son enfant perdue.
+TEST: un avis sur leur économie et leur œuvre étonnante.
 
 
 __gn_det_nom_fem_et_det_nom_fem__
@@ -27462,15 +27467,15 @@ __gn_det_nom_mas_et_det_nom_fem__
         --1>> =suggFemSing(\-1) + "|" + suggMasPlur(\-1)                            && Soit cet adjectif doit être accordé avec “\5” (féminin singulier) ou bien “\2” et “\5” (masculin pluriel).
 
     [mon|ton|son]  *WORD  [et|ou]  [la|une|cette|ma|ta|sa]  *WORD  @:A.*¬:(?:A.*:(?:f:[si]|m:[pi]|e)|3[sp]|P|G)
-        <<- /gn/ morph(\2, ":[NA].*:[me]:[si]", ":(?:>[aâeéèêiîoôuœæh].*:[ef]|V0|G)") and morph(\5, ":[NA].*:[fe]:[si]", ":V0") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
+        <<- /gn/ morph(\2, ":[NA].*:[me]:[si]", "(?:>[aâeéèêiîoôuœæh].*:[ef]|:V0|:G)") and morph(\5, ":[NA].*:[fe]:[si]", ":V0") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
         --1>> =suggFemSing(\-1) + "|" + suggMasPlur(\-1)                            && Soit cet adjectif doit être accordé avec “\5” (féminin singulier) ou bien “\2” et “\5” (masculin pluriel).
 
     [mon|ton|son]  *WORD  [et|ou]  [l’|notre|votre|leur]  *WORD  @:A.*¬:(?:A.*:(?:f:[si]|m:[pi]|e)|3[sp]|P|G)
-        <<- /gn/ morph(\2, ":[NA].*:[me]:[si]", ":(?:>[aâeéèêiîoôuœæh].*:[ef]|V0|G)") and morph(\5, ":[NA].*:f:[si]", ":(?:[me]|V0)") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
+        <<- /gn/ morph(\2, ":[NA].*:[me]:[si]", "(?:>[aâeéèêiîoôuœæh].*:[ef]|:V0|:G)") and morph(\5, ":[NA].*:f:[si]", ":(?:[me]|V0)") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
         --1>> =suggFemSing(\-1) + "|" + suggMasPlur(\-1)                            && Soit cet adjectif doit être accordé avec “\5” (féminin singulier) ou bien “\2” et “\5” (masculin pluriel).
 
     [mon|ton|son]  *WORD  [et|ou]  [mon|ton|son]  *WORD  @:A.*¬:(?:A.*:(?:f:[si]|m:[pi]|e)|3[sp]|P|G)
-        <<- /gn/ morph(\2, ":[NA].*:[me]:[si]", ":(?:>[aâeéèêiîoôuœæh].*:[ef]|V0|G)") and morph(\5, ">[aâeéèêiîoôuœæh].*:[NA].*:f:[si]", ":(?:[me]|V0)") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
+        <<- /gn/ morph(\2, ":[NA].*:[me]:[si]", "(?:>[aâeéèêiîoôuœæh].*:[ef]|:V0|:G)") and morph(\5, ">[aâeéèêiîoôuœæh].*:[NA].*:f:[si]", ":(?:[me]|V0)") and not (value(<1, "|,|de|d’|du|des|") and morph(<2, ":[NA]"))
         --1>> =suggFemSing(\-1) + "|" + suggMasPlur(\-1)                            && Soit cet adjectif doit être accordé avec “\5” (féminin singulier) ou bien “\2” et “\5” (masculin pluriel).
 
 TEST: Il faut donc examiner ensemble le panneau et la paroi {{latérales}}.          ->> latérale|latéraux
@@ -30442,31 +30447,31 @@ __purge_prépositions_pronoms__
 
     jusqu’ à        chez
     [de|d’]         chez
-    ?[de|d’]? par   chez
+    ?[de|d’]¿ par   chez
     pour            chez
         <<- ~1:-2>> *
 
-    ?[de|d’]? à bonne distance [de|d’]      {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? à côté [de|d’]                {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? à part                        {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? à [cause|partir] [de|d’]      {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? autour [de|d’]                {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? au-dessus [de|d’]             {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? au-dedans [de|d’]             {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? au fond [de|d’]               {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? au plus profond [de|d’]       {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? chez *WORD ?jusqu’¿ à chez    {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? en dessous [de|d’]            {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? ?tout¿ au fond [de|d’]        {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? ?tout¿ autour [de|d’]         {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? avec ou sans                  {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? en paix avec                  {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? par-devers                    {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? par >égard pour               {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? par gratitude pour            {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? pour ou contre                {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? ?tout¿ près [de|d’]           {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
-    ?[de|d’]? sans >égard pour              {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ à bonne distance [de|d’]      {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ à côté [de|d’]                {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ à part                        {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ à [cause|partir] [de|d’]      {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ autour [de|d’]                {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ au-dessus [de|d’]             {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ au-dedans [de|d’]             {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ au fond [de|d’]               {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ au plus profond [de|d’]       {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ chez *WORD ?jusqu’¿ à chez    {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ en dessous [de|d’]            {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ ?tout¿ au fond [de|d’]        {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ ?tout¿ autour [de|d’]         {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ avec ou sans                  {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ en paix avec                  {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ par-devers                    {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ par >égard pour               {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ par gratitude pour            {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ pour ou contre                {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ ?tout¿ près [de|d’]           {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
+    ?[de|d’]¿ sans >égard pour              {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
     quant à                                 {_pronom_obj_}  [<end>|,|@:[VXG]¬>qui/]
         <<- ~1:-2>> *
 
@@ -30480,11 +30485,11 @@ __purge_prépositions_pronoms__
     iels            [seuls|seules]
         <<- ~2>> *
 
-    nous    [tous|toutes]   qui
-    vous    [tous|toutes]   qui
-    eux     tous            qui
-    elles   toutes          qui
-    iels    tout·e·s        qui
+    nous    [tous|toutes|tout·e·s]  qui
+    vous    [tous|toutes|tout·e·s]  qui
+    eux     tous                    qui
+    elles   toutes                  qui
+    iels    tout·e·s                qui
         <<- ~2>> *
 
 TODO: comme
@@ -30950,6 +30955,7 @@ __énumérations_noms_propres__
 @@@@
 @@@@
 @@@@
+
 
 __da_été2__
     >avoir été
@@ -34105,6 +34111,12 @@ __imp_verbe_groupe2_groupe3_t__
             and not (value(\-1, "|vient|dit|surgit|survient|périt|") and morph(>1, ":(?:[MDR]|Oo)|>[A-ZÉÈÂÎ]/"))
             and morph(\-1, ":V[23].*:Ip.*:3s", ":[GNA]|>(?:devoir|suffire|para[îi]tre)/") and analyse(\-1[:-1]+"s", ":E:2s")
         --1>> =\-1[:-1]+"s"                                                         && S’il s’agit d’un impératif, la terminaison est “s”, non “t”.
+
+    [<start>|,] [compatit|conclut] @:M
+    [<start>|,] [compatit|conclut] l’ homme
+    [<start>|,] [compatit|conclut] [le|mon|ton|son|notre|votre|leur] [chef|garçon|jeune|ministre|président|vieillard|vieux]
+    [<start>|,] [compatit|conclut] [la|ma|ta|sa|notre|votre|leur] [cheffe|femme|fille|jeune|ministre|présidente|vieillarde|vielle]
+        <<- !2>> imp
 
 TEST: {{Finit}} ton assiette.                                           ->> Finis
 TEST: Ne {{pourrit}} pas l’ambiance.                                    ->> pourris
