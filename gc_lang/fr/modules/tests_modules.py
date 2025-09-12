@@ -43,15 +43,15 @@ class TestDictionary (unittest.TestCase):
             self.assertFalse(self.oSpellChecker.lookup(sWord), sWord)
 
     def test_isvalidtoken (self):
-        for sWord in ["Branche", "branche", "BRANCHE", "Émilie", "ÉMILIE", "aujourd'hui", "aujourd’hui", "Aujourd'hui", "Aujourd’hui", "je-suis-vraiment-fatigué", ""]:
+        for sWord in ["Branche", "branche", "BRANCHE", "Émilie", "ÉMILIE", "aujourd'hui", "aujourd’hui", "Aujourd'hui", "Aujourd’hui", "je-suis-vraiment-fatigué", "donne-m’en", "tiens-t’y"]:
             self.assertTrue(self.oSpellChecker.isValidToken(sWord), sWord)
 
     def test_isvalid (self):
-        for sWord in ["Branche", "branche", "BRANCHE", "Émilie", "ÉMILIE", "aujourd’hui", "Aujourd’hui"]:
+        for sWord in ["Branche", "branche", "BRANCHE", "Émilie", "ÉMILIE", "aujourd’hui", "Aujourd’hui", "M’EN", "T’Y"]:
             self.assertTrue(self.oSpellChecker.isValid(sWord), sWord)
 
     def test_isvalid_failed (self):
-        for sWord in ["BranchE", "BRanche", "BRAnCHE", "émilie", "éMILIE", "émiLie", "aujourd'hui", "Aujourd'hui", ]:
+        for sWord in ["BranchE", "BRanche", "BRAnCHE", "émilie", "éMILIE", "émiLie", "aujourd'hui", "Aujourd'hui"]:
             self.assertFalse(self.oSpellChecker.isValid(sWord), sWord)
 
     def test_suggest (self):

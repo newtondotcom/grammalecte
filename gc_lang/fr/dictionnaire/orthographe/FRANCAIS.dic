@@ -4992,7 +4992,7 @@ applaudir/f0p+()	po:v2_itnq__a	di:*	fq:7
 applaudissement/S.()	po:nom	is:mas	di:*	fq:6
 applaudisseur/Fs()	po:nom	di:*	fq:4
 Apple/L'D'Q'	po:npr	is:epi	is:inv	se:soc	se:info	di:*	fq:5
-applet/S.()	po:nom	is:mas	et:angl	di:*	fq:4
+applet/S.()	po:nom	is:fem	et:angl	di:*	fq:4
 applette/S.()	po:nom	is:fem	lx:néo	se:info	et:angl	di:*	fq:2
 appli/S.()	po:nom	is:fem	lx:abr	se:info	di:*	fq:5
 applicabilité/S.()	po:nom	is:fem	di:*	fq:6
@@ -51368,6 +51368,7 @@ mémorisation/S.()	po:nom	is:fem	di:*	fq:6
 mémoriser/a0p+()	po:v1_it___zz	di:*	fq:6
 Memphis/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:6
 m’en	po:err	di:*	fq:0
+m’y	po:err	di:*	fq:0
 menaçant/F.()	po:adj	di:*	fq:6
 menace/S.()	po:nom	is:fem	di:*	fq:7
 menacer/a0p+()	po:v1_it___zz	di:*	fq:7
@@ -79463,6 +79464,7 @@ temporo-pariétal/W.()	po:adj	se:anat	di:*	fq:2
 temps/L'D'Q'	po:nom	is:mas	is:inv	se:temps	et:lat	di:*	fq:9
 temps-réel/L'D'Q'	po:nom	is:mas	is:sg	di:*	fq:3
 t’en	po:err	di:*	fq:0
+t’y	po:err	di:*	fq:0
 tenable/S.()	po:adj	is:epi	di:*	fq:5
 tenace/S.()	po:adj	is:epi	di:*	fq:6
 tenacement/L'D'Q'	po:adv	di:*	fq:5
@@ -86983,6 +86985,7 @@ phytoplasme/S.()	po:nom	is:mas	se:bio	et:grec	di:*
 plaçable/S.()	po:adj	is:epi	di:*
 pluricentenaire/S.()	po:adj	is:epi	se:temps	di:*
 proxiphotographie/S.()	po:nom	is:fem	se:image	di:*
+recréditer/a0p+()	po:v1__t___zz	di:*
 résumable/S.()	po:adj	is:epi	se:litt	di:*
 résurrecteur/Fc()	po:adj	se:reli	di:*
 riparien/F+()	po:adj	se:géogr	di:*

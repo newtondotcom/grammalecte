@@ -159,12 +159,14 @@ def g_info (dToken):
     if not dToken:
         echo("> no token")
         return True
+    for sKey, val in dToken.items():
+        echo(sKey + ":" + str(val))
     lMorph = dToken["lMorph"]  if "lMorph" in dToken  else _oSpellChecker.getMorph(dToken["sValue"])
     if not lMorph:
         echo("> not in dictionary: " + dToken["sValue"])
         return True
-    for sKey, val in dToken.items():
-        echo(sKey + ":" + str(val))
+    for sMorph in lMorph:
+        echo(sMorph)
     return True
 
 
