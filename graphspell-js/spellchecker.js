@@ -333,6 +333,9 @@ class SpellChecker {
             } else if (sWord.gl_isTitle() && this.lexicographer.dSugg.has(sWord.toLowerCase())) {
                 let lSuggs = this.lexicographer.dSugg.get(sWord.toLowerCase()).split("|");
                 yield lSuggs.map((sSugg) => { return sSugg.slice(0,1).toUpperCase() + sSugg.slice(1); });
+            } else if (sWord.gl_isUpperCase() && this.lexicographer.dSugg.has(sWord.toLowerCase())) {
+                let lSuggs = this.lexicographer.dSugg.get(sWord.toLowerCase()).split("|");
+                yield lSuggs.map((sSugg) => { return sSugg.toUpperCase(); });
             } else {
                 let lSuggs = this.oMainDic.suggest(sWord, nSuggLimit, true);
                 lSuggs = lSuggs.filter((sSugg) => this.lexicographer.isValidSugg(sSugg, this));

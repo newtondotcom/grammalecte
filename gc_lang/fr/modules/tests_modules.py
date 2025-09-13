@@ -71,6 +71,7 @@ class TestDictionary (unittest.TestCase):
             ("vraaaaiiiimeeeeennnt", "vraiment"),
             ("oeil", "œil"),
             ("Oeil", "Œil"),
+            ("OEIL", "ŒIL"),
             ("apele", "appel"),
             ("Co2", "CO₂"),
             ("emmppâiiiller", "empailler"),
