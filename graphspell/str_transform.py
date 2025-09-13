@@ -8,6 +8,7 @@ import unicodedata
 import re
 
 from .char_player import distanceBetweenChars, dDistanceBetweenChars
+from .echo import echo
 
 
 #### N-GRAMS
@@ -259,7 +260,7 @@ def showDistance (s1, s2):
     nDL = distanceDamerauLevenshtein(s1, s2)
     nS4 = distanceSift4(s1, s2)
     fJW = distanceJaroWinkler(s1, s2)
-    print(s1, "≠", s2, "\tDL:", nDL, "\tS4:", nS4, "\tJW:", fJW)
+    echo(f"{s1:22} ≠ {s2:22} \tDL: {nDL}\tS4: {nS4}\tJW: {fJW}")
 
 
 
