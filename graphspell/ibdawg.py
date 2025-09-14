@@ -43,7 +43,7 @@ class SuggResult:
     def __init__ (self, sWord, nSuggLimit=10, nDistLimit=-1):
         self.sWord = sWord
         self.sSimplifiedWord = st.simplifyWord(sWord)
-        self.nDistLimit = nDistLimit  if nDistLimit >= 0  else  (len(sWord) // 3) + 1 # used in suggest()
+        self.nDistLimit = nDistLimit  if nDistLimit >= 0  else  (len(sWord) // 3) + 1 # maximum accepted distance, used in suggest()
         self.nMinDist = 1000
         # Temporary sets
         self.aAllSugg = set()   # All suggestions, even the one rejected

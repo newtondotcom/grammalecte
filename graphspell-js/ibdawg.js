@@ -25,17 +25,14 @@ class SuggResult {
     constructor (sWord, nSuggLimit=10, nDistLimit=-1) {
         this.sWord = sWord;
         this.sSimplifiedWord = str_transform.simplifyWord(sWord);
-        this.nDistLimit = (nDistLimit >= 0) ? nDistLimit :  Math.floor(sWord.length / 3) + 1;
+        this.nDistLimit = (nDistLimit >= 0) ? nDistLimit :  Math.floor(sWord.length / 3) + 1; // maximum accepted distance, used in suggest()
         this.nMinDist = 1000;
         // Temporary sets
         this.aAllSugg = new Set();  // All suggestions, even the one rejected
-        this.dGoodSugg = new Map(); // Acceptable suggestions
-        this.dBestSugg = new Map(); // Best suggestions
+        this.dAccSugg = new Map();  // Accepted suggestions
         // Parameters
-        this.nSuggLimit = nSuggLimit;
-        this.nSuggLimitExt = nSuggLimit + 2;                // we add few entries in case suggestions merge after casing modifications
-        this.nBestSuggLimit = Math.floor(nSuggLimit * 2);   // n times the requested limit
-        this.nGoodSuggLimit = nSuggLimit * 15;              // n times the requested limit
+        this.nSuggLimit = nSuggLimit;           // number of returned suggestions
+        this.nTempSuggLimit = nSuggLimit * 6;   // limit of accepted suggestions (ends search over this limit)
     }
 
     addSugg (sSugg) {
@@ -44,53 +41,30 @@ class SuggResult {
             return;
         }
         this.aAllSugg.add(sSugg);
-        // jaro 0->1 1 les chaines sont égale
-        let nDistJaro = 1 - str_transform.distanceJaroWinkler(this.sSimplifiedWord, str_transform.simplifyWord(sSugg));
-        let nDist = Math.floor(nDistJaro * 10);
-        if (nDist < this.nMinDist) {
-            this.nMinDist = nDist;
+        //console.log("Grammalecte: " + sSugg);
+        let nSimDist = str_transform.distanceSift4(this.sSimplifiedWord, str_transform.simplifyWord(sSugg));
+        if (nSimDist < this.nMinDist) {
+            this.nMinDist = nSimDist;
         }
-        if (nDistJaro < .11) {        // Best suggestions
-            this.dBestSugg.set(sSugg, Math.round(nDistJaro*1000));
-            if (this.dBestSugg.size > this.nBestSuggLimit) {
-                this.nDistLimit = -1; // make suggest() to end search
-            }
-        } else if (nDistJaro < .33) { // Good suggestions
-            this.dGoodSugg.set(sSugg, Math.round(nDistJaro*1000));
-            if (this.dGoodSugg.size > this.nGoodSuggLimit) {
-                this.nDistLimit = -1; // make suggest() to end search
+        if (nSimDist <= this.nMinDist+1) {
+            let nDist = Math.min(str_transform.distanceDamerauLevenshtein(this.sWord, sSugg), str_transform.distanceDamerauLevenshtein(this.sSimplifiedWord, str_transform.simplifyWord(sSugg)));
+            this.dAccSugg.set(sSugg, Math.min(nDist, nSimDist+1));
+            if (this.dAccSugg.size  > this.nTempSuggLimit) {
+                this.nDistLimit = -1; // suggest() ends searching when this variable = -1
             }
         }
         this.nDistLimit = Math.min(this.nDistLimit, this.nMinDist+1);
+        //console.log(this.dAccSugg);
     }
 
     getSuggestions () {
-        // return a list of suggestions
+        //// return a list of suggestions
+        // sort according to distance
         let lRes = [];
-        if (this.dBestSugg.size > 0) {
-            // sort only with simplified words
-            let lResTmp = [...this.dBestSugg.entries()].sort((a, b) => { return a[1] - b[1]; });
-            let nSize = Math.min(this.nSuggLimitExt, lResTmp.length);
-            for (let i=0;  i < nSize;  i++){
-                lRes.push(lResTmp[i][0]);
-            }
-        }
-        if (lRes.length < this.nSuggLimitExt) {
-            // sort with simplified words and original word
-            let lResTmp = [...this.dGoodSugg.entries()].sort((a, b) => {
-                // Low precision to rely more on simplified words
-                let nJaroA = Math.round(str_transform.distanceJaroWinkler(this.sWord, a[0]) * 10);
-                let nJaroB = Math.round(str_transform.distanceJaroWinkler(this.sWord, b[0]) * 10);
-                if (nJaroA == nJaroB) {
-                    return a[1] - b[1];     // warning: both lists are NOT sorted the same way (key: a-b)
-                } else {
-                    return nJaroB - nJaroA; // warning: both lists are NOT sorted the same way (key: b-a)
-                }
-            }).slice(0, this.nSuggLimitExt);
-            let nSize = Math.min(this.nSuggLimitExt, lResTmp.length);
-            for (let i=0;  i < nSize;  i++){
-                lRes.push(lResTmp[i][0]);
-            }
+        let lResTmp = [...this.dAccSugg.entries()].sort((a, b) => { return a[1] - b[1]; });
+        let nSize = Math.min(this.nSuggLimit, lResTmp.length);
+        for (let i=0;  i < nSize;  i++){
+            lRes.push(lResTmp[i][0]);
         }
         // casing
         if (this.sWord.gl_isUpperCase()) {
