@@ -11813,6 +11813,14 @@ TEST: actions {{à bâton rompu}}                                               
 TEST: discuter à bâtons rompus
 
 
+__conf_à_bon_port__
+    !! à bon port ¡¡
+    [à|a] bon [>porc|>pore|>port]
+        <<- /conf/ ->> à bon port                                           && Locution adverbiale “à bon port”.|https://fr.wiktionary.org/wiki/%C3%A0_bon_port
+
+TEST: {{a bon porc}}                                                                ->> à bon port
+
+
 __conf_à_cor_et_à_cri__
     !! à cor et à cri ¡¡
     [a|à] [corps|cor+s] [et|est|es|ait|ais|aies|é|è|ei|ai|aient] [à|a] [cri+s|crie+s|crit]
@@ -15797,7 +15805,7 @@ __conf_porc_port_pore__
     >pore [qui|qué] [>pique|>pic]
     >porc [qui|qué] [>pique|>pic]
     >port [qui|qué] [>pique|>pic]
-        <<- morph(<1, ":D|<start>|>[(,]") ->> porc-épic|porcs-épics            && Confusion générale ? Si vous parlez de l’animal, écrivez “porc-épic”.|https://fr.wiktionary.org/wiki/porc-%C3%A9pic
+        <<- /conf/ morph(<1, ":D|<start>|>[(,]") ->> porc-épic|porcs-épics  && Confusion générale ? Si vous parlez de l’animal, écrivez “porc-épic”.|https://fr.wiktionary.org/wiki/porc-%C3%A9pic
 
     ## port
     [>pore|>porc] [de|d’] [plaisance|pêche]
@@ -15811,7 +15819,6 @@ __conf_porc_port_pore__
     frais [de|d’] [>pore|>porc]
         <<- /conf/ --1>> port                                               && Confusion. Locution “frais de port”.|https://fr.wiktionary.org/wiki/frais_de_port
 
-    [>arriver|>parvenir] ?@:[WX]¿ [à|a] bon [>pore|>porc]
     [>accoster|>amarrer] ?@:[WX]¿ au [>pore|>porc]
     [>accoster|>amarrer] ?@:[WX]¿ à ce ?petit¿ [>pore|>porc]
         <<- /conf/ --1>> port                                               && Confusion. Pour évoquer un havre côtier où les bateaux accostent, écrivez “port”.|https://fr.wiktionary.org/wiki/port
@@ -15831,7 +15838,6 @@ TEST: j’en ai marre de bouffer du {{port}}                                  ->
 TEST: un {{porc qui pique}}                                                 ->> porc-épic|porcs-épics
 TEST: le {{pore}} de l’étoile jaune                                         ->> port
 TEST: un petit {{porc}} de plaisance                                        ->> port|ports
-TEST: nous parvenons enfin à bon {{pore}}                                   ->> port
 TEST: les frais de {{pore}}                                                 ->> port
 TEST: Accoste au {{porc}}                                                   ->> port
 TEST: le {{pore}} de La Rochelle                                            ->> port

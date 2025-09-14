@@ -50,22 +50,22 @@ class SuggResult:
         self.aAllSugg = set()   # All suggestions, even the one rejected
         self.dAccSugg = {}      # Accepted suggestions
         # Parameters
-
-        self.nSuggLimit = nSuggLimit
-        self.nTempSuggLimit = nSuggLimit * 6
+        self.nSuggLimit = nSuggLimit            # number of returned suggestions
+        self.nTempSuggLimit = nSuggLimit * 6    # limit of accepted suggestions (ends search over this limit)
 
     def addSugg (self, sSugg, nDeep=0):
-        "add a suggestion"
+        "add a suggestion to the suggestion list"
         if sSugg in self.aAllSugg:
             return
         self.aAllSugg.add(sSugg)
         nSimDist = st.distanceSift4(self.sSimplifiedWord, st.simplifyWord(sSugg))
-        st.showDistance(self.sSimplifiedWord, st.simplifyWord(sSugg))
+        #st.showDistance(self.sSimplifiedWord, st.simplifyWord(sSugg))
         if nSimDist < self.nMinDist:
             self.nMinDist = nSimDist
         if nSimDist <= (self.nMinDist + 1):
-            nDist = st.distanceJaroWinkler(self.sWord, sSugg)
-            st.showDistance(self.sWord, sSugg)
+            nDist = min(st.distanceDamerauLevenshtein(self.sWord, sSugg), st.distanceDamerauLevenshtein(self.sSimplifiedWord, st.simplifyWord(sSugg)))
+            #print(">", end="")
+            #st.showDistance(self.sWord, sSugg)
             self.dAccSugg[sSugg] = min(nDist, nSimDist+1)
             if len(self.dAccSugg) > self.nTempSuggLimit:
                 self.nDistLimit = -1  # suggest() ends searching when this variable = -1

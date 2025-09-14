@@ -78,9 +78,9 @@ class TestDictionary (unittest.TestCase):
             ("testt", "test"),
             ("apelaion", "appellation"),
             ("exsepttion", "exception"),
-            ("sintaxik", "syntaxique"),
             ("ebriete", "ébriété"),
-            ("ennormmement", "énormément")
+            ("ennormmement", "énormément"),
+            ("sintaxik", "syntaxique")
         ]:
             #with timeblock(sWord):
             for lSugg in self.oSpellChecker.suggest(sWrong):

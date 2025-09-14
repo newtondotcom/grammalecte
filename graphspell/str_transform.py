@@ -32,11 +32,11 @@ def spellingNormalization (sWord):
 
 
 _xTransCharsForSimplification = str.maketrans({
-    'à': 'a',  'é': 'é',  'î': 'i',  'ô': 'o',  'û': 'u',  'ÿ': 'y',
-    'â': 'a',  'è': 'é',  'ï': 'i',  'ö': 'o',  'ù': 'u',  'ŷ': 'y',
-    'ä': 'a',  'ê': 'é',  'í': 'i',  'ó': 'o',  'ü': 'u',  'ý': 'y',
-    'á': 'a',  'ë': 'é',  'ì': 'i',  'ò': 'o',  'ú': 'u',  'ỳ': 'y',
-    'ā': 'a',  'ē': 'é',  'ī': 'i',  'ō': 'o',  'ū': 'u',  'ȳ': 'y',
+    'à': 'a',  'é': 'e',  'î': 'i',  'ô': 'o',  'û': 'u',  'ÿ': 'i', 'y': 'i',
+    'â': 'a',  'è': 'e',  'ï': 'i',  'ö': 'o',  'ù': 'u',  'ŷ': 'i',
+    'ä': 'a',  'ê': 'e',  'í': 'i',  'ó': 'o',  'ü': 'u',  'ý': 'i',
+    'á': 'a',  'ë': 'e',  'ì': 'i',  'ò': 'o',  'ú': 'u',  'ỳ': 'i',
+    'ā': 'a',  'ē': 'e',  'ī': 'i',  'ō': 'o',  'ū': 'u',  'ȳ': 'i',
     'ç': 'c',  'ñ': 'n',
     'œ': 'oe',  'æ': 'ae',
     'ſ': 's',  'ﬃ': 'ffi',  'ﬄ': 'ffl',  'ﬀ': 'ff',  'ﬅ': 'ft',  'ﬁ': 'fi',  'ﬂ': 'fl',  'ﬆ': 'st',
@@ -53,7 +53,7 @@ def simplifyWord (sWord):
     for i, c in enumerate(sWord, 1):
         if c != sWord[i:i+1] or (c == 'e' and sWord[i:i+2] != "ee"):  # exception for <e> to avoid confusion between crée / créai
             sNewWord += c
-    return sNewWord.replace("eau", "o").replace("au", "o").replace("ai", "éi").replace("ei", "é").replace("ph", "f")
+    return sNewWord.replace("eau", "o").replace("au", "o").replace("ei", "e").replace("ai", "ei").replace("ph", "f")
 
 
 def cleanWord (sWord):
