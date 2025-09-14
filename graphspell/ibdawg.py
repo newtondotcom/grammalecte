@@ -14,7 +14,6 @@ import time
 import json
 import binascii
 import importlib
-from collections import OrderedDict
 from math import floor
 
 #import logging
@@ -73,19 +72,18 @@ class SuggResult:
 
     def getSuggestions (self):
         "return a list of suggestions"
-        # we sort the better results with the original word
+        # sort according to distance
         lRes = []
-        # sort only with simplified words
         lResTmp = sorted(self.dAccSugg.items(), key=lambda x: (x[1], x[0]))
         for i in range(min(self.nSuggLimit, len(lResTmp))):
             lRes.append(lResTmp[i][0])
             #st.showDistance(self.sWord, lResTmp[i][0])
         # casing
         if self.sWord.isupper():
-            lRes = list(OrderedDict.fromkeys(map(lambda sSugg: sSugg.upper(), lRes))) # use dict, when Python 3.6+
+            lRes = list(dict.fromkeys(map(lambda sSugg: sSugg.upper(), lRes)))
         elif self.sWord[0:1].isupper():
             # don’t use <.istitle>
-            lRes = list(OrderedDict.fromkeys(map(lambda sSugg: sSugg[0:1].upper()+sSugg[1:], lRes))) # use dict, when Python 3.6+
+            lRes = list(dict.fromkeys(map(lambda sSugg: sSugg[0:1].upper()+sSugg[1:], lRes)))
         return lRes[:self.nSuggLimit]
 
 
