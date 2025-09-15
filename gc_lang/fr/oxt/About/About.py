@@ -69,7 +69,7 @@ class AboutGrammalecte (unohelper.Base, XActionListener):
             # logo
             xDefaultContext = self.ctx.ServiceManager.DefaultContext
             xPackageInfoProvider = xDefaultContext.getValueByName("/singletons/com.sun.star.deployment.PackageInformationProvider")
-            sExtPath = xPackageInfoProvider.getPackageLocation("French.linguistic.resources.from.Dicollecte.by.OlivierR")
+            sExtPath = xPackageInfoProvider.getPackageLocation("${oxt_identifier}")
             self._addWidget('imgMainLogo', 'ImageControl', 5, 5, 150, 80, ImageURL = sExtPath+"/img/logo120_text.png", Border = 0, ScaleMode = 1)
 
             # Infos
