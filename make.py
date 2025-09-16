@@ -359,7 +359,7 @@ def buildDictionary (dVars, sType, bJavaScript=False):
 def extraTest (sLang):
     "test grammar checker with files in <gc_lang/xx/tests>"
     if os.path.isdir(f"gc_lang/{sLang}/tests"):
-        print(">>>>>>>>>> EXTRA TESTS: parsing texts in <gc_lang/{sLang}/tests>\n")
+        print(f">>>>>>>>>> EXTRA TESTS: parsing texts in <gc_lang/{sLang}/tests>\n")
         grammalecte = importlib.import_module("grammalecte")
         oGrammarChecker = grammalecte.GrammarChecker(sLang)
         for sf in os.listdir(f"gc_lang/{sLang}/tests"):
