@@ -103,8 +103,8 @@ def distanceDamerauLevenshtein (s1, s2):
         d[-1, j] = j + 1
     for i in range(nLen1):
         for j in range(nLen2):
-            #nCost = 0  if s1[i] == s2[j]  else 1
-            nCost = distanceBetweenChars(s1[i], s2[j])
+            nCost = 0  if s1[i] == s2[j]  else 1
+            #nCost = distanceBetweenChars(s1[i], s2[j])
             d[i, j] = min(
                 d[i-1, j]   + 1,        # Deletion
                 d[i,   j-1] + 1,        # Insertion
