@@ -47,8 +47,9 @@ class SuggResult {
             this.nMinDist = nSimDist;
         }
         if (nSimDist <= this.nMinDist+1) {
-            let nDist = Math.min(str_transform.distanceDamerauLevenshtein(this.sWord, sSugg), str_transform.distanceDamerauLevenshtein(this.sSimplifiedWord, str_transform.simplifyWord(sSugg)));
-            this.dAccSugg.set(sSugg, Math.min(nDist, nSimDist+1));
+            let nDist = Math.min(str_transform.distanceDamerauLevenshteinX(this.sWord, sSugg), str_transform.distanceDamerauLevenshteinX(this.sSimplifiedWord, str_transform.simplifyWord(sSugg)));
+            if (sSugg.includes(" ")) { nDist += 1; }
+            this.dAccSugg.set(sSugg, nDist);
             if (this.dAccSugg.size  > this.nTempSuggLimit) {
                 this.nDistLimit = -1; // suggest() ends searching when this variable = -1
             }

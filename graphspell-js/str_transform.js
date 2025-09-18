@@ -124,6 +124,43 @@ var str_transform = {
         return longestCommonSubstring;
     },
 
+    distanceDamerauLevenshteinX: function (s1, s2) {
+        // distance of Damerau-Levenshtein between <s1> and <s2>
+        // https://fr.wikipedia.org/wiki/Distance_de_Damerau-Levenshtein
+        try {
+            let nLen1 = s1.length;
+            let nLen2 = s2.length;
+            let matrix = [];
+            for (let i = 0;  i <= nLen1+1;  i++) {
+                matrix[i] = new Array(nLen2 + 2);
+            }
+            for (let i = 0;  i <= nLen1+1;  i++) {
+                matrix[i][0] = i;
+            }
+            for (let j = 0;  j <= nLen2+1;  j++) {
+                matrix[0][j] = j;
+            }
+            for (let i = 1;  i <= nLen1;  i++) {
+                for (let j = 1;  j <= nLen2;  j++) {
+                    //let nCost = (s1[i-1] === s2[j-1]) ? 0 : 1;
+                    let nCost = char_player.distanceBetweenChars(s1[i-1], s2[j-1]);
+                    matrix[i][j] = Math.min(
+                        matrix[i-1][j] + 1,         // Deletion
+                        matrix[i][j-1] + 1,         // Insertion
+                        matrix[i-1][j-1] + nCost    // Substitution
+                    );
+                    if (i > 1 && j > 1 && s1[i] == s2[j-1] && s1[i-1] == s2[j]) {
+                        matrix[i][j] = Math.min(matrix[i][j], matrix[i-2][j-2] + nCost);  // Transposition
+                    }
+                }
+            }
+            return matrix[nLen1][nLen2];
+        }
+        catch (e) {
+            console.error(e);
+        }
+    },
+
     distanceDamerauLevenshtein: function (s1, s2) {
         // distance of Damerau-Levenshtein between <s1> and <s2>
         // https://fr.wikipedia.org/wiki/Distance_de_Damerau-Levenshtein
@@ -163,7 +200,7 @@ var str_transform = {
 
     distanceJaroWinkler: function(a, b, boost = .666) {
         // https://github.com/thsig/jaro-winkler-JS
-        //if (a == b) { return 1.0; }
+        if (a == b) { return 1.0; }
         let a_len = a.length;
         let b_len = b.length;
         let a_flag = [];
@@ -306,9 +343,10 @@ var str_transform = {
     showDistance: function (s1, s2) {
         console.log(`${s1} ≠ ${s2}`);
         let nDL = this.distanceDamerauLevenshtein(s1, s2);
+        let fDLX = this.distanceDamerauLevenshteinX(s1, s2);
         let nS4 = this.distanceSift4(s1, s2);
         let fJW = this.distanceJaroWinkler(s1, s2);
-        console.log(`DL: ${nDL} — S4: ${nS4} — JW: ${fJW}`);
+        console.log(`DL: ${nDL} DLX: ${fDLX} — S4: ${nS4} — JW: ${fJW}`);
     },
 
     // Suffix only
@@ -395,6 +433,7 @@ if (typeof(exports) !== 'undefined') {
     exports.numbersToExponent = str_transform.numbersToExponent;
     exports.spellingNormalization = str_transform.spellingNormalization;
     exports.longestCommonSubstring = str_transform.longestCommonSubstring;
+    exports.distanceDamerauLevenshteinX = str_transform.distanceDamerauLevenshteinX;
     exports.distanceDamerauLevenshtein = str_transform.distanceDamerauLevenshtein;
     exports.distanceJaroWinkler = str_transform.distanceJaroWinkler;
     exports.showDistance = str_transform.showDistance;
