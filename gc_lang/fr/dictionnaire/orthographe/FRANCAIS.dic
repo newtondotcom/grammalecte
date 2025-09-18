@@ -86902,12 +86902,13 @@ adénomyose/S.()	po:nom	is:fem	se:méd	di:*
 allergénicité/S.()	po:nom	is:fem	se:méd	di:*
 Amélien/L'D'Q'	po:prn	is:mas	is:inv	di:*
 Améline/L'D'Q'	po:prn	is:fem	is:inv	di:*
-anti-rapprochement/L'D'Q' 	po:adj	is:epi	is:inv	se:sécu	di:C
+anisochromie/S.()	po:nom	is:fem	se:méd	di:*
+anti-rapprochement/L'D'Q'	po:adj	is:epi	is:inv	se:sécu	di:C
 antiagrégant/F.()	po:adj	se:méd	di:*
 antiapoplectique/S.()	po:adj	is:epi	se:méd	di:*
 antimoustique/S.()	po:adj	is:epi	di:*
 antiprurigineux/W.()	po:adj	di:*
-antirapprochement/L'D'Q' 	po:adj	is:epi	is:inv	se:sécu	di:M
+antirapprochement/L'D'Q'	po:adj	is:epi	is:inv	se:sécu	di:*
 antiskyrmion/S.()	po:nom	is:mas	se:phys	di:*
 antiélitisme/S.()	po:nom	is:mas	se:polit	di:*
 antiélitiste/S.()	po:adj	is:epi	se:polit	di:*
@@ -86925,7 +86926,9 @@ bigorexie/S.()	po:nom	is:fem	se:sport	se:méd	di:*
 biophoton/S.()	po:nom	is:mas	se:bio	di:*
 bokeh/S.()	po:nom	is:mas	se:image	di:*
 bordélisation/S.()	po:nom	is:fem	di:*
-cassos/L'D'Q'	po:nom	is:epi	lx:péj	di:*
+cardiocirculatoire/S.()	po:adj	is:epi	se:méd	di:*
+cardio-circulatoire/S.()	po:adj	is:epi	se:méd	di:C
+cassos/L'D'Q'	po:nom	is:epi	is:inv	lx:péj	di:*
 castagneur/Fs()	po:nom	po:adj	di:*
 chatbot/S.()	po:nom	is:mas	se:info	se:comm	et:angl	di:*
 chawarma/S.()	po:nom	is:mas	se:cuis	di:*
@@ -86934,6 +86937,7 @@ chimichurri/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
 cimentaire/S.()	po:adj	is:epi	se:bât	di:*
 clarifloculation/S.()	po:nom	is:fem	se:techni	di:*
 Clemens/L'D'Q'	po:prn	is:mas	is:inv	di:*
+clostridium/S.()	po:nom	is:mas	se:bio	di:*
 codéiné/F.()	po:adj	se:pharma	di:*
 commentariat/S.()	po:nom	is:mas	se:comm	di:*
 contraventionnalisation/S.()	po:nom	is:fem	se:droit	se:sécu	di:*
@@ -86941,6 +86945,7 @@ coven/S.()	po:nom	is:mas	se:reli	di:*
 crossfit/S.()	po:nom	is:mas	se:sport	di:*
 cryophile/S.()	po:adj	is:epi	se:bio	di:*
 cyberstratégie/S.()	po:nom	is:fem	se:info	di:*
+cytaphérèse/S.()	po:nom	is:fem	se:méd	di:*
 Decathlon	po:npr	is:epi	is:inv	se:soc	se:sport
 deutéragoniste/S.()	po:nom	is:epi	se:théâ	et:grec	di:*
 digestat/S.()	po:nom	is:mas	se:bio	di:*
@@ -86955,7 +86960,7 @@ délotage/S.()	po:nom	is:mas	se:biz	di:*
 délégable/S.()	po:adj	is:epi	di:*
 démétropolisation/S.()	po:nom	is:fem	se:polit	di:*
 déploratoire/S.()	po:adj	is:epi	lx:rare	di:*
-déployeur/Fs()	po:nom	is:fem	di:*
+déployeur/Fs()	po:nom	di:*
 désanctuariser/a0p+()	po:v1__t____a	di:*
 détransitionner/a0p+()	po:v1_i_____a	lx:néo	di:*
 écoanxiété/S.()	po:nom	is:fem	lx:néo	se:écolo	di:*
@@ -86974,6 +86979,7 @@ enthéogène/S.()	po:adj	is:epi	se:pharma	se:reli	et:grec	di:*
 épitrochoïde/S.()	po:adj	is:epi	se:math	di:*
 exclaustration/S.()	po:nom	is:fem	se:chris	di:*
 exsanguiner/a0p+()	po:v1__t_q__a	se:méd	di:*
+facio-scapulo-huméral/W.()	po:adj	se:méd	di:*
 Fourvière/L'D'Q'	po:npr	is:epi	is:inv	di:*
 fragmentable/S.()	po:adj	is:epi	di:*
 francocide/S.()	po:nom	is:mas	lx:néo	se:socio	di:*
@@ -86981,16 +86987,26 @@ fustier/F.()	po:nom	se:constr	di:*
 glandu/S.()	po:nom	is:epi	lx:péj	di:*
 glottophobie/S.()	po:nom	is:fem	lx:néo	di:*
 Grabels/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*
-géo-ingénierie/S.()	po:nom	is:fem	se:géol	di:C
+géo-ingénierie/S.()	po:nom	is:fem	se:géol	di:M
 géodrilologie/S.()	po:nom	is:fem	lx:rare	se:zool	di:*
-géoingénierie/S.()	po:nom	is:fem	se:géol	di:M
+géoingénierie/S.()	po:nom	is:fem	se:géol	di:R
 gênance/S.()	po:nom	is:fem	lx:néo	di:*
+hémianopsie/S.()	po:nom	is:fem	lx:hm	se:méd	di:*
+holoenzyme/S.()	po:nom	is:fem	lx:hm	se:bioch	di:*
+hyperazotémie/S.()	po:nom	is:fem	lx:hm	se:méd	di:*
+hypercoagulable/S.()	po:adj	is:epi	lx:hm	se:méd	di:*
+hypocoagulable/S.()	po:adj	is:epi	lx:hm	se:méd	di:*
+hypocoagulabilité/S.()	po:nom	is:fem	lx:hm	se:méd	di:*
 icosaédrique/S.()	po:adj	is:epi	di:*
 ignosticisme/S.()	po:nom	is:mas	lx:néo	se:reli	di:*
 ignostique/S.()	po:adj	is:epi	lx:néo	se:reli	di:*
 infodivertissement/S.()	po:nom	is:mas	se:comm	di:*
+intrarectal/W.()	po:adj	se:méd	di:*
+intra-rectal/W.()	po:adj	se:méd	di:C
+intrathécal/W.()	po:adj	se:méd	di:*
 Isolde/L'D'Q'	po:prn	is:fem	is:inv	di:*
 jaserie/S.()	po:nom	is:fem	se:comm	di:*
+kaliurie/S.()	po:nom	is:fem	se:méd	di:*
 kebbé/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
 kikuyu/S.()	po:nom	po:adj	is:epi	se:gent	se:lang	di:*
 kimchi/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
@@ -87018,19 +87034,29 @@ mycophyte/S.()	po:nom	is:mas	se:myco	di:*
 mécanochimie/S.()	po:nom	is:fem	se:chim	di:*
 mégabassine/S.()	po:nom	is:fem	di:*
 mégafeu/X.()	po:nom	is:mas	di:*
+méningococcie/S.()	po:nom	is:fem	se:méd	di:*
 mésocarnivore/S.()	po:nom	is:epi	se:zool	di:*
-métavers/S.()	po:nom	is:mas	se:info	di:*
+métavers	po:nom	is:mas	is:inv	se:info	di:*
 méthanation/S.()	po:nom	is:fem	se:chim	di:*
+micropsie/S.()	po:nom	is:fem	se:méd	di:*
+myoblaste/S.()	po:nom	is:mas	se:bio	di:*
 narcobanditisme/S.()	po:nom	is:mas	se:crime	di:*
 narcoterrorisme/S.()	po:nom	is:mas	se:crime	di:*
 nasopharyngé/F.()	po:adj	se:méd	di:*
+noscapine/S.()	po:nom	is:fem	se:pharma	di:*
+oncohématologie/S.()	po:nom	is:fem	se:méd	di:R
+onco-hématologie/S.()	po:nom	is:fem	se:méd	di:M
 optogénétique/S.()	po:nom	is:fem	se:méd	di:*
 optométrique/S.()	po:adj	is:epi	se:méd	di:*
 ossécaille/S.()	po:adj	is:epi	se:lingu	di:*
+ostéon/S.()	po:nom	is:mas	se:anat	di:*
+ostéome/S.()	po:nom	is:mas	se:méd	di:*
 paléoclimatologue/S.()	po:nom	is:epi	di:*
 pansexualité/S.()	po:nom	is:fem	se:sexe	di:*
 paralimbique/S.()	po:adj	is:epi	se:anat	di:*
+parasympatholytique/S.()	po:adj	is:epi	se:méd	di:*
 paresthésique/S.()	po:adj	is:epi	se:méd	di:*
+pélicandrome/S.()	po:nom	is:mas	se:aéron	di:*
 perfluoré/F.()	po:nom	po:adj	se:chim	di:*
 périménopause/S.()	po:nom	is:fem	se:méd	di:*
 peropératoire/S.()	po:adj	is:epi	se:méd	di:*
@@ -87044,7 +87070,8 @@ pornodivulgation/S.()	po:nom	is:fem	se:crime	di:*
 portobello/S.()	po:nom	is:mas	se:cuis	di:*
 propriocepteur/S.()	po:nom	is:mas	se:bio	di:*
 proxiphotographie/S.()	po:nom	is:fem	se:image	di:*
-pélicandrome/S.()	po:nom	is:mas	se:aéron	di:*
+punctiforme/S.()	po:adj	is:epi	di:*
+pyélographie/S.()	po:nom	is:fem	se:méd	di:*
 ramen/S.()	po:nom	is:mas	se:cuis	et:jap	di:*
 recréditer/a0p+()	po:v1__t___zz	di:*
 rejouabilité/S.()	po:nom	is:fem	se:jeu	di:*
