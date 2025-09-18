@@ -274,6 +274,7 @@ def main ():
         sText = _getText(sInputText)
         while True:
             if sText.startswith("?"):
+                # morphologies
                 for sWord in sText[1:].strip().split():
                     if sWord:
                         echo("* " + sWord)
@@ -282,13 +283,20 @@ def main ():
                             for sMorph, sMeaning in aRes:
                                 echo("      {:<40}  {}".format(sMorph, sMeaning))
             elif sText.startswith("!"):
+                # spelling suggestions
                 for sWord in sText[1:].strip().split():
                     if sWord:
                         for lSugg in oSpellChecker.suggest(sWord):
                             echo(" | ".join(lSugg))
+                            if xArgs.debug:
+                                for sSugg in lSugg:
+                                    nDist = strt.distanceDamerauLevenshteinX(sWord, sSugg)
+                                    echo(f"{sSugg:30} {nDist}")
             elif sText.startswith(">"):
+                # path in the word graph
                 oSpellChecker.drawPath(sText[1:].strip())
             elif sText.startswith("="):
+                # search in dictionnary
                 sSearch = sText[1:].strip()
                 if "=" in sSearch:
                     nCut = sSearch.find("=")
@@ -300,10 +308,10 @@ def main ():
                 for aRes in oSpellChecker.select(sFlexPattern, sTagsPattern):
                     echo("{:<30} {:<30} {}".format(*aRes))
             elif sText.startswith("≠"):
+                # distances calculation
                 lWords = sText[1:].split("|")
                 for s1, s2 in itertools.combinations(lWords, 2):
-                    nDist = strt.distanceDamerauLevenshtein(s1, s2)
-                    print(f"{s1} ≠ {s2}: {nDist}")
+                    strt.showDistance(s1, s2)
             elif sText.startswith("/o+ "):
                 oGrammarChecker.gce.setOptions({ opt:True  for opt in sText[3:].strip().split()  if opt in oGrammarChecker.gce.getOptions() })
                 echo("done")

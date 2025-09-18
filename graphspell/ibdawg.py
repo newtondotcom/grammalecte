@@ -62,10 +62,10 @@ class SuggResult:
         if nSimDist < self.nMinDist:
             self.nMinDist = nSimDist
         if nSimDist <= (self.nMinDist + 1):
-            nDist = min(st.distanceDamerauLevenshtein(self.sWord, sSugg), st.distanceDamerauLevenshtein(self.sSimplifiedWord, st.simplifyWord(sSugg)))
+            nDist = min(st.distanceDamerauLevenshteinX(self.sWord, sSugg), st.distanceDamerauLevenshteinX(self.sSimplifiedWord, st.simplifyWord(sSugg)))
             #print(">", end="")
             #st.showDistance(self.sWord, sSugg)
-            self.dAccSugg[sSugg] = min(nDist, nSimDist+1)
+            self.dAccSugg[sSugg] = nDist  if " " not in sSugg  else nDist+1
             if len(self.dAccSugg) > self.nTempSuggLimit:
                 self.nDistLimit = -1  # suggest() ends searching when this variable = -1
         self.nDistLimit = min(self.nDistLimit, self.nMinDist+1)
@@ -75,6 +75,7 @@ class SuggResult:
         # sort according to distance
         lRes = []
         lResTmp = sorted(self.dAccSugg.items(), key=lambda x: (x[1], x[0]))
+        #print("\n>", lResTmp)
         for i in range(min(self.nSuggLimit, len(lResTmp))):
             lRes.append(lResTmp[i][0])
             #st.showDistance(self.sWord, lResTmp[i][0])
