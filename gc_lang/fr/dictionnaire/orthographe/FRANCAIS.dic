@@ -67947,7 +67947,7 @@ ravissement/S.()	po:nom	is:mas	di:*	fq:6
 ravisseur/Fs()	po:nom	di:*	fq:6
 ravitaillement/S.()	po:nom	is:mas	di:*	fq:6
 ravitailler/a0p+()	po:v1__t_q_zz	di:*	fq:6
-ravitailleur/S.()	po:nom	is:mas	di:*	fq:5
+ravitailleur/Fs()	po:nom	di:*	fq:5
 ravivage/S.()	po:nom	is:mas	di:*	fq:4
 ravivement/S.()	po:nom	is:mas	di:*	fq:4
 raviver/a0p+()	po:v1__t_q_zz	di:*	fq:6
@@ -86893,132 +86893,216 @@ wesh/S.()	po:nom	is:epi	lx:arg	et:ara	di:*
 xérasie/S.()	po:nom	is:fem	se:méd	et:grec	di:*
 zyzomys/L'D'Q'	po:nom	is:mas	is:inv	se:zool	di:*
 zzz	po:interj	lx:onom	di:*
+abaya/S.()	po:nom	is:fem	se:islam	di:*
 acarologie/S.()	po:nom	is:fem	se:zool	di:*
 acetabulum/S.()	po:nom	is:mas	se:anat	di:M
 acétabulum/S.()	po:nom	is:mas	se:anat	di:R
 adénochrome/S.()	po:nom	is:mas	se:bioch	di:*
+adénomyose/S.()	po:nom	is:fem	se:méd	di:*
+allergénicité/S.()	po:nom	is:fem	se:méd	di:*
 Amélien/L'D'Q'	po:prn	is:mas	is:inv	di:*
 Améline/L'D'Q'	po:prn	is:fem	is:inv	di:*
+anti-rapprochement/L'D'Q' 	po:adj	is:epi	is:inv	se:sécu	di:C
 antiagrégant/F.()	po:adj	se:méd	di:*
 antiapoplectique/S.()	po:adj	is:epi	se:méd	di:*
 antimoustique/S.()	po:adj	is:epi	di:*
 antiprurigineux/W.()	po:adj	di:*
+antirapprochement/L'D'Q' 	po:adj	is:epi	is:inv	se:sécu	di:M
+antiskyrmion/S.()	po:nom	is:mas	se:phys	di:*
 antiélitisme/S.()	po:nom	is:mas	se:polit	di:*
 antiélitiste/S.()	po:adj	is:epi	se:polit	di:*
 antiétatiste/S.()	po:nom	po:adj	is:epi	se:polit	di:*
 arpégiateur/S.()	po:nom	is:mas	se:mus	di:*
 arverne/S.()	po:nom	po:adj	is:epi	se:gent	di:*
 asgardien/F+()	po:nom	po:adj	se:gent	se:myth	di:*
+assimilationnisme/S.()	po:nom	is:mas	se:polit	di:*
 autocicatrisant/F.()	po:adj	di:*
 autoproduire/yM()	po:v3____p_e_	di:*
 autoréparant/F.()	po:adj	di:*
+babka/S.()	po:nom	is:mas	se:cuis	et:pol	di:*
 berserk/S.()	po:nom	is:epi	se:myth	di:*
+bigorexie/S.()	po:nom	is:fem	se:sport	se:méd	di:*
 biophoton/S.()	po:nom	is:mas	se:bio	di:*
 bokeh/S.()	po:nom	is:mas	se:image	di:*
+bordélisation/S.()	po:nom	is:fem	di:*
+cassos/L'D'Q'	po:nom	is:epi	lx:péj	di:*
 castagneur/Fs()	po:nom	po:adj	di:*
+chatbot/S.()	po:nom	is:mas	se:info	se:comm	et:angl	di:*
 chawarma/S.()	po:nom	is:mas	se:cuis	di:*
 chiller/a0p.()	po:v1_i_____a	lx:néo	di:*
+chimichurri/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
 cimentaire/S.()	po:adj	is:epi	se:bât	di:*
 clarifloculation/S.()	po:nom	is:fem	se:techni	di:*
 Clemens/L'D'Q'	po:prn	is:mas	is:inv	di:*
+codéiné/F.()	po:adj	se:pharma	di:*
+commentariat/S.()	po:nom	is:mas	se:comm	di:*
+contraventionnalisation/S.()	po:nom	is:fem	se:droit	se:sécu	di:*
 coven/S.()	po:nom	is:mas	se:reli	di:*
+crossfit/S.()	po:nom	is:mas	se:sport	di:*
+cryophile/S.()	po:adj	is:epi	se:bio	di:*
+cyberstratégie/S.()	po:nom	is:fem	se:info	di:*
 Decathlon	po:npr	is:epi	is:inv	se:soc	se:sport
-décorporiser/a0p+()	po:v1_it_q__a	se:occult	di:*
-délégable/S.()	po:adj	is:epi	di:*
-délotage/S.()	po:nom	is:mas	se:biz	di:*
-déploratoire/S.()	po:adj	is:epi	lx:rare	di:*
-désanctuariser/a0p+()	po:v1__t____a	di:*
-détransitionner/a0p+()	po:v1_i_____a	lx:néo	di:*
 deutéragoniste/S.()	po:nom	is:epi	se:théâ	et:grec	di:*
 digestat/S.()	po:nom	is:mas	se:bio	di:*
 directionnalité/S.()	po:nom	is:fem	di:*
 dominat/S.()	po:nom	is:mas	se:polit	se:hist	di:*
 doula/S.()	po:nom	is:fem	se:édu	se:méd	di:*
+débunker/a0()	po:v1__t____a	lx:néo	se:comm	di:*
+déconjugaliser/a0()	po:v1__t____a	lx:néo	se:droit	di:*
+décornage/S.()	po:nom	is:mas	di:*
+décorporiser/a0p+()	po:v1_it_q__a	se:occult	di:*
+délotage/S.()	po:nom	is:mas	se:biz	di:*
+délégable/S.()	po:adj	is:epi	di:*
+démétropolisation/S.()	po:nom	is:fem	se:polit	di:*
+déploratoire/S.()	po:adj	is:epi	lx:rare	di:*
+déployeur/Fs()	po:nom	is:fem	di:*
+désanctuariser/a0p+()	po:v1__t____a	di:*
+détransitionner/a0p+()	po:v1_i_____a	lx:néo	di:*
 écoanxiété/S.()	po:nom	is:fem	lx:néo	se:écolo	di:*
+écoforesterie/S.()	po:nom	is:fem	se:écolo	di:*
+écomatériau/X.()	po:nom	is:mas	se:écolo	di:*
+écopâturage/S.()	po:nom	is:mas	se:écolo	di:*
 électromigration/S.()	po:nom	is:fem	se:électro	di:*
 électroperception/S.()	po:nom	is:fem	se:bio	se:élec	di:*
+emportiérage/S.()	po:nom	is:mas	lx:québ	di:*
+encapsider/a0p+()	po:v1__t_q__a	se:bio	di:*
+endotrachéal/W.()	po:adj	se:méd	di:*
+enthéogène/S.()	po:adj	is:epi	se:pharma	se:reli	et:grec	di:*
 épicyclique/S.()	po:adj	is:epi	se:math	di:*
 Épidaure/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*
 épitoquie/S.()	po:nom	is:fem	lx:rare	se:bio	et:grec	di:*
 épitrochoïde/S.()	po:adj	is:epi	se:math	di:*
-emportiérage/S.()	po:nom	is:mas	lx:québ	di:*
-encapsider/a0p+()	po:v1__t_q__a	se:bio	di:*
-enthéogène/S.()	po:adj	is:epi	se:pharma	se:reli	et:grec	di:*
 exclaustration/S.()	po:nom	is:fem	se:chris	di:*
 exsanguiner/a0p+()	po:v1__t_q__a	se:méd	di:*
 Fourvière/L'D'Q'	po:npr	is:epi	is:inv	di:*
+fragmentable/S.()	po:adj	is:epi	di:*
 francocide/S.()	po:nom	is:mas	lx:néo	se:socio	di:*
 fustier/F.()	po:nom	se:constr	di:*
-gênance/S.()	po:nom	is:fem	lx:néo	di:*
-Grabels/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*
-géodrilologie/S.()	po:nom	is:fem	lx:rare	se:zool	di:*
+glandu/S.()	po:nom	is:epi	lx:péj	di:*
 glottophobie/S.()	po:nom	is:fem	lx:néo	di:*
+Grabels/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*
+géo-ingénierie/S.()	po:nom	is:fem	se:géol	di:C
+géodrilologie/S.()	po:nom	is:fem	lx:rare	se:zool	di:*
+géoingénierie/S.()	po:nom	is:fem	se:géol	di:M
+gênance/S.()	po:nom	is:fem	lx:néo	di:*
 icosaédrique/S.()	po:adj	is:epi	di:*
 ignosticisme/S.()	po:nom	is:mas	lx:néo	se:reli	di:*
 ignostique/S.()	po:adj	is:epi	lx:néo	se:reli	di:*
+infodivertissement/S.()	po:nom	is:mas	se:comm	di:*
 Isolde/L'D'Q'	po:prn	is:fem	is:inv	di:*
 jaserie/S.()	po:nom	is:fem	se:comm	di:*
-kompromat/S.()	po:nom	is:mas	se:polit	di:*
-kikuyu/S.()	po:nom	po:adj	is:epi	se:gent	di:*
+kebbé/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
+kikuyu/S.()	po:nom	po:adj	is:epi	se:gent	se:lang	di:*
+kimchi/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
 kinétine/S.()	po:nom	is:fem	se:bioch	di:*
+kitesurfeur/Fs()	po:nom	se:sport	di:*
+kompromat/S.()	po:nom	is:mas	se:polit	di:*
 konjac/S.()	po:nom	is:mas	se:bot	di:*
+labné/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
+limoncello/S.()	po:nom	is:mas	se:alcool	et:ita	di:*
+lombalgique/S.()	po:adj	is:epi	se:méd	di:*
 lounge/S.()	po:nom	is:mas	di:*
 lysimètre/S.()	po:nom	is:mas	se:agri	di:*
 lysimétrie/S.()	po:nom	is:fem	se:agri	di:*
 maudisseur/Fs()	po:nom	po:adj	se:reli	di:*
-mécanochimie/S.()	po:nom	is:fem	se:chim	di:*
 merdification/S.()	po:nom	is:fem	di:*
 microfilament/S.()	po:nom	is:mas	di:*
 microgouttelette/S.()	po:nom	is:fem	di:*
+mochi/S.()	po:nom	is:mas	se:cuis	et:jap	di:*
+mocktail/S.()	po:nom	is:mas	se:cuis	di:*
 monothélisme/S.()	po:nom	is:mas	se:chris	di:*
 Morrigan/L'D'Q'	po:prn	is:fem	is:inv	se:myth	di:*
 moutarder/a0p+()	po:v1_it____a	se:cuis	di:*
 multicursal/W.()	po:adj	se:math	di:*
 mycophyte/S.()	po:nom	is:mas	se:myco	di:*
+mécanochimie/S.()	po:nom	is:fem	se:chim	di:*
+mégabassine/S.()	po:nom	is:fem	di:*
+mégafeu/X.()	po:nom	is:mas	di:*
 mésocarnivore/S.()	po:nom	is:epi	se:zool	di:*
+métavers/S.()	po:nom	is:mas	se:info	di:*
 méthanation/S.()	po:nom	is:fem	se:chim	di:*
+narcobanditisme/S.()	po:nom	is:mas	se:crime	di:*
+narcoterrorisme/S.()	po:nom	is:mas	se:crime	di:*
+nasopharyngé/F.()	po:adj	se:méd	di:*
+optogénétique/S.()	po:nom	is:fem	se:méd	di:*
+optométrique/S.()	po:adj	is:epi	se:méd	di:*
 ossécaille/S.()	po:adj	is:epi	se:lingu	di:*
+paléoclimatologue/S.()	po:nom	is:epi	di:*
+pansexualité/S.()	po:nom	is:fem	se:sexe	di:*
 paralimbique/S.()	po:adj	is:epi	se:anat	di:*
+paresthésique/S.()	po:adj	is:epi	se:méd	di:*
 perfluoré/F.()	po:nom	po:adj	se:chim	di:*
+périménopause/S.()	po:nom	is:fem	se:méd	di:*
+peropératoire/S.()	po:adj	is:epi	se:méd	di:*
+phagosome/S.()	po:nom	is:mas	se:méd	di:*
 photophérèse/S.()	po:nom	is:fem	se:méd	di:*
 phytoplasme/S.()	po:nom	is:mas	se:bio	et:grec	di:*
+pisciniste/S.()	po:nom	is:epi	di:*
 plaçable/S.()	po:adj	is:epi	di:*
 pluricentenaire/S.()	po:adj	is:epi	se:temps	di:*
+pornodivulgation/S.()	po:nom	is:fem	se:crime	di:*
+portobello/S.()	po:nom	is:mas	se:cuis	di:*
+propriocepteur/S.()	po:nom	is:mas	se:bio	di:*
 proxiphotographie/S.()	po:nom	is:fem	se:image	di:*
+pélicandrome/S.()	po:nom	is:mas	se:aéron	di:*
+ramen/S.()	po:nom	is:mas	se:cuis	et:jap	di:*
 recréditer/a0p+()	po:v1__t___zz	di:*
-résumable/S.()	po:adj	is:epi	se:litt	di:*
-résurrecteur/Fc()	po:adj	se:reli	di:*
+rejouabilité/S.()	po:nom	is:fem	se:jeu	di:*
 riparien/F+()	po:adj	se:géogr	di:*
 ripisylve/S.()	po:nom	is:fem	se:sylvi	di:*
 ronin/S.()	po:nom	is:mas	se:hist	et:jap	di:*
 Rosalinde/L'D'Q'	po:prn	is:fem	is:inv	di:*
+réduflation/S.()	po:nom	is:fem	se:écono	di:*
+réflexologue/S.()	po:nom	is:epi	se:méd	di:*
+restauratif/F.()	po:adj	di:*
+résumable/S.()	po:adj	is:epi	se:litt	di:*
+résurrecteur/Fc()	po:adj	se:reli	di:*
 sacoglosse/S.()	po:nom	is:fem	se:zool	di:*
 Samhain	po:npr	is:fem	is:inv	se:reli	di:*
+sans-abrisme/S.()	po:nom	is:mas	di:*
+saprobionte/S.()	po:nom	is:mas	se:bio	di:*
 saturomètre/S.()	po:nom	is:mas	se:méd	di:*
 saxaul/S.()	po:nom	is:mas	se:bot	di:*
 sexer/a0p+()	po:v1_it____a	se:sexe	di:*
+shrinkflation/S.()	po:nom	is:fem	se:écono	di:*
+skyr/S.()	po:nom	is:mas	se:cuis	di:*
 skyrmion/S.()	po:nom	is:mas	se:phys	di:*
-antiskyrmion/S.()	po:nom	is:mas	se:phys	di:*
+smicardisation/S.()	po:nom	is:fem	se:écono	di:*
 sous-soleuse/S.()	po:nom	is:fem	se:agri	di:*
-saprobionte/S.()	po:nom	is:mas	se:bio	di:*
+steampunk/L'D'Q'	po:adj	is:epi	is:inv	lx:néo	di:M
+steampunk/S.()	po:adj	is:epi	lx:néo	di:R
 stochasticité/S.()	po:nom	is:fem	se:log	di:*
+streameur/Fs()	po:nom	se:comm	di:*
+stéatohépatite/S.()	po:nom	is:fem	se:méd	di:*
+superaliment/S.()	po:nom	is:mas	se:méd	di:*
+surcyclage/S.()	po:nom	is:mas	se:écolo	di:*
+suroccupé/F.()	po:adj	di:*
 surtourisme/S.()	po:nom	is:mas	se:socio	di:*
 synodalité/S.()	po:nom	is:fem	se:chris	di:*
+tahini/S.()	po:nom	is:mas	se:cuis	di:*
 tardiveté/S.()	po:nom	is:fem	se:temps	di:*
 texel/S.()	po:nom	is:mas	se:info	di:*
-tahini/S.()	po:nom	is:mas	se:cuis	di:*
+thermobarique/S.()	po:adj	is:epi	se:phys	di:*
 torsoplastie/S.()	po:nom	is:fem	se:chir	se:sexe	di:*
+trampoliniste/S.()	po:nom	is:epi	se:sport	di:*
+transdimensionnel/F+()	po:adj	se:sf	di:*
 transracial/W.()	po:adj	lx:néo	se:socio	di:*
 transracialisme/S.()	po:nom	is:mas	lx:néo	se:socio	di:*
-transdimensionnel/F+()	po:adj	se:sf	di:*
 tritagoniste/S.()	po:nom	is:epi	se:théâ	et:grec	di:*
+trottinettiste/S.()	po:nom	is:epi	di:*
 truffade/S.()	po:nom	is:fem	se:cuis	di:*
 tsimihety/S.()	po:nom	po:adj	is:epi	se:gent	se:lang	di:*
+ultraconservatisme/S.()	po:nom	is:mas	se:polit	di:*
+ultratransformé/F.()	po:adj	se:méd	se:cuis	di:*
 unicursal/W.()	po:adj	se:math	di:*
+urbex/L'D'Q'	po:nom	is:mas	is:inv	di:*
 ventirad/S.()	po:nom	is:mas	se:info	di:*
+vidéoverbalisation/S.()	po:nom	is:fem	se:polit	se:sécu	di:*
 vlogueur/Fs()	po:nom	se:vidéo	di:*
 woke/S.()	po:nom	po:adj	is:epi	se:polit	et:angl	di:*
 wokisme/S.()	po:nom	is:mas	se:polit	et:angl	di:*
+zaatar/S.()	po:nom	is:mas	se:cuis	et:ara	di:*
+zythologue/S.()	po:nom	is:epi	di:*
 Zelensky/L'D'Q'	po:patr	is:epi	is:inv	se:polit	di:*
 Bifröst/L'D'Q'	po:nom	is:mas	is:inv	se:myth	di:*
 Ragnarök/L'D'Q'	po:nom	is:mas	is:inv	se:myth	di:*

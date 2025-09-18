@@ -8029,7 +8029,8 @@ __typo_ordinaux_chiffres_romains_incorrects!5__
 #        <<- /romain/ __else__ ->> ⅠⅠᵈᵉˢ                   && Nombre ordinal romain. Second : IIᵈ. Seconde : IIᵈᵉ. Seconds : IIᵈˢ. Secondes : IIᵈᵉˢ.|http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=4271
 
     ~^[IVXLCDM]{1,20}$  [e|è|ième|ieme|ème|eme]
-        <<- /typo/ ->> \1ᵉ                                  && Nombre ordinal romain singulier. Exemples : IIᵉ, IIIᵉ, IVᵉ…|http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=4271
+        <<- /typo/ not (value(\1, "|D|") and value(\2, "|e|"))
+        ->> \1ᵉ                                             && Nombre ordinal romain singulier. Exemples : IIᵉ, IIIᵉ, IVᵉ…|http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=4271
 #        <<- /romain/ __else__ ->> =\1.replace("I", "Ⅰ").replace("V", "Ⅴ").replace("X", "Ⅹ").replace("L", "Ⅼ").replace("C", "Ⅽ").replace("D", "Ⅾ").replace("M", "Ⅿ") + "ᵉ"
 #        && Nombre ordinal romain singulier. Exemples : 2ᵉ, 3ᵉ, 4ᵉ…|http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=4271
 
@@ -8066,6 +8067,8 @@ TEST: Le {{XX ème}} siècle.                     ->> XXᵉ
 TEST: Le {{XXIème}} siècle.                     ->> XXIᵉ
 TEST: le {{XXè}} siècle.                        ->> XXᵉ
 TEST: les {{CXIèmes}}                           ->> CXIᵉˢ
+TEST: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+TEST: a b c d e f g h i j k l m n o p q r s t u v w x y z
 #TEST: __romain__ François {{Iier}}              ->> Ⅰᵉʳ
 #TEST: __romain__ {{Iiers}}                      ->> Ⅰᵉʳˢ
 #TEST: __romain__ {{I ière}}                     ->> Ⅰʳᵉ
@@ -9387,7 +9390,7 @@ __typo_À_début_phrase!7__
     <start>  A  @:[GNAYM]¬:(?:Q|3s)
     <start>  A  peine
     <start>  A  [change|force] [de|d’]
-        <<- /typo/ not value(\3, "|t’|priori|posteriori|postériori|contrario|capella|fortiori|giorno|a|")
+        <<- /typo/ not value(\3, "|t’|priori|posteriori|postériori|contrario|capella|fortiori|giorno|a|b|")
         -2>> À                                                                                      && S’il s’agit de la préposition « à », il faut accentuer la majuscule.
 
     <start>  A  bientôt  [<end>|,|)]
@@ -13048,7 +13051,7 @@ __conf_ce_ceux_se!6__
         <<- /conf/ not (tag(\1, "eg1mot") and value(<1, "|pronom|"))
         -1>> ce                                             && Confusion. Exemples : ce bâtiment, se perdre.|http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=2440
 
-    ceux  ?[ne|n’]¿  @:V0.*:[123][sp]¬:P|>a/
+    ceux  ?[ne|n’]¿  @:V0e.*:[123][sp]¬:P|>a/
         <<- /conf/ -1>> ce                                  && Confusion.|http://www.intellego.fr/soutien-scolaire-6eme/aide-scolaire-francais/ce-ceux-ou-se/3829
 
     se [ne|n’] [>être|>pouvoir|>devoir]
@@ -13093,6 +13096,7 @@ TEST: Pensez-vous que ceux ne sachant même pas ce qu’est une VHS peuvent y tr
 TEST: la réduction de ma liberté intellectuelle et celle de ceux autour de moi
 TEST: ceux autour de vous ne sont pas ce que vous croyez.
 TEST: voir ce que c’est n’est pas impossible
+TEST: ceux (qui) ont
 
 
 __conf_se_ceux_ce!6__
