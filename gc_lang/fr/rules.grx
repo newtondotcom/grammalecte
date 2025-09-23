@@ -11935,7 +11935,7 @@ TEST: un partage à parts égales
 __conf_à_peu_près__
     !! à peu près ¡¡
     [a|à] [peu|peux|peut] [près|>pré|>prêt]
-        <<- /loc/ ->> à peu près                                            && Confusion.|https://fr.wiktionary.org/wiki/%C3%A0_peu_pr%C3%A8s
+        <<- /loc/ ->> à peu près                                            && Confusion adverbiale “à peu près”.|https://fr.wiktionary.org/wiki/%C3%A0_peu_pr%C3%A8s
         <<- ~>> *
 
 TEST: C’est {{à peu prêt}} la même chose.                                   ->> à peu près
@@ -11949,6 +11949,16 @@ __conf_à_pleines_dents__
         <<- /loc/ ->> à pleines dents                                       && Locution “à pleines dents” (toujours au pluriel).
 
 TEST: Elle mord la vie {{à plaine dent}}.                                   ->> à pleines dents
+TEST: à pleines dents
+
+
+__conf_à_prix_d_or!7__
+    !! à prix d’ or ¡¡
+    [à|a] [prix|pris|prie|pries] d’ [or|ors|hors|aure]
+        <<- /loc/ ->> à prix d’or                                           && Confusion. Locution adverbiale “à prix d’or”.|https://fr.wiktionary.org/wiki/%C3%A0_prix_d%E2%80%99or
+
+TEST: vendre de la merde {{à pris d’or}}, ils savent faire                  ->> à prix d’or
+TEST: débourser un cadeau banal à prix d’or.
 
 
 __conf_à_quel_point!7__
