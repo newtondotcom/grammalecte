@@ -286,12 +286,14 @@ def main ():
                 # spelling suggestions
                 for sWord in sText[1:].strip().split():
                     if sWord:
+                        print(sWord)
                         for lSugg in oSpellChecker.suggest(sWord):
                             echo(" | ".join(lSugg))
                             if xArgs.debug:
                                 for sSugg in lSugg:
                                     nDist = strt.distanceDamerauLevenshteinX(sWord, sSugg)
                                     echo(f"{sSugg:30} {nDist}")
+                        print()
             elif sText.startswith(">"):
                 # path in the word graph
                 oSpellChecker.drawPath(sText[1:].strip())
