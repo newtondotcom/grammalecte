@@ -367,7 +367,7 @@ class IBDAWG {
             return;
         }
         let cCurrent = sRemain.slice(0, 1);
-        for (let [cChar, jAddr] of this._getCharArcs(iAddr)) {
+        for (let [cChar, jAddr] of this._getCharArcs(iAddr, cCurrent)) {
             if (char_player.d1to1.gl_get(cCurrent, cCurrent).indexOf(cChar) != -1) {
                 this._suggest(oSuggResult, sRemain.slice(1), nMaxSwitch, nMaxDel, nMaxHardRepl, nMaxJump, nDist, nDeep+1, jAddr, sNewWord+cChar);
             }
@@ -429,12 +429,21 @@ class IBDAWG {
         return this.a2grams.has(sChars);
     }
 
-    * _getCharArcs (iAddr) {
+    * _getCharArcs (iAddr, cChar="") {
         // generator: yield all chars and addresses from node at address <iAddr>
+        let lStack = [];
         for (let [nVal, jAddr] of this._getArcs(iAddr)) {
             if (nVal <= this.nChar) {
-                yield [this.dCharVal.get(nVal), jAddr];
+                if (char_player.d1to1.gl_get(cChar, cChar).indexOf(this.dCharVal.get(nVal)) != -1) {
+                    yield [this.dCharVal.get(nVal), jAddr];
+                }
+                else {
+                    lStack.push([this.dCharVal.get(nVal), jAddr]);
+                }
             }
+        }
+        while (lStack.length > 0) {
+            yield lStack.shift();
         }
     }
 

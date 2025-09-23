@@ -253,7 +253,7 @@ class IBDAWG:
 
     def _suggest (self, oSuggResult, sRemain, nMaxSwitch=0, nMaxDel=0, nMaxHardRepl=0, nMaxJump=0, nDist=0, nDeep=0, iAddr=0, sNewWord="", bAvoidLoop=False):
         # recursive function
-        #logging.info((nDeep * "  ") + sNewWord + ":" + sRemain)
+        #logging.info((nDeep * "  ") + f"{sNewWord}:{sRemain} nMaxSwitch:{nMaxSwitch} nMaxDel:{nMaxDel} nMaxHardRepl:{nMaxHardRepl} nMaxJump:{nMaxJump} | nDist:{nDist} / {oSuggResult.nDistLimit}")
         if self.lByDic[iAddr] & self._finalNodeMask:
             if not sRemain:
                 oSuggResult.addSugg(sNewWord, nDeep)
@@ -268,7 +268,7 @@ class IBDAWG:
         if nDist > oSuggResult.nDistLimit:
             return
         cCurrent = sRemain[0:1]
-        for cChar, jAddr in self._getCharArcs(iAddr):
+        for cChar, jAddr in self._getCharArcs(iAddr, cCurrent):
             if cChar in cp.d1to1.get(cCurrent, cCurrent):
                 self._suggest(oSuggResult, sRemain[1:], nMaxSwitch, nMaxDel, nMaxHardRepl, nMaxJump, nDist, nDeep+1, jAddr, sNewWord+cChar)
             elif not bAvoidLoop:
@@ -310,11 +310,17 @@ class IBDAWG:
             return True
         return sChars in self.a2grams
 
-    def _getCharArcs (self, iAddr):
+    def _getCharArcs (self, iAddr, cChar=""):
         "generator: yield all chars and addresses from node at address <iAddr>"
+        lStack = []
         for nVal, jAddr in self._getArcs(iAddr):
             if nVal <= self.nChar:
-                yield (self.dCharVal[nVal], jAddr)
+                if self.dCharVal[nVal] in cp.d1to1.get(cChar, cChar):
+                    yield (self.dCharVal[nVal], jAddr)
+                else:
+                    lStack.append((self.dCharVal[nVal], jAddr))
+        while lStack:
+            yield lStack.pop(0)
 
     def _getTails (self, iAddr, sTail="", n=2):
         "return a list of suffixes ending at a distance of <n> from <iAddr>"

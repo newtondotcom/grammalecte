@@ -67,7 +67,7 @@ class TestDictionary (unittest.TestCase):
             ("email", "courriel"),
             ("fatiqué", "fatigué"),
             ("coeur", "cœur"),
-            ("trèèèèèèèèès", "très"),
+            ("triiiiicheuuuur", "tricheur"),
             ("vraaaaiiiimeeeeennnt", "vraiment"),
             ("oeil", "œil"),
             ("Oeil", "Œil"),
@@ -80,6 +80,7 @@ class TestDictionary (unittest.TestCase):
             ("exsepttion", "exception"),
             ("ebriete", "ébriété"),
             ("ennormmement", "énormément"),
+            ("maîtnesse", "maîtresse"),
             ("sintaxik", "syntaxique")
         ]:
             #with timeblock(sWord):
