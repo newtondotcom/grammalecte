@@ -29,7 +29,7 @@ Analysis commands:
     !word                               spelling suggestion
     >word                               draw path of word in the word graph
     =[filter1][=[filter2]]              show entries which fit to filters (filter1 for word, filter2 for morphology)
-    ≠word|word|…                        show distance between words
+    ≠word1 word2 [word3] ...            show distance between words
     $some_text                          show sentences and tokens of text
 
 Other commands:
@@ -309,9 +309,12 @@ def main ():
                     echo("{:<30} {:<30} {}".format(*aRes))
             elif sText.startswith("≠"):
                 # distances calculation
-                lWords = sText[1:].split("|")
+                lWords = sText[1:].split()
                 for s1, s2 in itertools.combinations(lWords, 2):
                     strt.showDistance(s1, s2)
+                    if xArgs.debug:
+                        strt.showDistance(strt.simplifyWord(s1), strt.simplifyWord(s2))
+                        echo("")
             elif sText.startswith("/o+ "):
                 oGrammarChecker.gce.setOptions({ opt:True  for opt in sText[3:].strip().split()  if opt in oGrammarChecker.gce.getOptions() })
                 echo("done")
