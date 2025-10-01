@@ -4,13 +4,16 @@
 
 - Nouvelles règles de contrôle.
 - Suppression de faux positifs.
+- Quelques bugs supprimés.
+- [Thésaurus] Mise à jour (Merci à Algoo).
 - [Conjugueur] Corrections concernant les participes passés.
-- [Dictionnaire] Mise à jour, et contrôle strict sur les entrées (de nombreuses erreurs d’étiquetage corrigées).
-- [Graphspell] Amélioration du moteur de suggestions.
-- [Graphspell] nouvelles suggestions ad hoc.
+- [Dictionnaire] Mise à jour (v7.7), et contrôle strict sur les entrées (de nombreuses erreurs d’étiquetage corrigées).
+- [Graphspell] Amélioration du moteur de suggestions (plus rapide, plus précis).
+- [Graphspell] Nouvelles suggestions ad hoc.
 - [LibreOffice] Formateur de texte: peut dorénavant agir sur une sélection de texte (Merci à Jean-Marc Zambon).
 - [LibreOffice] Ajustement de la couleur de l’UI pour être lisible pour ceux qui utilisent un thème sombre.
 - [LibreOffice] Correction: normalisation des URL de l’import/export des fichiers.
+- [Serveur] Mise à jour vers Bottle.py v0.13.4
 
 
 ## Grammalecte 2.2 (mars 2023)
