@@ -13454,7 +13454,11 @@ __conf_coup_cout_cou1__
 
     [un|le] [>coût|>cout|>cou] d’ avance
     [un|le] [>coût|>cout|>cou] [de|d’] retard
-        <<- /conf/ -2>> coup                    && Confusion. Locution “avoir un coup d’avance” ou un “coup de retard”.
+        <<- /conf/ -2>> coup                    && Confusion. Locution “avoir un coup d’avance” ou “un coup de retard”.
+
+    [plusieurs|quelques|$:B] [>coût|>cout|>cou] d’ avance
+    [plusieurs|quelques|$:B] [>coût|>cout|>cou] [de|d’] retard
+        <<- /conf/ -2>> coups                   && Confusion. Locution “avoir plusieurs coups d’avance” ou “plusieurs coups de retard”.
 
     [>cou|>coût|>cout] [au-dessous|en-dessous] [de|d’] la ceinture
     [>cou|>coût|>cout] [de|d’] [>baguette|>barre|>bâton|>bec|>bélier|blues|>botte|>boule|>boutoir|>bol|>bite|>cœur|>chaud|>coude|>couteau|>crayon|>dé|>dent|>déprime|>éponge|>feu|>froid|fil|>filet|>folie|>foudre|>genou|>grâce|>griffe|>grisou|>gueule|>hache|>hachette|>hanche|Jarnac|jus|>jeune|>klaxon|>main|maître|maitre|>massue|>marteau|>menton|monté+s|>nostalgie|>pied|>poing|>poignard|>poignet|>pouce|>pute|>queue|>rein|>rabot|>savate|>sang|>sabot|>sabre|>semonce|>sonnette|>sifflet|>soleil|>sonde|>sort|>surin|>tête|>théâtre|>tonnerre|>torchon|>trique|>vent|vieux]
@@ -13490,6 +13494,8 @@ __conf_coup_cout_cou1__
     sous le [coût|cout|cou] du [bonheur]
         <<- /conf/ -3>> coup            && Confusion probable. Locution “sous le coup de…”|https://fr.wiktionary.org/wiki/sous_le_coup_de
 
+TEST: il a un {{cou}} d’avance                                                      ->> coup
+TEST: elle a dix {{coûts}} d’avance                                                 ->> coups
 TEST: le collier autour de son {{coup}}                                             ->> cou
 TEST: J’ai pris un {{cou}} de bâton.                                                ->> coup|coups
 TEST: Encore un {{cou}} dur.                                                        ->> coup|coups
@@ -33460,7 +33466,11 @@ TEST: sans avoir {{ignorée}} le problème.                                     
 ## avoir avec participe passé
 __ppas_n_m_t_l_avoir__
     n’  ?[en|y]¿  avoir  @:(?:Y|[123][sp])¬:[QGWMX]
-        <<- /ppas/ not value(\-1, "|confiance|charge|cours|envie|garde|marre|peine|prise|crainte|cure|affaire|hâte|force|recours|pouvoir|")
+        <<- /ppas/ not value(\-1, "|confiance|charge|cours|envie|figure|garde|marre|peine|prise|crainte|cure|affaire|hâte|force|recours|pouvoir|")
+        --1>> =suggVerbPpas(\-1, ":m:s")                                                && Confusion probable : employez un participe passé.
+
+    n’  ?[en|y]¿  >avoir  @:V1.*:Y¬:[QGWMX]
+        <<- /ppas/ not value(\-1, "|confiance|charge|cours|envie|figure|garde|marre|peine|prise|crainte|cure|affaire|hâte|force|recours|pouvoir|")
         --1>> =suggVerbPpas(\-1, ":m:s")                                                && Confusion probable : employez un participe passé.
 
     l’  >avoir  @:(?:Y|[123][sp])¬:(?:[QGWMX]|V0)
@@ -33481,6 +33491,7 @@ TEST: elle t’en a {{parle}}.                                                  
 TEST: c’est vous qui m’avez {{convertit}}.                                                          ->> converti
 TEST: Mélanie l’a {{transformer}}                                                                   ->> transformé
 TEST: l’avoir {{trouver}} si affaibli m’a glacé                                                     ->> trouvé
+TEST: nous n’avions pas {{attirer}}                                                                 ->> attiré
 TEST: parce que t’as envie que je le fasse
 TEST: t’avais confiance
 TEST: t’en as envie ?
@@ -36888,6 +36899,9 @@ TEST: si les femmes {{auraient}} parlé, je l’aurais su.                      
 
 # quand/lorsque/puisque + indicatif
 __vmode_quand_lorsque_indicatif__
+    <start> ?et¿ quand cela eût été [<end>|,|?|!]
+        <<- !-3>>
+
     [quand|lorsque|lorsqu’|puisque|puisqu’]  [je|j’|tu|il|elle|iel|on|nous|vous|ils|elles|iels|ça|cela|ceci]  @:S¬:[GI]
     [quand|lorsque|lorsqu’|puisque|puisqu’]  [je|j’|tu|il|elle|iel|on|nous|vous|ils|elles|iels|ça|cela|ceci]  @:V0e.*:S
         <<- /vmode/ --1>> =suggVerbMode(\-1, ":I", \-2)                                             && Après “quand” ou “lorsque” ou “puisque”, le verbe ne s’emploie pas au subjonctif mais à l’indicatif.
@@ -36910,6 +36924,7 @@ TEST: puisque les grandes {{eussent}} réussi                                   
 TEST: quel homme eût abandonné un empire pour une promesse ?
 TEST: qui eût abandonné un empire pour une promesse ?
 TEST: quels amis ils eussent trompés pour si peu ?
+TEST: Et quand cela eût été ?
 
 
 # pourquoi + indicatif
@@ -37416,6 +37431,10 @@ TEST: afin de l’informer qu’elle pouvait se présenter
 
 
 __vmode_locution_que_subjonctif__
+    en sorte [que|qu’] [il|elle|iel|ça|cela|ceci] a
+    en sorte [que|qu’] [un|une|le|la|l’|ce|cet|cette|mon|ton|son|ma|ta|sa|notre|votre|leur|chaque]  @:N.*:[si] a
+        <<- !-1>>
+
     à       [condition|moins|supposer]  [que|qu’]  [je|j’|tu|il|elle|iel|nous|vous|ils|elles|iels|ça|cela|ceci]  @:I¬:[GYS]
     de      [crainte|peur]              [que|qu’]  [je|j’|tu|il|elle|iel|nous|vous|ils|elles|iels|ça|cela|ceci]  @:I¬:[GYS]
     de      [façon|manière]             [que|qu’]  [je|j’|tu|il|elle|iel|nous|vous|ils|elles|iels|ça|cela|ceci]  @:I¬:(?:[GYS]|Iq)
@@ -37461,6 +37480,7 @@ TEST: À condition que tu réussisses.
 TEST: À condition que tu me prennes.
 TEST: Je travaille de façon que nous puissions vivre.
 TEST: Je travaille de façon qu’il puisse vivre.
+TEST: en sorte que le meulon a pour diamètre deux fois la longueur des tiges du froment
 
 
 __vmode_en_admettant_que_subjonctif__
