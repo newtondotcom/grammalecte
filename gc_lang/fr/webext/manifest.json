@@ -125,15 +125,6 @@
     "downloads",
     "clipboardWrite",
     "storage"
-  ],
+  ]
 
-  "chrome_settings_overrides": {
-    "search_provider": {
-      "name": "Grammalecte",
-      "search_url": "https://grammalecte.net/dictionary.php?prj=fr&lemma={searchTerms}",
-      "keyword": "gram",
-      "favicon_url": "https://grammalecte.net/favicon.ico",
-      "is_default": false
-    }
-  }
 }
