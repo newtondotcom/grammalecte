@@ -12,9 +12,9 @@
 
 
 const sGrammalecteConjugueurHTML = `
-    <div class="centered_bar">
+    <div class="grammalecte_centered_bar">
         <div contenteditable="true" id="grammalecte_conj_verb" autofocus >entrez un verbe</div>
-        <div id="grammalecte_conj_button">Conjuguer</div>
+        <div id="grammalecte_conj_erase_button">×</div>
     </div>
 
     <div class="grammalecte_clearer"></div>
@@ -158,4 +158,22 @@ const sGrammalecteConjugueurHTML = `
     <div class="grammalecte_clearer"></div>
 `;
 
+const sGrammalecteThesaurusHTML = `
+    <div class="grammalecte_centered_bar">
+        <div contenteditable="true" id="grammalecte_thes_word" autofocus ></div>
+        <div id="grammalecte_thes_erase_button">×</div>
+    </div>
 
+    <div class="grammalecte_clearer"></div>
+
+    <h1 class="grammalecte_thes_title" id="grammalecte_thes_title" class="center">&nbsp;</h1>
+
+    <div id="grammalecte_separator">❦</div>
+    <div id="grammalecte_thes_word_info" class="center" style="display: none;">Aucun synonyme trouvé</div>
+
+    <div id="grammalecte_synonyms_list">
+
+    </div>
+
+    <div class="grammalecte_clearer"></div>
+`;

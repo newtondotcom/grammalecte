@@ -23,7 +23,7 @@ var helpers = {
         // for more options have a look here: https://gist.github.com/Noitidart/ec1e6b9a593ec7e3efed
         // if not in workers, use sdk/data.load() instead
         try {
-            if(typeof(process) !== 'undefined') {
+            if (typeof(process) !== 'undefined') {
                 //console.log('loadFile(disque): ' + spf);
                 let fs = require("fs");
                 return fs.readFileSync(spf, "utf8");

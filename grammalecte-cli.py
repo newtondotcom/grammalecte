@@ -16,6 +16,7 @@ import grammalecte
 import grammalecte.text as txt
 import grammalecte.graphspell.str_transform as strt
 from grammalecte.graphspell.echo import echo
+import grammalecte.fr.thesaurus as thes
 
 
 _EXAMPLE = "Quoi ? Racontes ! Racontes-moi ! Bon sangg, parles ! Oui. Il y a des menteur partout. " \
@@ -31,6 +32,7 @@ Analysis commands:
     =[filter1][=[filter2]]              show entries which fit to filters (filter1 for word, filter2 for morphology)
     ≠word1 word2 [word3] ...            show distance between words
     $some_text                          show sentences and tokens of text
+    #word1 [word2] ...                  get synonyms of words
 
 Other commands:
     /help                       /h      show this text
@@ -317,6 +319,17 @@ def main ():
                     if xArgs.debug:
                         strt.showDistance(strt.simplifyWord(s1), strt.simplifyWord(s2))
                         echo("")
+            elif sText.startswith("#"):
+                # synonyms
+                lWords = sText[1:].split()
+                for sWord in lWords:
+                    lSyns = thes.getSyns(sWord)
+                    if lSyns:
+                        echo(f"\n{sWord}")
+                        for sCat, lSyn in lSyns:
+                            echo(f"> {sCat} : " + " | ".join(lSyn))
+                    else:
+                        echo(f"\n{sWord}: pas de synonymes trouvés")
             elif sText.startswith("/o+ "):
                 oGrammarChecker.gce.setOptions({ opt:True  for opt in sText[3:].strip().split()  if opt in oGrammarChecker.gce.getOptions() })
                 echo("done")

@@ -91,8 +91,12 @@
       "suggested_key": { "default": "Ctrl+Shift+6" },
       "description": "Ouvre le conjugueur"
     },
-    "lexicon_editor": {
+    "thesaurus_tab": {
       "suggested_key": { "default": "Ctrl+Shift+7" },
+      "description": "Ouvre le thésaurus"
+    },
+    "lexicon_editor": {
+      "suggested_key": { "default": "Ctrl+Shift+8" },
       "description": "Ouvre l’éditeur lexical"
     }
   },
@@ -112,6 +116,7 @@
     "grammalecte/fr/conj_data.json",
     "grammalecte/fr/mfsp_data.json",
     "grammalecte/fr/phonet_data.json",
+    "grammalecte/fr/thesaurus_data.json",
     "grammalecte/fr/tests_data.json",
     "img/logo-16.png"
   ],

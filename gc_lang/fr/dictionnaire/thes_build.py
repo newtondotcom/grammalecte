@@ -2,6 +2,7 @@
 
 import os
 import re
+import json
 
 
 def readFile (spf):
@@ -21,7 +22,7 @@ class ThesaurusBuilder ():
         self.dSynEntry = {}     # {sWord: iSynset}
         self.dSynset = {}       # {iSynset: lSynset}
         # thesaurus
-        self.dThesEntry = {}    # {sWord: lWord}
+        self.dThesaurus = {}    # {sWord: lWord}
 
     def readSynsets (self, spf):
         if not spf:
@@ -61,7 +62,7 @@ class ThesaurusBuilder ():
                     print("Ligne:", iEntryLine, ", nombre de liste incorrect")
                 iEntryLine = i
                 sEntry, sNum = sLine.split("|")
-                self.dThesEntry[sEntry] = []
+                self.dThesaurus[sEntry] = []
                 nClass = int(sNum)
                 nClassFound = 0
             else:
@@ -69,10 +70,10 @@ class ThesaurusBuilder ():
                 nClassFound += 1
                 sPOS, *lClass = sLine.split("|")
                 lClass = self._removeDuplicatesFrom(lClass)
-                self.dThesEntry[sEntry].append( (sPOS, lClass) )
+                self.dThesaurus[sEntry].append( (sPOS, lClass) )
 
     def showThesaurusEntries (self):
-        for sWord, lClass in self.dThesEntry.items():
+        for sWord, lClass in self.dThesaurus.items():
             for sPOS, lWord in lClass:
                 print(sWord, sPOS, "|".join(lWord))
 
@@ -82,10 +83,10 @@ class ThesaurusBuilder ():
     def merge (self):
         for sWord, lSynset in self.dSynEntry.items():
             for sPOS, iSynset in lSynset:
-                if sWord in self.dThesEntry:
-                    self.dThesEntry[sWord].append( (sPOS, self.dSynset[iSynset]) )
+                if sWord in self.dThesaurus:
+                    self.dThesaurus[sWord].append( (sPOS, self.dSynset[iSynset]) )
                 else:
-                    self.dThesEntry[sWord] = [ (sPOS, self.dSynset[iSynset]) ]
+                    self.dThesaurus[sWord] = [ (sPOS, self.dSynset[iSynset]) ]
 
     def write (self, spDest):
         nOffset = 0     # the offset for finding data is the number of bytes (-> encoding("utf-8"))
@@ -94,7 +95,7 @@ class ThesaurusBuilder ():
             sHeader = "UTF-8\n"
             hThes.write(sHeader)
             nOffset = len(sHeader.encode("utf-8"))
-            for sWord, lClass in self.dThesEntry.items():
+            for sWord, lClass in self.dThesaurus.items():
                 dOffset[sWord] = nOffset
                 sWordLine = sWord+"|"+str(len(lClass))+"\n"
                 hThes.write(sWordLine)
@@ -105,9 +106,14 @@ class ThesaurusBuilder ():
                     nOffset += len(sClassLine.encode("utf-8"))
         with open(spDest + "/thes_fr.idx", "w", encoding="utf-8", newline="\n") as hIndex:
             hIndex.write("UTF-8\n")
-            hIndex.write(str(len(self.dThesEntry))+"\n")
+            hIndex.write(str(len(self.dThesaurus))+"\n")
             for sWord, nOffset in sorted(dOffset.items()):
                 hIndex.write(sWord+"|"+str(nOffset)+"\n")
+
+    def writeAsJSON (self, spDest):
+        with open(spDest + "/thes_fr.json", "w", encoding="utf-8", newline="\n") as hJsonThes:
+            sJSON = json.dumps(self.dThesaurus, ensure_ascii=False)
+            hJsonThes.write(sJSON)
 
 
 def build (spfThesaurus="", spfSynsets="", spDest="_build"):
@@ -118,6 +124,7 @@ def build (spfThesaurus="", spfSynsets="", spDest="_build"):
     #oThes.showThesaurusEntries()
     oThes.merge()
     oThes.write(spDest)
+    oThes.writeAsJSON(spDest)
 
 
 if __name__ == '__main__':

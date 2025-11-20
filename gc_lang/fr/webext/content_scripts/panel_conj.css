@@ -7,7 +7,7 @@ div#grammalecte_conj_panel_content {
     width: 100%;
 }
 
-div.centered_bar {
+div.grammalecte_centered_bar {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -76,22 +76,19 @@ div#grammalecte_conj_verb {
     color: hsl(0, 0%, 70%);
 }
 
-div#grammalecte_conj_button {
+
+div#grammalecte_conj_erase_button {
     display: inline-block;
-    padding: 7px 10px;
-    font-size: 18px;
-    background-color: hsl(210, 30%, 50%);
-    color: hsl(210, 30%, 80%);
-    border-radius: 3px;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
+    margin: 3px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
 }
-div#grammalecte_conj_button:hover {
-    background-color: hsl(210, 60%, 40%);
-    color: hsl(210, 60%, 90%);
-    box-shadow: 0 0 2px hsl(210, 60%, 50%);
+div#grammalecte_conj_erase_button:hover {
+    background-color: hsl(0, 50%, 50%);
+    cursor: pointer;
 }
 
 div#grammalecte_conj_options {

@@ -570,7 +570,9 @@ class Dictionnaire:
         file_util.copy_file('césures/README_hyph_fr-3.0.txt', spExt+'/dictionaries')
         file_util.copy_file('césures/README_hyph_fr-2.9.txt', spExt+'/dictionaries')
         # thesaurus
-        dir_util.copy_tree(spBuild + "/thesaurus-v" + sThesVer, spExt + "/dictionaries")
+        file_util.copy_file(spBuild+"/thesaurus-v"+sThesVer+'/thes_fr.dat', spExt+"/dictionaries")
+        file_util.copy_file(spBuild+"/thesaurus-v"+sThesVer+'/thes_fr.idx', spExt+"/dictionaries")
+        file_util.copy_file(spBuild+"/thesaurus-v"+sThesVer+'/README_thes_fr.txt', spExt+"/dictionaries")
         # zip
         createZipFiles(spExt, spBuild, sExtensionName + '.oxt')
         # copy to Grammalecte Project
@@ -1408,7 +1410,7 @@ class StatsLex:
                 hDst.write("{} - {}\n".format(e[0], e[1]))
 
 
-def createThesaurusPackage (spBuild, sVersion, spCopy=""):
+def createThesaurusPackage (spBuild, sVersion, spCopy="", spDataDestGL=""):
     print(" * Création du thésaurus")
     spThesaurus = spBuild+"/thesaurus-v"+sVersion
     dir_util.mkpath(spThesaurus)
@@ -1420,6 +1422,9 @@ def createThesaurusPackage (spBuild, sVersion, spCopy=""):
         file_util.copy_file(spThesaurus+'/thes_fr.dat', spCopy)
         file_util.copy_file(spThesaurus+'/thes_fr.idx', spCopy)
         file_util.copy_file(spThesaurus+'/README_thes_fr.txt', spCopy)
+    if spModulesDestGL:
+        # copy in data source folder of Grammalecte
+        file_util.copy_file(spThesaurus+'/thes_fr.json', spDataDestGL)
 
 
 def main ():
@@ -1475,6 +1480,7 @@ def main ():
     ### Écriture des paquets
     echo("Création des paquets...")
 
+    nThesaurusVersion = 2.4
     spLexiconDestGL = "../../../lexicons"  if xArgs.grammalecte  else ""
     spLibreOfficeExtDestGL = "../oxt/Dictionnaires/dictionaries"  if xArgs.grammalecte  else ""
     spMozillaExtDestGL = ""  if xArgs.grammalecte  else "" # no more Hunspell dictionaries in Mozilla extensions for now
@@ -1486,8 +1492,8 @@ def main ():
     oFrenchDict.createFiles(spBuild, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], xArgs.mode, xArgs.simplify)
     oFrenchDict.createLexiconPackages(spBuild, xArgs.verdic, oStatsLex, spLexiconDestGL)
     oFrenchDict.createFileIfqForDB(spBuild)
-    createThesaurusPackage(spBuild, "2.4", spLibreOfficeExtDestGL)
-    oFrenchDict.createLibreOfficeExtension(spBuild, dMOZEXT, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], "2.4", spLibreOfficeExtDestGL)
+    createThesaurusPackage(spBuild, nThesaurusVersion, spLibreOfficeExtDestGL, spDataDestGL)
+    oFrenchDict.createLibreOfficeExtension(spBuild, dMOZEXT, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], nThesaurusVersion, spLibreOfficeExtDestGL)
     oFrenchDict.createMozillaExtensions(spBuild, dMOZEXT, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], spMozillaExtDestGL)
     oFrenchDict.createDictConj(spBuild, spDataDestGL)
     oFrenchDict.createDictDecl(spBuild, spDataDestGL)

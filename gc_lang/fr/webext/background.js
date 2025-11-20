@@ -51,6 +51,7 @@ const oWorkerHandler = {
                     case "getListOfTokens":
                     case "getSpellSuggestions":
                     case "getVerb":
+                    case "getSyns":
                         // send result to content script
                         if (typeof(oInfo.iReturnPort) === "number") {
                             let xPort = dConnx.get(oInfo.iReturnPort);
@@ -293,6 +294,9 @@ function handleMessage (oRequest, xSender, sendResponse) {
         case "openConjugueurTab":
             openConjugueurTab();
             break;
+        case "openThesaurusTab":
+            openThesaurusTab();
+            break;
         case "openLexiconEditor":
             openLexiconEditor(oParam["dictionary"]);
             break;
@@ -332,6 +336,7 @@ function handleConnexion (xPort) {
             case "getListOfTokens":
             case "getSpellSuggestions":
             case "getVerb":
+            case "getSyns":
                 oRequest.oInfo.iReturnPort = iPortId; // we pass the id of the return port to receive answer
                 oWorkerHandler.xGCEWorker.postMessage(oRequest);
                 break;
@@ -346,6 +351,12 @@ function handleConnexion (xPort) {
                 break;
             case "openConjugueurWindow":
                 openConjugueurWindow();
+                break;
+            case "openThesaurusTab":
+                openThesaurusTab();
+                break;
+            case "openThesaurusWindow":
+                openThesaurusWindow();
                 break;
             case "openLexiconEditor":
                 openLexiconEditor("__personal__", oParam["sWord"]);
@@ -391,6 +402,8 @@ if (!bThunderbird) {
     browser.contextMenus.create({ id: "conjugueur_window",          title: "Conjugueur [fenêtre]",                      contexts: ["all"] });
     //browser.contextMenus.create({ id: "dictionaries",               title: "Dictionnaires",                             contexts: ["all"] });
     browser.contextMenus.create({ id: "lexicon_editor",             title: "Éditeur lexical",                           contexts: ["all"] });
+    browser.contextMenus.create({ id: "thesaurus_tab",              title: "Thésaurus [onglet]",                        contexts: ["all"] });
+    browser.contextMenus.create({ id: "thesaurus_window",           title: "Thésaurus [fenêtre]",                       contexts: ["all"] });
 
     browser.contextMenus.onClicked.addListener(function (xInfo, xTab) {
         // xInfo = https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/contextMenus/OnClickData
@@ -413,6 +426,12 @@ if (!bThunderbird) {
                 openConjugueurWindow();
                 break;
             case "conjugueur_tab":
+                openConjugueurTab();
+                break;
+            case "thesaurus_window":
+                openConjugueurWindow();
+                break;
+            case "thesaurus_tab":
                 openConjugueurTab();
                 break;
             case "lexicon_editor":
@@ -442,6 +461,9 @@ browser.commands.onCommand.addListener(function (sCommand) {
         case "conjugueur_tab":
             openConjugueurTab();
             break;
+        case "thesaurus_tab":
+            openThesaurusTab();
+            break;
         case "lexicon_editor":
             openLexiconEditor();
             break;
@@ -458,12 +480,14 @@ browser.commands.onCommand.addListener(function (sCommand) {
 let nTabLexiconEditor = null;
 let nTabDictionaries = null;
 let nTabConjugueur = null;
+let nTabThesaurus = null;
 
 browser.tabs.onRemoved.addListener(function (nTabId, xRemoveInfo) {
     switch (nTabId) {
         case nTabLexiconEditor: nTabLexiconEditor = null; break;
         case nTabDictionaries:  nTabDictionaries = null; break;
         case nTabConjugueur:    nTabConjugueur = null; break;
+        case nTabThesaurus:     nTabThesaurus = null; break;
     }
 });
 
@@ -605,6 +629,46 @@ function openConjugueurWindow () {
     });
 }
 
+
+function openThesaurusTab () {
+    if (nTabThesaurus === null) {
+        if (bChrome) {
+            browser.tabs.create({
+                url: browser.runtime.getURL("panel/thesaurus.html")
+            }, onThesaurusOpened);
+            return;
+        }
+        let xThesTab = browser.tabs.create({
+            url: browser.runtime.getURL("panel/thesaurus.html")
+        });
+        xThesTab.then(onThesaurusOpened, showError);
+    }
+    else {
+        browser.tabs.update(nTabThesaurus, {active: true});
+    }
+}
+
+function onThesaurusOpened (xTab) {
+    nTabThesaurus = xTab.id;
+}
+
+function openThesaurusWindow () {
+    if (bChrome) {
+        browser.windows.create({
+            url: browser.runtime.getURL("panel/thesaurus.html"),
+            type: "popup",
+            width: 710,
+            height: 980
+        });
+        return;
+    }
+    let xConjWindow = browser.windows.create({
+        url: browser.runtime.getURL("panel/thesaurus.html"),
+        type: "popup",
+        width: 710,
+        height: 980
+    });
+}
 
 function showError (e) {
     console.error(e);

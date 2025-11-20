@@ -33,6 +33,9 @@ function onGrammalecteGCPanelClick (xEvent) {
         } else {
             oGrammalecte.oGCPanel.oTooltip.hide();
         }
+        if (xElem.className == "grammalecte_synonym") {
+            oGrammalecte.oGCPanel.getSyns(xElem.textContent.trim());
+        }
     }
     catch (e) {
         showError(e);
@@ -88,6 +91,11 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         this.xPanelContent.appendChild(this.xConjPanelContent);
         this.sVerb = "";
         this.bListenConj = false;
+        // Thésaurus
+        this.xThesPanelContent = oGrammalecte.createNode("div", {id: "grammalecte_thes_panel_content"});
+        this.xThesPanelContent.innerHTML = sGrammalecteThesaurusHTML;  // @Reviewers: sGrammalecteThesaurusHTML is a const value defined in <content_scripts/html_src.js>
+        this.xPanelContent.appendChild(this.xThesPanelContent);
+        this.sWord = "";
     }
 
     createMenu () {
@@ -97,8 +105,9 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         this.xEditorButton = oGrammalecte.createNode("div", {className: "grammalecte_menu_button", textContent: "Éditeur"});
         this.xLxgButton = oGrammalecte.createNode("div", {className: "grammalecte_menu_button", textContent: "Lexicographe"});
         this.xConjButton = oGrammalecte.createNode("div", {className: "grammalecte_menu_button", textContent: "Conjugueur"});
+        this.xThesButton = oGrammalecte.createNode("div", {className: "grammalecte_menu_button", textContent: "Thésaurus"});
         // buttons
-        this.xLexEditButton = oGrammalecte.createNode("div", {className: "grammalecte_menu_subbutton", textContent: "ÉditLex", title: "Ouvrir l’éditeur lexical", style: "background-color: hsl(210, 50%, 40%)"});
+        this.xLexEditButton = oGrammalecte.createNode("div", {className: "grammalecte_menu_subbutton", textContent: "Édit.", title: "Ouvrir l’éditeur lexical", style: "background-color: hsl(210, 50%, 40%)"});
         this.xLxgButton.appendChild(this.xLexEditButton);
         this.xAutoRefresh = oGrammalecte.createNode("div", {className: "grammalecte_menu_subbutton", textContent: "AutoRafr", title: "Auto-rafraîchissement de la correction grammaticale (3 s après la dernière frappe)"});
         this.xEditorButton.appendChild(this.xAutoRefresh);
@@ -136,6 +145,11 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
                 this.showConjugueur();
             }
         };
+        this.xThesButton.onclick = () => {
+            if (!this.bWorking) {
+                this.showThesaurus();
+            }
+        };
         this.xLexEditButton.onclick = () => {
             oGrammalecteBackgroundPort.openLexiconEditor();
         };
@@ -144,6 +158,7 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         this.xMenu.appendChild(this.xEditorButton);
         this.xMenu.appendChild(this.xLxgButton);
         this.xMenu.appendChild(this.xConjButton);
+        this.xMenu.appendChild(this.xThesButton);
         this.xPanelBar.appendChild(this.xMenu);
     }
 
@@ -195,6 +210,7 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         this.switchContentOn(this.xGCPanelContent, this.xEditorButton);
         this.switchContentOff(this.xLxgPanelContent, this.xLxgButton);
         this.switchContentOff(this.xConjPanelContent, this.xConjButton);
+        this.switchContentOff(this.xThesPanelContent, this.xThesButton);
         this.xPanel.style.background = "";
     }
 
@@ -202,6 +218,7 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         this.switchContentOff(this.xGCPanelContent, this.xEditorButton);
         this.switchContentOn(this.xLxgPanelContent, this.xLxgButton);
         this.switchContentOff(this.xConjPanelContent, this.xConjButton);
+        this.switchContentOff(this.xThesPanelContent, this.xThesButton);
         this.xPanel.style.background = "";
     }
 
@@ -209,11 +226,21 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         this.switchContentOff(this.xGCPanelContent, this.xEditorButton);
         this.switchContentOff(this.xLxgPanelContent, this.xLxgButton);
         this.switchContentOn(this.xConjPanelContent, this.xConjButton);
+        this.switchContentOff(this.xThesPanelContent, this.xThesButton);
         this.xPanel.style.background = "linear-gradient(to bottom, hsla(0,0%,100%,1) 0%, hsla(0,0%,95%,1) 55%, hsla(0,0%,90%,1) 100%)";
         this.listenConj();
         if (!this.sVerb) {
             this.conjugateVerb("être");
         }
+    }
+
+    showThesaurus () {
+        this.switchContentOff(this.xGCPanelContent, this.xEditorButton);
+        this.switchContentOff(this.xLxgPanelContent, this.xLxgButton);
+        this.switchContentOff(this.xConjPanelContent, this.xConjButton);
+        this.switchContentOn(this.xThesPanelContent, this.xThesButton);
+        this.xPanel.style.background = "";
+        this.listenThes();
     }
 
     switchContentOn (xContent, xNodeButton) {
@@ -686,10 +713,10 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
 
     listenConj () {
         if (!this.bListenConj) {
-            // button
-            this.xParent.getElementById('grammalecte_conj_button').addEventListener("click", (e) => { this.conjugateVerb(); });
             // text field
-            //this.xParent.getElementById('grammalecte_conj_verb').addEventListener("input", (e) => { this.conjugateVerb(); });
+            this.xParent.getElementById('grammalecte_conj_verb').addEventListener("input", (e) => { this.conjugateVerb(); });
+            // erase button
+            this.xParent.getElementById('grammalecte_conj_erase_button').addEventListener("click", (e) => { this.clearConjInput(); });
             // options
             this.xParent.getElementById('grammalecte_conj_oneg').addEventListener("click", (e) => { this.switchOption('grammalecte_conj_oneg'); this.updateConj(); });
             this.xParent.getElementById('grammalecte_conj_opro').addEventListener("click", (e) => { this.switchOption('grammalecte_conj_opro'); this.updateConj(); });
@@ -700,15 +727,9 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         }
     }
 
-    purgeInputText () {
-        // Thunderbird don’t accept input fields
-        // So we use editable node and we purge it
-        let sVerb = this.xParent.getElementById('grammalecte_conj_verb').innerText;
-        let nIndexCut = sVerb.indexOf("\n");
-        if (nIndexCut != -1) {
-            sVerb = sVerb.slice(0, nIndexCut);
-        };
-        this.xParent.getElementById('grammalecte_conj_verb').textContent = sVerb.trim();
+    clearConjInput () {
+        this.xParent.getElementById('grammalecte_conj_verb').innerText = "";
+        this.xParent.getElementById('grammalecte_conj_verb').style = "";
     }
 
     switchOption (sOption) {
@@ -747,16 +768,21 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
 
     conjugateVerb (sVerb="") {
         try {
-            if (!sVerb) {
-                this.purgeInputText();
-                sVerb = this.xParent.getElementById('grammalecte_conj_verb').textContent;
-            }
             this.resetOption('grammalecte_conj_oneg');
             this.resetOption('grammalecte_conj_opro');
             this.resetOption('grammalecte_conj_oint');
             this.resetOption('grammalecte_conj_otco');
             this.resetOption('grammalecte_conj_ofem');
             // request analyzing
+            if (!sVerb) {
+                sVerb = this.xParent.getElementById('grammalecte_conj_verb').innerText;
+                if (sVerb.indexOf("\n") != -1) {
+                    sVerb = this.purgeInputText(sVerb);
+                    this.xParent.getElementById('grammalecte_conj_verb').textContent = sVerb;
+                } else {
+                    sVerb = this.purgeInputText(sVerb);
+                }
+            }
             sVerb = sVerb.trim().toLowerCase().replace(/’/g, "'").replace(/  +/g, " ");
             if (sVerb) {
                 if (sVerb.startsWith("ne pas ")) {
@@ -776,10 +802,10 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
                     sVerb = sVerb.slice(0,-1).trim();
                 }
                 if (sVerb) {
-                    this.sVerb = sVerb;
-                    this.updateConj(true);
-                } else {
-                    this.xParent.getElementById('grammalecte_conj_verb').textContent = "";
+                    if (sVerb.search("(?:[ei]r|re)$")) {
+                        this.sVerb = sVerb;
+                        this.updateConj(true);
+                    }
                 }
             }
         }
@@ -920,6 +946,85 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
         catch (e) {
             showError(e);
         }
+    }
+
+
+    // Thesaurus
+
+    listenThes () {
+        if (!this.bListenThes) {
+            // text field
+            this.xParent.getElementById('grammalecte_thes_word').addEventListener("input", (e) => {
+                let sWord = this.xParent.getElementById('grammalecte_thes_word').innerText;
+                this.getSyns(sWord);
+            });
+            // erase button
+            this.xParent.getElementById('grammalecte_thes_erase_button').addEventListener("click", (e) => {
+                this.clearWordInput();
+            });
+            this.bListenThes = true;
+        }
+    }
+
+    clearWordInput () {
+        this.xParent.getElementById('grammalecte_thes_word').innerText = "";
+        this.xParent.getElementById('grammalecte_thes_word').style = "";
+    }
+
+    getSyns (sWord) {
+        sWord = sWord.trim();
+        oGrammalecteBackgroundPort.getSyns(sWord);
+    }
+
+    displaySyns (sWord, lSyns) {
+        try {
+            if (sWord) {
+                this.xParent.getElementById('grammalecte_thes_title').textContent = sWord;
+                this.emptySynList();
+                if (lSyns.length == 0) {
+                    this.xParent.getElementById('grammalecte_thes_word').style = "color: #BB4411;";
+                    this.xParent.getElementById('grammalecte_thes_word_info').style = "display: block";
+                } else {
+                    this.xParent.getElementById('grammalecte_thes_word').style = "";
+                    this.xParent.getElementById('grammalecte_thes_word_info').style = "display: none";
+                    this.populateSynList(lSyns);
+                }
+            }
+        }
+        catch (e) {
+            console.error(e);
+        }
+    }
+
+    emptySynList () {
+        let xSynonymsList = this.xParent.getElementById('grammalecte_synonyms_list');
+        while (xSynonymsList.firstChild) {
+            xSynonymsList.removeChild(xSynonymsList.firstChild);
+        }
+    }
+
+    populateSynList (lSyns) {
+        let xSynonymsList = this.xParent.getElementById('grammalecte_synonyms_list');
+        for (let [sCat, lSyn] of lSyns) {
+            let xSynBlok = oGrammalecte.createNode("div", { className: "grammalecte_syn_block" });
+            xSynonymsList.appendChild(xSynBlok);
+            xSynBlok.appendChild(oGrammalecte.createNode("div", { className: "grammalecte_cat_name", textContent: sCat }));
+            let xSynonyms = oGrammalecte.createNode("div", { className: "grammalecte_synonyms" });
+            xSynBlok.appendChild(xSynonyms);
+            for (let sSyn of lSyn) {
+                xSynonyms.appendChild(oGrammalecte.createNode("div", { className: "grammalecte_synonym", textContent: sSyn }));
+            }
+        }
+    }
+
+    purgeInputText (sText) {
+        // Thunderbird doesn’t accept input fields
+        // So we use editable node and we purge it
+        let nIndexCut = sText.indexOf("\n");
+        if (nIndexCut != -1) {
+            sText = sText.slice(0, nIndexCut);
+        };
+        return sText.trim();
     }
 }
 

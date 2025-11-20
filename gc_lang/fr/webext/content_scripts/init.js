@@ -356,6 +356,10 @@ const oGrammalecteBackgroundPort = {
         this.send("getVerb", { sVerb: sVerb, bPro: bPro, bNeg: bNeg, bTpsCo: bTpsCo, bInt: bInt, bFem: bFem }, { bStart: bStart });
     },
 
+    getSyns: function (sWord) {
+        this.send("getSyns", { sWord: sWord });
+    },
+
     getSpellSuggestions: function (sWord, sDestination, sErrorId) {
         this.send("getSpellSuggestions", { sWord: sWord }, { sDestination: sDestination, sErrorId: sErrorId });
     },
@@ -451,6 +455,9 @@ const oGrammalecteBackgroundPort = {
                     } else {
                         oGrammalecte.oGCPanel.displayConj(result.oConjTable);
                     }
+                    break;
+                case "getSyns":
+                    oGrammalecte.oGCPanel.displaySyns(result.sWord, result.lSyns);
                     break;
                 case "workerRestarted":
                     oGrammalecte.oGCPanel.stopWaitIcon();

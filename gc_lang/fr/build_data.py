@@ -64,6 +64,19 @@ def makeDictionaries (sp, sVersion):
             os.system("python3 ./genfrdic.py -s -gl -v "+sVersion)
 
 
+def makeThesaurusFiles (sp):
+    dThesaurus = {}
+    sContent = open(sp+'/data/thes_fr.json', "r", encoding="utf-8").read()
+    dThesaurus = json.loads(sContent)
+    ## write file for Python
+    sCode = "# generated data (do not edit)\n\n" + \
+            "dThesaurus = " + str(dThesaurus) + "\n"
+    open(sp+"/modules/thesaurus_data.py", "w", encoding="utf-8", newline="\n").write(sCode)
+    if bJS:
+        ## write file for JavaScript
+        file_util.copy_file(sp+'/data/thes_fr.json', sp+"/modules-js/thesaurus_data.json")
+
+
 def makeConj (sp, bJS=False):
     print("> Conjugaisons ", end="")
     print("(Python et JavaScript)"  if bJS  else "(Python seulement)")

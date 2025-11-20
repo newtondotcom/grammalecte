@@ -43,6 +43,7 @@ importScripts("grammalecte/graphspell/tokenizer.js");
 importScripts("grammalecte/fr/conj.js");
 importScripts("grammalecte/fr/mfsp.js");
 importScripts("grammalecte/fr/phonet.js");
+importScripts("grammalecte/fr/thesaurus.js");
 importScripts("grammalecte/fr/cregex.js");
 importScripts("grammalecte/fr/gc_options.js");
 importScripts("grammalecte/fr/gc_functions.js");
@@ -142,6 +143,9 @@ onmessage = function (e) {
         case "getVerb":
             getVerb(oParam.sVerb, oParam.bPro, oParam.bNeg, oParam.bTpsCo, oParam.bInt, oParam.bFem, oInfo);
             break;
+        case "getSyns":
+            getSyns(oParam.sWord, oInfo);
+            break;
         default:
             console.log("[Worker] Unknown command: " + sCommand);
             showData(e.data);
@@ -160,7 +164,7 @@ let oLocution = null;
 
 /*
     Technical note:
-    This worker don’t work as a PromiseWorker (which returns a promise),  so when we send request
+    This worker doesn’t work as a PromiseWorker (which returns a promise),  so when we send request
     to this worker, we can’t wait the return of the answer just after the request made.
     The answer is received by the background in another function (onmessage).
     That’s why the full text to analyze is send in one block, but analyse is returned paragraph
@@ -174,6 +178,7 @@ function init (sExtensionPath, dOptions=null, sContext="JavaScript", oInfo={}) {
             conj.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/conj_data.json"));
             phonet.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/phonet_data.json"));
             mfsp.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/mfsp_data.json"));
+            thesaurus.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/thesaurus_data.json"));
             //console.log("[Worker] Modules have been initialized…");
             gc_engine.load(sContext, "aHSL", sExtensionPath+"grammalecte/graphspell/_dictionaries");
             oSpellChecker = gc_engine.getSpellChecker();
@@ -429,5 +434,19 @@ function getVerb (sWord, bPro, bNeg, bTpsCo, bInt, bFem, oInfo) {
     catch (e) {
         console.error(e);
         postMessage(createResponse("getVerb", createErrorResult(e, "no verb"), oInfo, true, true));
+    }
+}
+
+
+// Thesaurus
+
+function getSyns (sWord, oInfo) {
+    try {
+        let lSyns = thesaurus.getSyns(sWord)
+        postMessage(createResponse("getSyns", { sWord: sWord, lSyns: lSyns }, oInfo, true));
+    }
+    catch (e) {
+        console.error(e);
+        postMessage(createResponse("getSyns", createErrorResult(e, "no synonyms"), oInfo, true, true));
     }
 }
