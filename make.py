@@ -285,13 +285,13 @@ def copyGraphspellCore (bJavaScript=False):
     "copy Graphspell package in Grammalecte package"
     print("> Copy Graphspell package in Grammalecte package")
     helpers.createCleanFolder("grammalecte/graphspell")
-    helpers.createFolder("grammalecte/graphspell/_dictionaries")
+    os.makedirs("grammalecte/graphspell/_dictionaries", exist_ok=True)
     for sf in os.listdir("graphspell"):
         if not os.path.isdir("graphspell/"+sf):
             shutil.copy2("graphspell/"+sf, "grammalecte/graphspell")
     if bJavaScript:
         helpers.createCleanFolder("grammalecte-js/graphspell")
-        helpers.createFolder("grammalecte-js/graphspell/_dictionaries")
+        os.makedirs("grammalecte-js/graphspell/_dictionaries", exist_ok=True)
         dVars = {}
         for sf in os.listdir("js_extension"):
             dVars[sf[:-3]] = open("js_extension/"+sf, "r", encoding="utf-8").read()
@@ -421,10 +421,10 @@ def main ():
         xArgs.build_data_before = True
         xArgs.build_data_after = True
 
-    helpers.createFolder("_build")
-    helpers.createFolder("grammalecte")
+    os.makedirs("_build", exist_ok=True)
+    os.makedirs("grammalecte", exist_ok=True)
     if xArgs.javascript:
-        helpers.createFolder("grammalecte-js")
+        os.makedirs("grammalecte-js", exist_ok=True)
 
     copyGraphspellCore(xArgs.javascript)
 

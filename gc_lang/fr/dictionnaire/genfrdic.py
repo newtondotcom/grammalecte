@@ -196,12 +196,6 @@ def readfile (spf):
         print("# Error: file not found.")
 
 
-def createFolder (sp):
-    "make a folder if it doesn’t exist; don’t change anything if it exists"
-    if not os.path.exists(sp):
-        os.makedirs(sp, exist_ok=True)
-
-
 class Dictionnaire:
     def __init__ (self, version, name):
         # Dictionary
@@ -530,7 +524,7 @@ class Dictionnaire:
     def createFiles (self, spDst, lDictVars, nMode, bSimplified):
         sDicName = PREFIX_DICT_PATH + self.sVersion
         spDic = spDst + '/' + sDicName
-        createFolder(spDic)
+        os.makedirs(spDic, exist_ok=True)
         for dVars in lDictVars:
             # template vars
             dVars['version'] = self.sVersion
@@ -546,10 +540,10 @@ class Dictionnaire:
         dTplVars['version'] = self.sVersion
         sExtensionName = EXT_PREFIX_OOO + self.sVersion
         spExt = spBuild + '/' + sExtensionName
-        createFolder(spExt+'/META-INF')
-        createFolder(spExt+'/ui')
-        createFolder(spExt+'/dictionaries')
-        createFolder(spExt+'/pythonpath')
+        os.makedirs(spExt+'/META-INF', exist_ok=True)
+        os.makedirs(spExt+'/ui', exist_ok=True)
+        os.makedirs(spExt+'/dictionaries', exist_ok=True)
+        os.makedirs(spExt+'/pythonpath', exist_ok=True)
         shutil.copy2('_templates/ooo/manifest.xml', spExt+'/META-INF')
         shutil.copy2('_templates/ooo/DictionarySwitcher.py', spExt)
         shutil.copy2('_templates/ooo/ds_strings.py', spExt+'/pythonpath')
@@ -589,7 +583,7 @@ class Dictionnaire:
         dTplVars['version'] = self.sVersion
         sExtensionName = EXT_PREFIX_MOZ + self.sVersion
         spExt = spBuild + '/' + sExtensionName
-        createFolder(spExt+'/dictionaries')
+        os.makedirs(spExt+'/dictionaries', exist_ok=True)
         copyTemplate('_templates/moz', spExt, 'manifest.json', dTplVars)
         spDict = spBuild + '/' + PREFIX_DICT_PATH + self.sVersion
         shutil.copy2(spDict+'/fr-classique.dic', spExt+'/dictionaries/fr-classic.dic')
@@ -615,7 +609,7 @@ class Dictionnaire:
     def createLexiconPackages (self, spBuild, version, oStatsLex, spDestGL=""):
         sLexName = LEX_PREFIX + version
         spLex = spBuild + '/' + sLexName
-        createFolder(spLex)
+        os.makedirs(spLex, exist_ok=True)
         # write lexicon
         self.sortLexiconByFreq()
         self.writeLexicon(spLex + '/' + sLexName + '.txt', version, oStatsLex)
@@ -1416,7 +1410,7 @@ class StatsLex:
 def createThesaurusPackage (spBuild, sVersion, spCopy="", spDataDestGL=""):
     print(" * Création du thésaurus")
     spThesaurus = spBuild+"/thesaurus-v"+sVersion
-    createFolder(spThesaurus)
+    os.makedirs(spThesaurus, exist_ok=True)
     thes_build.build("thesaurus/thes_fr.dat", "thesaurus/synsets_fr.dat", spThesaurus)
     shutil.copy2('thesaurus/README_thes_fr.txt', spThesaurus)
     if spCopy:
@@ -1451,7 +1445,7 @@ def main ():
 
     ### création du répertoire
     spBuild = BUILD_PATH + '/' + xArgs.verdic
-    createFolder(spBuild)
+    os.makedirs(spBuild, exist_ok=True)
 
     ### Lecture des fichiers et création du dictionnaire
     oFrenchDict = Dictionnaire(xArgs.verdic, "French dictionary")

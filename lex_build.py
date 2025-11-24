@@ -5,7 +5,7 @@ Lexicon builder
 """
 
 import argparse
-import helpers
+import os
 
 import graphspell.dawg as fsa
 
@@ -13,10 +13,10 @@ import graphspell.dawg as fsa
 def build (spfSrc, sLangCode, sLangName, sfDict, bJavaScript=False, sDicName="", sDescription="", sFilter="", cStemmingMethod="S", nCompressMethod=1):
     "transform a text lexicon as a binary indexable dictionary"
     oDAWG = fsa.DAWG(spfSrc, cStemmingMethod, sLangCode, sLangName, sDicName, sDescription, sFilter)
-    helpers.createFolder("graphspell/_dictionaries")
+    os.makedirs("graphspell/_dictionaries", exist_ok=True)
     oDAWG.writeAsJSObject("graphspell/_dictionaries/" + sfDict + ".json")
     if bJavaScript:
-        helpers.createFolder("graphspell-js/_dictionaries")
+        os.makedirs("graphspell-js/_dictionaries", exist_ok=True)
         oDAWG.writeAsJSObject("graphspell-js/_dictionaries/" + sfDict + ".json")
 
 
