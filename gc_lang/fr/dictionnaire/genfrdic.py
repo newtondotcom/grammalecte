@@ -13,10 +13,8 @@ import zipfile
 import math
 import argparse
 import tags
+import shutil
 from enum import Enum
-
-from distutils import dir_util
-from distutils import file_util
 from string import Template
 
 import tags
@@ -197,6 +195,11 @@ def readfile (spf):
     else:
         print("# Error: file not found.")
 
+
+def createFolder (sp):
+    "make a folder if it doesn’t exist; don’t change anything if it exists"
+    if not os.path.exists(sp):
+        os.mkdir(sp)
 
 
 class Dictionnaire:
@@ -527,7 +530,7 @@ class Dictionnaire:
     def createFiles (self, spDst, lDictVars, nMode, bSimplified):
         sDicName = PREFIX_DICT_PATH + self.sVersion
         spDic = spDst + '/' + sDicName
-        dir_util.mkpath(spDic)
+        createFolder(spDic)
         for dVars in lDictVars:
             # template vars
             dVars['version'] = self.sVersion
@@ -543,42 +546,42 @@ class Dictionnaire:
         dTplVars['version'] = self.sVersion
         sExtensionName = EXT_PREFIX_OOO + self.sVersion
         spExt = spBuild + '/' + sExtensionName
-        dir_util.mkpath(spExt+'/META-INF')
-        dir_util.mkpath(spExt+'/ui')
-        dir_util.mkpath(spExt+'/dictionaries')
-        dir_util.mkpath(spExt+'/pythonpath')
-        file_util.copy_file('_templates/ooo/manifest.xml', spExt+'/META-INF')
-        file_util.copy_file('_templates/ooo/DictionarySwitcher.py', spExt)
-        file_util.copy_file('_templates/ooo/ds_strings.py', spExt+'/pythonpath')
-        file_util.copy_file('_templates/ooo/addons.xcu', spExt+'/ui')
-        file_util.copy_file('_templates/ooo/french_flag.png', spExt)
-        file_util.copy_file('_templates/ooo/french_flag_16.bmp', spExt+'/ui')
+        createFolder(spExt+'/META-INF')
+        createFolder(spExt+'/ui')
+        createFolder(spExt+'/dictionaries')
+        createFolder(spExt+'/pythonpath')
+        shutil.copy2('_templates/ooo/manifest.xml', spExt+'/META-INF')
+        shutil.copy2('_templates/ooo/DictionarySwitcher.py', spExt)
+        shutil.copy2('_templates/ooo/ds_strings.py', spExt+'/pythonpath')
+        shutil.copy2('_templates/ooo/addons.xcu', spExt+'/ui')
+        shutil.copy2('_templates/ooo/french_flag.png', spExt)
+        shutil.copy2('_templates/ooo/french_flag_16.bmp', spExt+'/ui')
         copyTemplate('_templates/ooo', spExt, 'description.xml', dTplVars)
         copyTemplate('_templates/ooo', spExt, 'dictionaries.xcu', dTplVars)
-        #file_util.copy_file('_templates/ooo/dictionaries.xcu.tpl.xml', spExt)
+        #shutil.copy2('_templates/ooo/dictionaries.xcu.tpl.xml', spExt)
         copyTemplate('_templates/ooo', spExt, 'package-description.txt', dTplVars)
         for dVars in lDictVars:
             dicPath = spBuild + '/' + PREFIX_DICT_PATH + self.sVersion
-            file_util.copy_file(dicPath+'/'+dVars['asciiName']+'.dic', spExt+'/dictionaries/'+dVars['asciiName']+'.dic')
-            file_util.copy_file(dicPath+'/'+dVars['asciiName']+'.aff', spExt+'/dictionaries/'+dVars['asciiName']+'.aff')
+            shutil.copy2(dicPath+'/'+dVars['asciiName']+'.dic', spExt+'/dictionaries/'+dVars['asciiName']+'.dic')
+            shutil.copy2(dicPath+'/'+dVars['asciiName']+'.aff', spExt+'/dictionaries/'+dVars['asciiName']+'.aff')
         copyTemplate('orthographe', spExt+'/dictionaries', 'README_dict_fr.txt', dTplVars)
         # hyphenation
-        file_util.copy_file('césures/hyph_fr.dic', spExt+'/dictionaries')
-        file_util.copy_file('césures/hyph_fr.iso8859-1.dic', spExt+'/dictionaries')
-        file_util.copy_file('césures/frhyph.tex', spExt+'/dictionaries')
-        file_util.copy_file('césures/hyph-fr.tex', spExt+'/dictionaries')
-        file_util.copy_file('césures/README_hyph_fr-3.0.txt', spExt+'/dictionaries')
-        file_util.copy_file('césures/README_hyph_fr-2.9.txt', spExt+'/dictionaries')
+        shutil.copy2('césures/hyph_fr.dic', spExt+'/dictionaries')
+        shutil.copy2('césures/hyph_fr.iso8859-1.dic', spExt+'/dictionaries')
+        shutil.copy2('césures/frhyph.tex', spExt+'/dictionaries')
+        shutil.copy2('césures/hyph-fr.tex', spExt+'/dictionaries')
+        shutil.copy2('césures/README_hyph_fr-3.0.txt', spExt+'/dictionaries')
+        shutil.copy2('césures/README_hyph_fr-2.9.txt', spExt+'/dictionaries')
         # thesaurus
-        file_util.copy_file(spBuild+"/thesaurus-v"+sThesVer+'/thes_fr.dat', spExt+"/dictionaries")
-        file_util.copy_file(spBuild+"/thesaurus-v"+sThesVer+'/thes_fr.idx', spExt+"/dictionaries")
-        file_util.copy_file(spBuild+"/thesaurus-v"+sThesVer+'/README_thes_fr.txt', spExt+"/dictionaries")
+        shutil.copy2(spBuild+"/thesaurus-v"+sThesVer+'/thes_fr.dat', spExt+"/dictionaries")
+        shutil.copy2(spBuild+"/thesaurus-v"+sThesVer+'/thes_fr.idx', spExt+"/dictionaries")
+        shutil.copy2(spBuild+"/thesaurus-v"+sThesVer+'/README_thes_fr.txt', spExt+"/dictionaries")
         # zip
         createZipFiles(spExt, spBuild, sExtensionName + '.oxt')
         # copy to Grammalecte Project
         if spDestGL:
             echo("   Dictionnaires Hunspell copiés dans Grammalecte pour LibreOffice...")
-            dir_util.copy_tree(spExt+'/dictionaries', spDestGL)
+            shutil.copytree(spExt+'/dictionaries', spDestGL, dirs_exist_ok=True)
 
     def createMozillaExtensions (self, spBuild, dTplVars, lDictVars, spDestGL=""):
         # Mozilla extension 1
@@ -586,19 +589,19 @@ class Dictionnaire:
         dTplVars['version'] = self.sVersion
         sExtensionName = EXT_PREFIX_MOZ + self.sVersion
         spExt = spBuild + '/' + sExtensionName
-        dir_util.mkpath(spExt+'/dictionaries')
+        createFolder(spExt+'/dictionaries')
         copyTemplate('_templates/moz', spExt, 'manifest.json', dTplVars)
         spDict = spBuild + '/' + PREFIX_DICT_PATH + self.sVersion
-        file_util.copy_file(spDict+'/fr-classique.dic', spExt+'/dictionaries/fr-classic.dic')
-        file_util.copy_file(spDict+'/fr-classique.aff', spExt+'/dictionaries/fr-classic.aff')
+        shutil.copy2(spDict+'/fr-classique.dic', spExt+'/dictionaries/fr-classic.dic')
+        shutil.copy2(spDict+'/fr-classique.aff', spExt+'/dictionaries/fr-classic.aff')
         copyTemplate('orthographe', spExt, 'README_dict_fr.txt', dTplVars)
         createZipFiles(spExt, spBuild, sExtensionName + '.xpi')
         # Grammalecte
         if spDestGL:
             echo("   Dictionnaires Hunspell copiés dans Grammalecte pour Mozilla")
             for dVars in lDictVars:
-                file_util.copy_file(spDict+'/'+dVars['asciiName']+'.dic', spDestGL+'/'+dVars['mozAsciiName']+"/"+dVars['mozAsciiName']+'.dic')
-                file_util.copy_file(spDict+'/'+dVars['asciiName']+'.aff', spDestGL+'/'+dVars['mozAsciiName']+"/"+dVars['mozAsciiName']+'.aff')
+                shutil.copy2(spDict+'/'+dVars['asciiName']+'.dic', spDestGL+'/'+dVars['mozAsciiName']+"/"+dVars['mozAsciiName']+'.dic')
+                shutil.copy2(spDict+'/'+dVars['asciiName']+'.aff', spDestGL+'/'+dVars['mozAsciiName']+"/"+dVars['mozAsciiName']+'.aff')
 
     def createFileIfqForDB (self, spBuild):
         echo(" * Dictionnaire >> indices de fréquence pour la DB...")
@@ -612,7 +615,7 @@ class Dictionnaire:
     def createLexiconPackages (self, spBuild, version, oStatsLex, spDestGL=""):
         sLexName = LEX_PREFIX + version
         spLex = spBuild + '/' + sLexName
-        dir_util.mkpath(spLex)
+        createFolder(spLex)
         # write lexicon
         self.sortLexiconByFreq()
         self.writeLexicon(spLex + '/' + sLexName + '.txt', version, oStatsLex)
@@ -622,8 +625,8 @@ class Dictionnaire:
         createZipFiles(spLex, spBuild, sLexName + '.zip')
         # copy GC lexicon to Grammalecte
         if spDestGL:
-            file_util.copy_file(spBuild + '/' + sLexName + '.lex', spDestGL + '/French.lex')
-            file_util.copy_file('lexique/French.tagset.txt', spDestGL)
+            shutil.copy2(spBuild + '/' + sLexName + '.lex', spDestGL + '/French.lex')
+            shutil.copy2('lexique/French.tagset.txt', spDestGL)
 
     def createDictConj (self, spBuild, spDestGL=""):
         echo(" * Dictionnaire >> fichier de conjugaison...")
@@ -633,7 +636,7 @@ class Dictionnaire:
                     hDst.write(oEntry.getConjugation())
         if spDestGL:
             echo("   Fichier de conjugaison copié dans Grammalecte...")
-            file_util.copy_file(spBuild+'/dictConj.txt', spDestGL)
+            shutil.copy2(spBuild+'/dictConj.txt', spDestGL)
 
     def createDictDecl (self, spBuild, spDestGL=""):
         echo(" * Dictionnaire >> fichier de déclinaison...")
@@ -643,7 +646,7 @@ class Dictionnaire:
                     hDst.write(oEntry.getDeclination())
         if spDestGL:
             echo("   Fichier de déclinaison copié dans Grammalecte...")
-            file_util.copy_file(spBuild+'/dictDecl.txt', spDestGL)
+            shutil.copy2(spBuild+'/dictDecl.txt', spDestGL)
 
 
 class Entree:
@@ -1413,18 +1416,18 @@ class StatsLex:
 def createThesaurusPackage (spBuild, sVersion, spCopy="", spDataDestGL=""):
     print(" * Création du thésaurus")
     spThesaurus = spBuild+"/thesaurus-v"+sVersion
-    dir_util.mkpath(spThesaurus)
+    createFolder(spThesaurus)
     thes_build.build("thesaurus/thes_fr.dat", "thesaurus/synsets_fr.dat", spThesaurus)
-    file_util.copy_file('thesaurus/README_thes_fr.txt', spThesaurus)
+    shutil.copy2('thesaurus/README_thes_fr.txt', spThesaurus)
     if spCopy:
         # copy in libreoffice extension package
         print("   Copie du thésaurus dans:", spCopy)
-        file_util.copy_file(spThesaurus+'/thes_fr.dat', spCopy)
-        file_util.copy_file(spThesaurus+'/thes_fr.idx', spCopy)
-        file_util.copy_file(spThesaurus+'/README_thes_fr.txt', spCopy)
-    if spModulesDestGL:
+        shutil.copy2(spThesaurus+'/thes_fr.dat', spCopy)
+        shutil.copy2(spThesaurus+'/thes_fr.idx', spCopy)
+        shutil.copy2(spThesaurus+'/README_thes_fr.txt', spCopy)
+    if spDataDestGL:
         # copy in data source folder of Grammalecte
-        file_util.copy_file(spThesaurus+'/thes_fr.json', spDataDestGL)
+        shutil.copy2(spThesaurus+'/thes_fr.json', spDataDestGL)
 
 
 def main ():
@@ -1448,7 +1451,7 @@ def main ():
 
     ### création du répertoire
     spBuild = BUILD_PATH + '/' + xArgs.verdic
-    dir_util.mkpath(spBuild)
+    createFolder(spBuild)
 
     ### Lecture des fichiers et création du dictionnaire
     oFrenchDict = Dictionnaire(xArgs.verdic, "French dictionary")
@@ -1480,7 +1483,7 @@ def main ():
     ### Écriture des paquets
     echo("Création des paquets...")
 
-    nThesaurusVersion = 2.4
+    sThesaurusVersion = "3.0"
     spLexiconDestGL = "../../../lexicons"  if xArgs.grammalecte  else ""
     spLibreOfficeExtDestGL = "../oxt/Dictionnaires/dictionaries"  if xArgs.grammalecte  else ""
     spMozillaExtDestGL = ""  if xArgs.grammalecte  else "" # no more Hunspell dictionaries in Mozilla extensions for now
@@ -1492,8 +1495,8 @@ def main ():
     oFrenchDict.createFiles(spBuild, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], xArgs.mode, xArgs.simplify)
     oFrenchDict.createLexiconPackages(spBuild, xArgs.verdic, oStatsLex, spLexiconDestGL)
     oFrenchDict.createFileIfqForDB(spBuild)
-    createThesaurusPackage(spBuild, nThesaurusVersion, spLibreOfficeExtDestGL, spDataDestGL)
-    oFrenchDict.createLibreOfficeExtension(spBuild, dMOZEXT, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], nThesaurusVersion, spLibreOfficeExtDestGL)
+    createThesaurusPackage(spBuild, sThesaurusVersion, spLibreOfficeExtDestGL, spDataDestGL)
+    oFrenchDict.createLibreOfficeExtension(spBuild, dMOZEXT, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], sThesaurusVersion, spLibreOfficeExtDestGL)
     oFrenchDict.createMozillaExtensions(spBuild, dMOZEXT, [dTOUTESVAR, dCLASSIQUE, dREFORME1990], spMozillaExtDestGL)
     oFrenchDict.createDictConj(spBuild, spDataDestGL)
     oFrenchDict.createDictDecl(spBuild, spDataDestGL)

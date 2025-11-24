@@ -17,10 +17,9 @@ import importlib
 import unittest
 import json
 import platform
+import shutil
 
-from distutils import dir_util, file_util
-
-#import dialog_bundled
+#im2port dialog_bundled
 import compile_rules
 import helpers
 import lex_build
@@ -208,7 +207,7 @@ def create (sLang, xConfig, bInstallOXT, bJavaScript, bUseCache):
     for sf in os.listdir("gc_core/py"):
         if not os.path.isdir("gc_core/py/"+sf):
             helpers.copyAndFileTemplate("gc_core/py/"+sf, "grammalecte/"+sf, dVars)
-    file_util.copy_file("3rd/bottle.py", "grammalecte/bottle.py")
+    shutil.copy2("3rd/bottle.py", "grammalecte/bottle.py")
     open("grammalecte/WARNING.txt", "w", encoding="utf-8", newline="\n").write(sWarningMessage)
 
     ## CREATE GRAMMAR CHECKER PACKAGE
@@ -286,19 +285,19 @@ def copyGraphspellCore (bJavaScript=False):
     "copy Graphspell package in Grammalecte package"
     print("> Copy Graphspell package in Grammalecte package")
     helpers.createCleanFolder("grammalecte/graphspell")
-    dir_util.mkpath("grammalecte/graphspell/_dictionaries")
+    helpers.createFolder("grammalecte/graphspell/_dictionaries")
     for sf in os.listdir("graphspell"):
         if not os.path.isdir("graphspell/"+sf):
-            file_util.copy_file("graphspell/"+sf, "grammalecte/graphspell")
+            shutil.copy2("graphspell/"+sf, "grammalecte/graphspell")
     if bJavaScript:
         helpers.createCleanFolder("grammalecte-js/graphspell")
-        dir_util.mkpath("grammalecte-js/graphspell/_dictionaries")
+        helpers.createFolder("grammalecte-js/graphspell/_dictionaries")
         dVars = {}
         for sf in os.listdir("js_extension"):
             dVars[sf[:-3]] = open("js_extension/"+sf, "r", encoding="utf-8").read()
         for sf in os.listdir("graphspell-js"):
             if not os.path.isdir("graphspell-js/"+sf):
-                file_util.copy_file("graphspell-js/"+sf, "grammalecte-js/graphspell")
+                shutil.copy2("graphspell-js/"+sf, "grammalecte-js/graphspell")
                 helpers.copyAndFileTemplate("graphspell-js/"+sf, "grammalecte-js/graphspell/"+sf, dVars)
 
 
@@ -322,11 +321,11 @@ def copyGraphspellDictionaries (dVars, bJavaScript=False, bCommunityDict=False, 
         if not os.path.isfile(spfPyDic) or (bJavaScript and not os.path.isfile(spfJSDic)):
             buildDictionary(dVars, sType, bJavaScript)
         print("  +", spfPyDic)
-        file_util.copy_file(spfPyDic, "grammalecte/graphspell/_dictionaries")
+        shutil.copy2(spfPyDic, "grammalecte/graphspell/_dictionaries")
         dVars['dic_'+sType+'_filename_py'] = sFileName + '.json'
         if bJavaScript:
             print("  +", spfJSDic)
-            file_util.copy_file(spfJSDic, "grammalecte-js/graphspell/_dictionaries")
+            shutil.copy2(spfJSDic, "grammalecte-js/graphspell/_dictionaries")
             dVars['dic_'+sType+'_filename_js'] = sFileName + '.json'
     dVars['dic_main_filename_py'] = dVars['dic_default_filename_py'] + ".json"
     dVars['dic_main_filename_js'] = dVars['dic_default_filename_js'] + ".json"
@@ -397,7 +396,7 @@ def main ():
     xParser.add_argument("-frb", "--force_rebuild", help="force rebuilding rules", action="store_true")
     xParser.add_argument("-b", "--build_data", help="launch build_data.py (part 1 and 2)", action="store_true")
     xParser.add_argument("-bb", "--build_data_before", help="launch build_data.py (only part 1: before dictionary building)", action="store_true")
-    xParser.add_argument("-ba", "--build_data_after", help="launch build_data.py (only part 2: before dictionary building)", action="store_true")
+    xParser.add_argument("-ba", "--build_data_after", help="launch build_data.py (only part 2: after dictionary building)", action="store_true")
     xParser.add_argument("-d", "--dict", help="generate FSA dictionary", action="store_true")
     xParser.add_argument("-t", "--tests", help="run unit tests", action="store_true")
     xParser.add_argument("-tt", "--test_texts", help="perform gc tests on texts", action="store_true")
@@ -422,10 +421,10 @@ def main ():
         xArgs.build_data_before = True
         xArgs.build_data_after = True
 
-    dir_util.mkpath("_build")
-    dir_util.mkpath("grammalecte")
+    helpers.createFolder("_build")
+    helpers.createFolder("grammalecte")
     if xArgs.javascript:
-        dir_util.mkpath("grammalecte-js")
+        helpers.createFolder("grammalecte-js")
 
     copyGraphspellCore(xArgs.javascript)
 

@@ -77,6 +77,12 @@ def createCleanFolder (sp):
         eraseFolderContent(sp)
 
 
+def createFolder (sp):
+    "make a folder if it doesn’t exist; don’t change anything if it exists"
+    if not os.path.exists(sp):
+        os.mkdir(sp)
+
+
 def copyFolder (spSrc, spDst):
     "copy folder content from src to dst"
     try:

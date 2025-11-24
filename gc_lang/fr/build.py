@@ -6,7 +6,6 @@ import zipfile
 import shutil
 import json
 import traceback
-from distutils import dir_util, file_util
 
 import helpers
 
@@ -24,8 +23,8 @@ def createWebExtension (sLang, dVars):
     "create Web-extension"
     print("> Building WebExtension for Firefox")
     helpers.createCleanFolder("_build/webext/"+sLang)
-    dir_util.copy_tree("gc_lang/"+sLang+"/webext/", "_build/webext/"+sLang)
-    dir_util.copy_tree("grammalecte-js", "_build/webext/"+sLang+"/grammalecte")
+    shutil.copytree("gc_lang/"+sLang+"/webext/", "_build/webext/"+sLang, dirs_exist_ok=True)
+    shutil.copytree("grammalecte-js", "_build/webext/"+sLang+"/grammalecte", dirs_exist_ok=True)
     helpers.copyAndFileTemplate("_build/webext/"+sLang+"/manifest.json", "_build/webext/"+sLang+"/manifest.json", dVars)
     helpers.copyAndFileTemplate("_build/webext/"+sLang+"/panel/main.html", "_build/webext/"+sLang+"/panel/main.html", dVars)
     with helpers.CD("_build/webext/"+sLang):
@@ -89,11 +88,11 @@ def createMailExtension (sLang, dVars):
     # If <manifest.json> is changed, you must reinstall the extension manually
     spExtension = dVars['win_tb_debug_extension_path']  if platform.system() == "Windows"  else dVars['linux_tb_debug_extension_path']
     if os.path.isdir(spExtension):
-        file_util.copy_file(spfZip, f"{spExtension}/{dVars['tb_identifier']}.xpi")  # Filename for TB is just <identifier.xpi>
+        shutil.copy2(spfZip, f"{spExtension}/{dVars['tb_identifier']}.xpi")  # Filename for TB is just <identifier.xpi>
         print(f"Thunderbird extension copied in <{spExtension}>")
     spExtension = dVars['win_tb_beta_extension_path']  if platform.system() == "Windows"  else dVars['linux_tb_beta_extension_path']
     if os.path.isdir(spExtension):
-        file_util.copy_file(spfZip, f"{spExtension}/{dVars['tb_identifier']}.xpi")  # Filename for TB is just <identifier.xpi>
+        shutil.copy2(spfZip, f"{spExtension}/{dVars['tb_identifier']}.xpi")  # Filename for TB is just <identifier.xpi>
         print(f"Thunderbird extension copied in <{spExtension}>")
 
 
@@ -114,5 +113,5 @@ def _copyGrammalecteJSPackageInZipFile (hZip, sLang, sAddPath=""):
 
 def createNodeJSPackage (sLang):
     helpers.createCleanFolder("_build/nodejs/"+sLang)
-    dir_util.copy_tree("gc_lang/"+sLang+"/nodejs/", "_build/nodejs/"+sLang)
-    dir_util.copy_tree("grammalecte-js", "_build/nodejs/"+sLang+"/core/grammalecte")
+    shutil.copytree("gc_lang/"+sLang+"/nodejs/", "_build/nodejs/"+sLang, dirs_exist_ok=True)
+    shutil.copytree("grammalecte-js", "_build/nodejs/"+sLang+"/core/grammalecte", dirs_exist_ok=True)
