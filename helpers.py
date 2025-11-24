@@ -80,7 +80,7 @@ def createCleanFolder (sp):
 def createFolder (sp):
     "make a folder if it doesn’t exist; don’t change anything if it exists"
     if not os.path.exists(sp):
-        os.mkdir(sp)
+        os.makedirs(sp, exist_ok=True)
 
 
 def copyFolder (spSrc, spDst):

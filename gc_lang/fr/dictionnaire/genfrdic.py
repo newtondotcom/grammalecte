@@ -199,7 +199,7 @@ def readfile (spf):
 def createFolder (sp):
     "make a folder if it doesn’t exist; don’t change anything if it exists"
     if not os.path.exists(sp):
-        os.mkdir(sp)
+        os.makedirs(sp, exist_ok=True)
 
 
 class Dictionnaire:
