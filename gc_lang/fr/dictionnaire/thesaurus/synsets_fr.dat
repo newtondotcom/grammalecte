@@ -1,12 +1,14 @@
 (nom)|aigreur|indignation|rancœur|rancune|dépit|ressentiment|amertume|acrimonie|antipathie|colère
 (nom)|arbre|végétal|baliveau|tige|buisson|feuillu|résineux|arbuste|résinifère|tronc
 (nom)|assemblée|communauté|confrérie|sororité|collectivité|compagnie|association|corporation|congrégation|clergé|coterie|loge|corps|Église|ordre|groupe|société
+(nom)|athée|mécréant|incroyant|infidèle|sans-foi|libre penseur|indépendant|agnostique|sans-dieu|non-croyant|incrédule|irréligieux|areligieux|matérialiste|sceptique|païen|impie|
+libertin|insoumis|esprit fort|forte tête|indifférent|anarchiste|athéiste|antireligieux|bouffeur de curé|sacrilège|impénitent|scandaleux|profane|parpaillot
 (nom)|atout|carte-maîtresse|carte-maitresse|as|joker
 (nom)|âtre|feu|foyer|cheminée|réchaud|fourneau|chaufferette|brasero|chauffe-plat|tison|brasier|fournaise|chauffage|haut-fourneau|four
 (nom)|axe|pivot|essieu|manivelle|bielle|embiellage|pivot|charnière|balancier|bras|arbre|transmission
 (nom)|bordel|foutoir|chantier|désordre|galère|merdier|merde|bazar
 (nom)|cadavre|défunt|mort|trépassé|esprit|spectre|âme|décédé|victime|dépouille|défunt|tué|disparu|martyr|souffre-douleur|corps
-(verb)|capitulez|rendez-vous|acceptez|abandonnez|renoncez|repliez-vous|agenouillez-vous|soumettez-vous
+(verbe)|capitulez|rendez-vous|acceptez|abandonnez|renoncez|repliez-vous|agenouillez-vous|soumettez-vous
 (adj)|certain|indiscutable|indubitable|concret|positif|précis|net|patent|effectif|solide|sûr|sérieux|visible
 (adj)|charnel|sexuel|physiologique|organique|physique
 (nom)|chef|maître|maitre|responsable|dirigeant|patron|commandant|directeur|supérieur|leader|meneur|propriétaire|employeur|dictateur|tyran
@@ -17,6 +19,12 @@
 (adj)|concret|palpable|réel|matériel|corporel|physique|tangible|visible|solide
 (nom)|conjonction|coïncidence|jonction|association|entremêlement|réunion|rendez-vous
 (nom)|créateur|maître|maitre|dieu|divinité|déité|démiurge|verbe|idole|logos|éternel|père|artiste|maestro|virtuose|répétiteur|musicien
+(verbe)|crier|hurler|gueuler|beugler|vagir|brailler|vociférer|huer|tempêter|protester|tonner|réclamer|rouspéter|clamer|s’égosiller|fulminer|s’époumoner|éructer|s’écrier|s’exclamer|gronder|tonitruer|perturber|injurier|insulter|invectiver|maudire|pester|récriminer|reprocher|apostropher|pousser une gueulante|casser les oreilles
+(verbe)|crier|déclamer|proclamer|annoncer|proférer|claironner|exprimer|manifester|appeler|chanter|acclamer|applaudir|ovationner|glorifier
+(verbe)|crier|gémir|pleurer|sangloter|geindre|râler|se plaindre|grincer|pleurnicher|récriminer|reprocher|crisser|chouiner|couiner
+(verbe)|chahuter|bousculer|tempêter|gesticuler
+(verbe)|crier|​aboyer|beugler|bêler|coasser|hululer|rugir|meugler|piailler|criailler|couiner|grincer|croasser|feuler|glapir|japper|jaser|bramer|braire|mugir|raller|rauquer|pépier|piauler|crisser|grailler|brailler|craquer|piper
+(nom)|désespérance|découragement|désenchantement|écœurement|dégoût|lassitude|amertume|tristesse|déception|désespoir|désappointement|abattement|déréliction|détresse|consternation|accablement|navrement|bourdon|résignation|cafard|prostration
 (nom)|destruction|combustion|calcination|incendie|incinération|oxydation|déflagration|flamboiement|ignition|sinistre|feu
 (nom)|disparu|mort|décédé|trépassé|défunt|tué|passé|oublié|feu
 (nom)|douleur|feu|brûlure|aigreur|ampoule|cloque|inflammation|irradiation|irritation|insolation|ulcération|rougeur|enfer|souffrance
@@ -31,7 +39,7 @@
 (adj)|fluctuant|ondulant|changeant|fuyant|inconstant|flottant|vague
 (nom)|force|puissance|énergie|attraction|gravitation|pénétration|portée|effet|ampleur|intensité|amplitude|étendue|immensité|importance|impact|efficacité
 (adj)|foutu|râpé|terminé|fini|déglingué|mort
-(adj)|hésitant|irrésolu|indécis|perplexe|inexpressif|atone|froid|négligé|vague
+(adj)|hésitant|irrésolu|indécis|perplexe|négligé|vague
 (adj)|inanimé|inerte|inactif|crevé|épuisé|immobile|stagnant|dormant|marécageux|stationnaire|mort
 (nom)|lumière|feu|flamme|lanterne|fanal|flambeau|phare|flammes|flambée|flammèche|éblouissement|éclat|étincelle|embrasement|lueur|lumière|clarté|rayon|scintillement|éclair|illumination|fulgurance|luisance|phosphorescence|falot
 (nom)|maladie|mal|crève|grippe|mort
