@@ -717,7 +717,7 @@ SFX Go Y 2
 SFX Go   eur        oresse/L'D'Q'       teur                is:fem is:sg
 SFX Go   eur        oresses/D'Q'        teur                is:fem is:pl
 
-# féminin avec doublement de consonnes, pluriels en -s (cheffe, mortelle, conne, défenderesse)  (F+, F;)
+# féminin avec doublement de consonnes, pluriels en -s (cheffe, mortelle, conne, défenderesse)
 SFX F+ Y 19
 SFX F+   0          0/L'D'Q'            [^sxz]              is:mas is:sg
 SFX F+   0          s/D'Q'              [^sxz]              is:mas is:pl
@@ -1292,7 +1292,7 @@ SFX zE   être       soyez/n'l'm'            être                is:impe is:2pl
 #   en -ayer > formes possibles en -aie
 #   en -oyer, -uyer > formes exclusivement en -oie, uie
 
-# flexions sans élisions
+# cas général (correct pour la plupart des verbes du premier groupe)
 SFX a0 Y 103
 SFX a0   er         er/n'q'd'l'm't's'               er                  is:infi
 SFX a0   er         ant/n'q'd'l'm't's'              [^cg]er             is:ppre
@@ -1510,7 +1510,6 @@ SFX a9   ger        geassent/n'q'l'm't's'           ger                 is:simp 
 # bégueter, corseter, crocheter, fileter, fureter, haleter)
 # changement du e en è avant syllabe muette
 
-# flexions sans élisions
 SFX b0 Y 191
 SFX b0   er         er/n'q'd'l'm't's'               er                  is:infi
 SFX b0   er         ant/n'q'd'l'm't's'              [^c]er              is:ppre
@@ -1709,7 +1708,6 @@ SFX b0   er         ez/n'l'm'                       er                  is:impe 
 #           -éler, -émer, -éner, -éper, -équer, -érer, -éser, -éter, -étrer, -évrer, -éyer
 # changement du é en è (et gestion de c|ç et g|ge)
 
-# flexions sans élisions
 SFX c0 Y 384
 SFX c0   er         er/n'q'd'l'm't's'               er                  is:infi
 SFX c0   er         ant/n'q'd'l'm't's'              [^cg]er             is:ppre
@@ -2098,7 +2096,6 @@ SFX c0   er         ez/n'l'm'                       er                  is:impe 
 
 # verbes en -eler, -eter : doublement des consonnes l ou t ------------------------------------------------------------
 
-# flexions sans élisions
 # Note : épeler devraient être reconnu avec les conditions [^p].eler, mais ce n’est pas le cas
 SFX d0 Y 144
 SFX d0   er         er/n'q'd'l'm't's'               er                  is:infi
@@ -2615,7 +2612,7 @@ SFX dA   peler      pelez/n'l'm'                    peler               is:impe 
 
 # verbes du deuxième groupe ###########################################################################################
 
-# flexions sans élisions
+# cas général (correct pour presque tous les verbes du deuxième groupe)
 SFX f0 Y 33
 SFX f0   ir         ir/n'q'd'l'm't's'               ir                  is:infi
 SFX f0   ir         issant/n'q'd'l'm't's'           ir                  is:ppre
