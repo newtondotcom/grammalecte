@@ -666,7 +666,7 @@ class Entree:
         self.et = ''
         self.di = '*'
         self.fq = ''
-        self.iD = '0' # hunspell attribute: id
+        self.iD = '0' # hunspell attribute: id. Since the DB has been lost, useless.
 
         # autres
         self.comment = ''
@@ -725,33 +725,46 @@ class Entree:
 
     def check (self):
         sErr = ''
+        # lemme
         if self.lemma == '':
-            sErr += 'lemme vide'
+            sErr += ' > lemme vide'
         if re.match(r"^\s", self.lemma):
-            sErr += 'premier caractère un espace @ <' + self.lemma + '>'
+            sErr += ' > espace en début de lemme <' + self.lemma + '>'
         if re.search(r"\s$", self.lemma):
-            sErr += 'espace en fin de lemme'
+            sErr += ' > espace en fin de lemme <' + self.lemma + '>'
+        # verbe
         if re.match(r"v[0123]", self.po) and not re.match(r"[eas_][ix_][tx_][nx_][pqreuvx_][mx_][ex_z][ax_z]\b", self.po[2:]):
-            sErr += 'verbe inconnu: ' + self.po
-        if (re.match(r"S[.]", self.flags) and re.search("[sxz]$", self.lemma)) or (re.match(r"X[.]", self.flags) and not re.search("[ul]$", self.lemma)):
-            sErr += 'drapeau inutile'
-        if self.iz == '' and re.match(r"[SXAI](?!=)", self.flags) and self.po:
-            sErr += '<is> vide'
-        if re.match(r"pl|sg|inv", self.iz):
-            sErr += '<is> incomplet'
-        if re.match(r"[FW]", self.flags) and re.search(r"epi|mas|fem|inv|sg|pl", self.iz):
-            sErr += '<is> incohérent'
-        if re.search(r"pl|sg|inv", self.iz) and re.match(r"[SXAIFW](?!=)", self.flags):
-            sErr += '<is> incohérent'
-        if self.iz.endswith(("mas", "fem", "epi")) and (not self.flags or not self.flags.startswith(("S", "X", "F", "W", "A", "I", "U"))):
-            sErr += '<is> incomplet'
+            sErr += ' > verbe mal étiqueté: ' + self.po
+        if re.match(r"[abcdf]0", self.flags):
+            if not re.search(r"p[+.]", self.flags):
+                sErr += ' > verbe sans participe passé: ' + self.po
+            if "()" not in self.flags:
+                sErr += ' > drapeau () manquant'
+            if re.match(r"v...t", self.po) and "p+" not in self.flags:
+                sErr += ' > drapeau p+ absent sur un verbe étiqueté transitif'
         if self.flags.startswith(("a0", "b0", "c0", "d0")) and not self.lemma.endswith("er"):
-            sErr += "drapeau pour verbe du 1ᵉʳ groupe sur un lemme non conforme"
+            sErr += " > drapeau pour verbe du 1ᵉʳ groupe sur un lemme qui ne finit pas par -er"
         if self.flags.startswith("f") and not self.lemma.endswith(("ir", "ïr")):
-            sErr += "drapeau pour verbe du 2ᵉ groupe sur un lemme non conforme"
+            sErr += " > drapeau pour verbe du 2ᵉ groupe sur un lemme qui ne finit pas par -ir"
+        # nom / adj
+        if (re.match(r"S[.+]", self.flags) and re.search("[sxz]$", self.lemma)) or (re.match(r"X[.]", self.flags) and not re.search("[ul]$", self.lemma)):
+            sErr += ' > drapeau inutile'
+        if self.iz == '' and re.match(r"[SXAI](?!=)", self.flags) and self.po:
+            sErr += ' > étiquette <is> vide'
+        if re.match(r"pl|sg|inv", self.iz):
+            sErr += ' > étiquettes <is> incomplètes, genre non spécifié (mas/fem/epi)'
+        if re.match(r"[FW]", self.flags) and re.search(r"epi|mas|fem|inv|sg|pl", self.iz):
+            sErr += ' > étiquettes <is> incohérentes'
+        if re.search(r"pl|sg|inv", self.iz) and re.match(r"[SXAIFGW](?!=)", self.flags):
+            sErr += ' > étiquettes <is> incohérentes '
+        if re.search(r"pl|sg|inv", self.iz) and re.match(r"[SXAIFGW](?!=)", self.flags):
+            sErr += ' > étiquettes <is> incohérentes '
+        if self.iz.endswith(("mas", "fem", "epi")) and (not self.flags or not self.flags.startswith(("S", "X", "F", "W", "A", "I", "U"))):
+            sErr += ' > étiquettes <is> incomplètes'
+        if re.match(r"[SXAIFGW](?!=)", self.flags) and "()" not in self.flags:
+            sErr += ' > drapeau () manquant'
         if sErr:
-            echo('   error -  id: ' + self.iD, end = "")
-            echo('  ' + sErr + '  in  ' + self.__str__())
+            echo(f"   erreur {sErr}   sur   " + self.__str__())
 
     def setTagsFrom (self, oEnt):
         self.po = oEnt.po
