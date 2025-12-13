@@ -96,7 +96,7 @@ ab/L'D'Q'	po:loc.adv	se:@	et:lat	di:*	fq:7
 Aba/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*
 abaca/S.()	po:nom	is:mas	se:bot	et:esp	di:*	fq:4
 abacule/S.()	po:nom	is:mas	di:*	fq:1
-abader/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	lx:rég	di:*	fq:1
+abader/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	lx:rég	di:*	fq:1
 abaissable/S.()	po:adj	is:epi	di:*	fq:3
 abaissant/F.()	po:adj	di:*	fq:4
 abaissée/S.()	po:nom	is:fem	di:*	fq:6
@@ -106,9 +106,9 @@ abaissement/S.()	po:nom	is:mas	di:*	fq:7
 abaisser/a0p+()	po:v1_it_q__a	di:*	fq:7
 abaisseur/S.()	po:nom	is:mas	di:*	fq:5
 abajoue/S.()	po:nom	is:fem	di:*	fq:4
-abalober/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	lx:rég	di:*	fq:0
+abalober/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	lx:rég	di:*	fq:0
 abalone/S.()	po:nom	is:mas	et:angl	di:*	fq:3
-abalourdir/d'q'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:arg	di:*	fq:2
+abalourdir/d'q'n'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:arg	di:*	fq:2
 abandon/S.()	po:nom	is:mas	di:*	fq:7
 abandonnataire/S.()	po:nom	is:epi	se:droit	di:*	fq:4
 abandonnateur/Fc()	po:nom	di:*	fq:1
@@ -198,8 +198,8 @@ abducteur/Fc()	po:adj	se:anat	et:lat	di:*	fq:4
 abduction/S.()	po:nom	is:fem	di:*	fq:5
 Abdul/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:6
 Abdullah/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
-abeaudir/d'q'l'm't's'	po:v2____p_e_	po:infi	lx:québ	lx:vx	di:*	fq:0
-abeausir/d'q'l'm't's'	po:v2____p_e_	po:infi	lx:vx	di:*	fq:1
+abeaudir/d'q'n'l'm't's'	po:v2____p_e_	po:infi	lx:québ	lx:vx	di:*	fq:0
+abeausir/d'q'n'l'm't's'	po:v2____p_e_	po:infi	lx:vx	di:*	fq:1
 abécédaire/S.()	po:nom	is:mas	di:*	fq:5
 abécher/c0p+()	po:v1__t___zz	lx:rare	lx:vx	lx:rég	di:*	fq:1
 abecquer/a0p+()	po:v1__t___zz	lx:rare	di:M	fq:3
@@ -229,12 +229,12 @@ aberration/S.()	po:nom	is:fem	di:*	fq:6
 aberrer/a0p.()	po:v1_i____zz	di:*	fq:4
 abessif/S.()	po:nom	is:mas	di:*	fq:2
 abêtifié/F.()	po:adj	di:*	fq:0
-abêtifier/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:fam	di:*	fq:0
+abêtifier/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:fam	di:*	fq:0
 abêtir/f0p+()	po:v2_it_q__a	di:*	fq:5
 abêtissant/F.()	po:adj	di:*	fq:4
 abêtissement/S.()	po:nom	is:mas	di:*	fq:5
 abhorrer/a0p+()	po:v1__t___zz	di:*	fq:6
-abicher/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:rég	di:*	fq:0
+abicher/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:rég	di:*	fq:0
 Abidjan/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:6
 abies/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:5
 abiétacée/S.()	po:nom	is:fem	di:*	fq:1
@@ -242,7 +242,7 @@ abiétin/F.()	po:nom	po:adj	di:*	fq:2
 abiétinée/S.()	po:nom	is:fem	di:*	fq:3
 Abigaël/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:3
 Abigail/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:4
-abigotir/d'q'l'm't's'	po:v3__t_q_zz	po:infi	lx:vx	lx:rég	lx:arg	di:*	fq:0
+abigotir/d'q'n'l'm't's'	po:v3__t_q_zz	po:infi	lx:vx	lx:rég	lx:arg	di:*	fq:0
 abillot/S.()	po:nom	is:mas	di:*	fq:0
 abime/S.()	po:nom	is:mas	di:R	fq:5
 abîme/S.()	po:nom	is:mas	di:M	fq:6
@@ -264,7 +264,7 @@ ablater/a0p+()	po:v1__t_q_zz	di:*	fq:4
 ablatif/S.()	po:nom	is:mas	di:*	fq:5
 ablatif/F.()	po:adj	di:*	fq:4
 ablation/S.()	po:nom	is:fem	di:*	fq:6
-ablatir/d'q'l'm't's'	po:v2__t_q_zz	po:infi	lx:rare	di:*	fq:0
+ablatir/d'q'n'l'm't's'	po:v2__t_q_zz	po:infi	lx:rare	di:*	fq:0
 able/S.()	po:nom	is:mas	di:*	fq:6
 ablégat/S.()	po:nom	is:mas	di:*	fq:4
 ableret/S.()	po:nom	is:mas	di:*	fq:1
@@ -273,11 +273,11 @@ ablier/S.()	po:nom	is:mas	se:pêche	di:*	fq:2
 abloc/S.()	po:nom	is:mas	di:*	fq:1
 ablocage/S.()	po:nom	is:mas	di:*	fq:1
 abloquer/a0p+()	po:v1__t___zz	di:*	fq:1
-abloquir/d'q'l'm't's'	po:v2__t___zz	po:infi	lx:vx	lx:rare	lx:arg	di:*	fq:1
-abluer/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:3
+abloquir/d'q'n'l'm't's'	po:v2__t___zz	po:infi	lx:vx	lx:rare	lx:arg	di:*	fq:1
+abluer/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:3
 ablutiomanie/S.()	po:nom	is:fem	di:*	fq:0
 ablution/S.()	po:nom	is:fem	di:*	fq:6
-ablutionner/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:3
+ablutionner/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:3
 abnégation/S.()	po:nom	is:fem	di:*	fq:6
 aboi/S.()	po:nom	is:mas	di:*	fq:6
 aboiement/S.()	po:nom	is:mas	di:*	fq:5
@@ -315,7 +315,7 @@ abordeur/S.()	po:nom	is:mas	di:*	fq:5
 aborigène/S.()	po:nom	po:adj	is:epi	di:*	fq:6
 aborné/F.()	po:adj	di:*	fq:4
 abornement/S.()	po:nom	is:mas	di:*	fq:5
-aborner/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:4
+aborner/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:4
 abortif/F.()	po:adj	di:*	fq:5
 abortif/S.()	po:nom	is:mas	di:*	fq:5
 abot/S.()	po:nom	is:mas	di:*	fq:3
@@ -327,12 +327,12 @@ abotter/a0p+()	po:v1_itn___a	lx:rare	di:*	fq:1
 abouchement/S.()	po:nom	is:mas	di:*	fq:5
 aboucher/a0p+()	po:v1__t_q_zz	di:*	fq:6
 abougri/F.()	po:adj	di:*	fq:3
-abougrir/d'q'l'm't's'	po:v2_it_q_zz	po:infi	lx:vx	di:*	fq:1
+abougrir/d'q'n'l'm't's'	po:v2_it_q_zz	po:infi	lx:vx	di:*	fq:1
 Aboukir/L'D'Q'	po:npr	is:epi	is:inv	se:cité	se:hist	et:ara	di:*	fq:5
 abouler/a0p+()	po:v1_it_q_zz	di:*	fq:3
 aboulie/S.()	po:nom	is:fem	di:*	fq:5
 aboulique/S.()	po:nom	po:adj	is:epi	di:*	fq:5
-abouquer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+abouquer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 about/S.()	po:nom	is:mas	di:*	fq:6
 aboutage/S.()	po:nom	is:mas	di:*	fq:3
 aboutement/S.()	po:nom	is:mas	di:*	fq:3
@@ -341,17 +341,17 @@ abouteuse/S.()	po:nom	is:fem	di:*	fq:0
 aboutir/f0p+()	po:v2_i_n___a	di:*	fq:7
 aboutissant/S.()	po:nom	is:mas	di:*	fq:6
 aboutissement/S.()	po:nom	is:mas	di:*	fq:6
-aboutonner/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	lx:fam	di:*	fq:1
+aboutonner/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	lx:fam	di:*	fq:1
 aboyant/F.()	po:adj	di:*	fq:4
 aboyer/a0p+()	po:v1_it___zz	di:*	fq:6
 aboyeur/Fs()	po:nom	po:adj	di:*	fq:5
 abracadabra/S.()	po:nom	is:mas	di:*	fq:4
 abracadabrant/F.()	po:adj	di:*	fq:5
 abracadabrantesque/S.()	po:adj	is:epi	di:*	fq:4
-abracadabrer/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
+abracadabrer/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
 Abraham/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:6
 abrahamique/S.()	po:adj	is:epi	se:reli	di:*	fq:4
-abraquer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:rare	di:*	fq:3
+abraquer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:rare	di:*	fq:3
 abrasement/S.()	po:nom	is:mas	di:*	fq:3
 abraser/a0p+()	po:v1__t_q_zz	di:*	fq:5
 abrasif/F.()	po:adj	di:*	fq:5
@@ -374,8 +374,8 @@ abréviatif/F.()	po:nom	po:adj	di:*	fq:5
 abréviation/S.()	po:nom	is:fem	di:*	fq:6
 abréviativement/L'D'Q'	po:adv	di:*	fq:4
 abrévié/F.()	po:adj	lx:vx	lx:rare	di:*	fq:3
-abrévier/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:rare	di:*	fq:3
-abreyer/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
+abrévier/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	lx:rare	di:*	fq:3
+abreyer/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
 abri/S.()	po:nom	is:mas	di:*	fq:7
 abribus/L'D'Q'	po:nom	is:mas	is:inv	lx:dép	di:*	fq:4
 abricot/S.()	po:nom	is:mas	se:bot	di:*	fq:5
@@ -383,13 +383,13 @@ abricot/L'D'Q'	po:adj	is:epi	is:inv	lx:col	di:*	fq:5
 abricoter/a0p+()	po:v1__t___zz	di:*	fq:3
 abricotier/S.()	po:nom	is:mas	se:bot	di:*	fq:5
 abricotine/S.()	po:nom	is:fem	lx:helv	di:*	fq:2
-abrier/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:3
-abriller/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:québ	lx:rare	di:*	fq:1
+abrier/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:3
+abriller/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:québ	lx:rare	di:*	fq:1
 abri-sous-roche/L'D'Q'	po:nom	is:mas	is:sg	di:*	fq:2
 abris-sous-roche/D'Q'	po:nom	is:mas	is:pl	di:*	fq:2
 abriter/a0p+()	po:v1__t_q_zz	di:*	fq:7
 abrivent/S.()	po:nom	is:mas	di:*	fq:3
-abriver/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:vx	se:marin	di:*	fq:1
+abriver/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:vx	se:marin	di:*	fq:1
 abrogatif/F.()	po:adj	se:droit	et:lat	di:*	fq:4
 abrogation/S.()	po:nom	is:fem	se:droit	et:lat	di:*	fq:6
 abrogatoire/S.()	po:adj	is:epi	se:droit	et:lat	di:*	fq:4
@@ -410,10 +410,10 @@ ABS/L'D'Q'	po:nom	is:mas	is:inv	lx:sig	se:auto	et:all	di:*	fq:5
 abscisse/S.()	po:nom	is:fem	se:math	et:lat	di:*	fq:6
 abscission/S.()	po:nom	is:fem	di:*	fq:4
 abscissique/S.()	po:adj	is:epi	se:bot	se:chim	di:*	fq:4
-absconder/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:0
-abscondre/d'q'l'm't's'	po:v3__t_q_zz	po:infi	lx:vx	di:*	fq:1
+absconder/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:0
+abscondre/d'q'n'l'm't's'	po:v3__t_q_zz	po:infi	lx:vx	di:*	fq:1
 abscons/F.()	po:adj	di:*	fq:5
-absconser/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
+absconser/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
 absence/S.()	po:nom	is:fem	di:*	fq:8
 absent/F.()	po:nom	po:adj	di:*	fq:7
 absentéisme/S.()	po:nom	is:mas	di:*	fq:6
@@ -539,7 +539,7 @@ accablant/F.()	po:nom	po:adj	di:*	fq:6
 accablement/S.()	po:nom	is:mas	di:*	fq:6
 accabler/a0p+()	po:v1__t_q_zz	di:*	fq:7
 accalmie/S.()	po:nom	is:fem	di:*	fq:6
-accalmir/d'q'l'm't's'	po:v2____p_e_	po:infi	lx:vx	di:*	fq:1
+accalmir/d'q'n'l'm't's'	po:v2____p_e_	po:infi	lx:vx	di:*	fq:1
 accaparant/F.()	po:adj	di:*	fq:4
 accaparation/S.()	po:nom	is:fem	di:*	fq:3
 accaparement/S.()	po:nom	is:mas	di:*	fq:6
@@ -607,7 +607,7 @@ acclimatable/S.()	po:adj	is:epi	di:*	fq:3
 acclimatation/S.()	po:nom	is:fem	di:*	fq:6
 acclimatement/S.()	po:nom	is:mas	di:*	fq:5
 acclimater/a0p+()	po:v1__t_q_zz	di:*	fq:6
-accœurer/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	lx:arg	di:*	fq:0
+accœurer/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	lx:arg	di:*	fq:0
 accointance/S.()	po:nom	is:fem	di:*	fq:5
 accointer/a0p+()	po:v1____p_e_	di:*	fq:4
 accolade/S.()	po:nom	is:fem	di:*	fq:5
@@ -658,7 +658,7 @@ accot/S.()	po:nom	is:mas	di:*	fq:3
 accotement/S.()	po:nom	is:mas	di:*	fq:5
 accoter/a0p+()	po:v1__t_q_zz	di:*	fq:5
 accotoir/S.()	po:nom	is:mas	di:*	fq:4
-accouardir/d'q'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:rare	di:*	fq:1
+accouardir/d'q'n'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:rare	di:*	fq:1
 accouchée/S.()	po:nom	is:fem	di:*	fq:6
 accouchement/S.()	po:nom	is:mas	di:*	fq:7
 accoucher/a0p+()	po:v1_it____a	di:*	fq:6
@@ -704,7 +704,7 @@ accroche-poisson/S.()	po:nom	is:mas	se:pêche	di:*	fq:1
 accrocher/a0p+()	po:v1_itnq__a	di:*	fq:7
 accroche-tasse/S.()	po:nom	is:mas	di:*	fq:0
 accrocheur/Fs()	po:nom	po:adj	di:*	fq:5
-accroire/d'q'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:5
+accroire/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:5
 accroissement/S.()	po:nom	is:mas	di:*	fq:7
 accroitre/wV()	po:v3__t_q__a	di:R	fq:6
 accroître/wV()	po:v3__t_q__a	di:M	fq:7
@@ -1213,7 +1213,7 @@ administrable/S.()	po:adj	is:epi	se:admin	di:*	fq:4
 administrateur/Fc()	po:nom	po:adj	se:admin	di:*	fq:7
 administratif/F.()	po:adj	se:admin	di:*	fq:8
 administration/S.()	po:nom	is:fem	se:admin	di:*	fq:8
-administrationaliser/d'q'l'm't's'	po:v1_it_q__a	po:infi	lx:rare	se:admin	di:*	fq:0
+administrationaliser/d'q'n'l'm't's'	po:v1_it_q__a	po:infi	lx:rare	se:admin	di:*	fq:0
 administrativement/L'D'Q'	po:adv	se:admin	di:*	fq:6
 administré/F.()	po:nom	se:admin	di:*	fq:6
 administrer/a0p+()	po:v1_itnq__a	se:admin	di:*	fq:7
@@ -1468,7 +1468,7 @@ affaiblissant/F.()	po:adj	di:*	fq:5
 affaiblissement/S.()	po:nom	is:mas	di:*	fq:6
 affaiblisseur/S.()	po:nom	is:mas	se:image	se:chim	di:*	fq:4
 affainéanti/F.()	po:adj	di:*	fq:1
-affainéantir/d'q'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:rare	di:*	fq:0
+affainéantir/d'q'n'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:rare	di:*	fq:0
 affaire/S.()	po:nom	is:fem	se:@	di:*	fq:8
 affairement/S.()	po:nom	is:mas	di:*	fq:4
 affairer/a0p+()	po:v1____p_e_	di:*	fq:6
@@ -1564,7 +1564,7 @@ affolant/F.()	po:adj	di:*	fq:5
 affolé/F.()	po:nom	di:*	fq:6
 affolement/S.()	po:nom	is:mas	di:*	fq:5
 affoler/a0p+()	po:v1__t_q_zz	di:*	fq:6
-affolir/d'q'l'm't's'	po:v2_i____zz	po:infi	lx:vx	di:*	fq:1
+affolir/d'q'n'l'm't's'	po:v2_i____zz	po:infi	lx:vx	di:*	fq:1
 afforestation/S.()	po:nom	is:fem	se:sylvi	di:*	fq:4
 affouage/S.()	po:nom	is:mas	se:droit	se:sylvi	di:*	fq:5
 affouager/a0p+()	po:v1__t___zz	se:droit	se:sylvi	di:*	fq:3
@@ -1672,7 +1672,7 @@ agacerie/S.()	po:nom	is:fem	di:*	fq:5
 agacin/S.()	po:nom	is:mas	se:bot	di:*	fq:3
 Agadir/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:6
 agaillardi/F.()	po:adj	di:*	fq:1
-agaillardir/d'q'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	di:*	fq:1
+agaillardir/d'q'n'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	di:*	fq:1
 agalactie/S.()	po:nom	is:fem	se:méd	et:grec	di:*	fq:4
 agalaxie/S.()	po:nom	is:fem	lx:var	se:méd	di:*	fq:4
 agame/S.()	po:nom	po:adj	is:epi	di:*	fq:5
@@ -2169,7 +2169,7 @@ alabandine/S.()	po:nom	is:fem	se:minér	di:*	fq:3
 alabandite/S.()	po:nom	is:fem	se:minér	di:*	fq:1
 alabastre/S.()	po:nom	is:mas	se:hist	et:grec	di:*	fq:4
 alabastrite/S.()	po:nom	is:fem	di:*	fq:3
-alâchir/d'q'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:rég	di:*	fq:1
+alâchir/d'q'n'l'm't's'	po:v2__t_q_zz	po:infi	lx:vx	lx:rég	di:*	fq:1
 alacrité/S.()	po:nom	is:fem	di:*	fq:5
 Aladin/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
 Alain/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:7
@@ -2180,7 +2180,7 @@ alambiquer/a0p+()	po:v1__t___zz	di:*	fq:5
 Alamut/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:4
 Alan/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:6
 alandier/S.()	po:nom	is:mas	di:*	fq:4
-alangourer/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	lx:rég	di:*	fq:0
+alangourer/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	lx:rég	di:*	fq:0
 alanguir/f0p+()	po:v2__t_q__a	di:*	fq:5
 alanguissement/S.()	po:nom	is:mas	di:*	fq:4
 alanine/S.()	po:nom	is:fem	di:*	fq:5
@@ -2290,7 +2290,7 @@ AlCl₆K₃/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
 AlCl₄Na/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
 AlCl₆Na₃/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
 AlCl₄Rb/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
-alcoholiser/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:1
+alcoholiser/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:1
 Al₂CoO₄/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
 alcool/S.()	po:nom	is:mas	se:alcool	et:ara	di:*	fq:7
 alcoolat/S.()	po:nom	is:mas	di:*	fq:4
@@ -2383,7 +2383,7 @@ alésoir/S.()	po:nom	is:mas	di:*	fq:4
 Alessandra/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:5
 Alessandro/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:6
 Alessia/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:4
-alestir/d'q'l'm't's'	po:v3__t___zz	po:infi	lx:vx	se:marin	di:*	fq:0
+alestir/d'q'n'l'm't's'	po:v3__t___zz	po:infi	lx:vx	se:marin	di:*	fq:0
 aléthique/S.()	po:adj	is:epi	se:log	et:grec	di:*	fq:4
 aleurite/S.()	po:nom	is:epi	di:*	fq:4
 aleurode/S.()	po:nom	is:mas	di:*	fq:4
@@ -2584,7 +2584,7 @@ allégeance/S.()	po:nom	is:fem	di:*	fq:6
 allégement/S.()	po:nom	is:mas	di:C	fq:6
 allègement/S.()	po:nom	is:mas	di:*	fq:5
 alléger/c0p+()	po:v1__t_q_zz	di:*	fq:6
-allégérir/d'q'l'm't's'	po:v3__t___zz	po:infi	lx:vx	di:*	fq:1
+allégérir/d'q'n'l'm't's'	po:v3__t___zz	po:infi	lx:vx	di:*	fq:1
 allégir/f0p+()	po:v2__t____a	di:*	fq:4
 allégorie/S.()	po:nom	is:fem	di:*	fq:6
 allégorique/S.()	po:adj	is:epi	di:*	fq:6
@@ -3048,7 +3048,7 @@ amentifère/S.()	po:nom	is:fem	se:bot	et:lat	di:*	fq:1
 amentifère/S.()	po:adj	is:epi	se:bot	et:lat	di:*	fq:1
 amenuisement/S.()	po:nom	is:mas	di:*	fq:5
 amenuiser/a0p+()	po:v1__t___zz	di:*	fq:6
-aménuiser/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:1
+aménuiser/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:1
 amer/F.()	po:adj	di:*	fq:7
 amer/S.()	po:nom	is:mas	di:*	fq:6
 amèrement/L'D'Q'	po:adv	di:*	fq:6
@@ -5422,7 +5422,7 @@ ardoise/S.()	po:nom	is:fem	di:*	fq:6
 ardoiser/a0p+()	po:v1__t___zz	di:*	fq:5
 ardoiseux/W.()	po:adj	lx:rare	di:*	fq:2
 ardoisier/F.()	po:nom	po:adj	di:*	fq:5
-ardre/d'q'l'm't's'	po:v3_i____zz	po:infi	lx:vx	di:*	fq:4
+ardre/d'q'n'l'm't's'	po:v3_i____zz	po:infi	lx:vx	di:*	fq:4
 ardu/F.()	po:adj	di:*	fq:6
 Arduinna/L'D'Q'	po:prn	is:fem	is:inv	se:myth	di:X	fq:3
 Arduino/L'D'Q'	po:npr	is:mas	is:inv	se:prod	se:info	di:X	fq:4
@@ -6082,7 +6082,7 @@ assassin/F.()	po:nom	po:adj	di:*	fq:7
 assassinat/S.()	po:nom	is:mas	di:*	fq:7
 assassiner/a0p+()	po:v1__t____a	di:*	fq:7
 assaut/S.()	po:nom	is:mas	di:*	fq:7
-assavoir/d'q'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:6
+assavoir/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:6
 asse/S.()	po:nom	is:fem	di:*	fq:5
 Asse/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:5
 As₂Se/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
@@ -6538,7 +6538,7 @@ attracteur/Fc()	po:adj	se:chim	et:lat	di:*	fq:4
 attractif/F.()	po:adj	di:*	fq:6
 attraction/S.()	po:nom	is:fem	di:*	fq:7
 attractivité/S.()	po:nom	is:fem	di:*	fq:5
-attraire/d'q'l'm't's'	po:v3__t___zz	po:infi	lx:vx	di:*	fq:5
+attraire/d'q'n'l'm't's'	po:v3__t___zz	po:infi	lx:vx	di:*	fq:5
 attrait/S.()	po:nom	is:mas	di:*	fq:7
 attrapable/S.()	po:adj	is:epi	di:*	fq:1
 attrapade/S.()	po:nom	is:fem	di:*	fq:3
@@ -7290,7 +7290,7 @@ aven/S.()	po:nom	is:mas	di:*	fq:5
 avenant/S.()	po:nom	is:mas	di:*	fq:6
 avenant/F.()	po:adj	di:*	fq:5
 avènement/S.()	po:nom	is:mas	di:*	fq:7
-avenir/d'q'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:8
+avenir/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:8
 avenir/S.()	po:nom	is:mas	di:*	fq:5
 avent/S.()	po:nom	is:mas	lx:fxa	di:*	fq:5
 Aventin/L'D'Q'	po:nom	is:mas	is:inv	se:cité	di:*	fq:5
@@ -7933,7 +7933,7 @@ Baltique/L'D'Q'	po:nom	is:fem	is:inv	se:mer	di:*	fq:6
 baltringue/S.()	po:nom	is:epi	lx:fam	di:*	fq:3
 baluchithérium/S.()	po:nom	is:mas	lx:rare	di:*	fq:0
 baluchon/S.()	po:nom	is:mas	di:*	fq:5
-baluchonner/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	lx:arg	di:*	fq:1
+baluchonner/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	lx:arg	di:*	fq:1
 balustrade/S.()	po:nom	is:fem	di:*	fq:6
 balustre/S.()	po:nom	is:mas	di:*	fq:5
 Balzac/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:7
@@ -9418,7 +9418,7 @@ bientraitance/S.()	po:nom	is:fem	lx:néo	di:*	fq:4
 bienveillamment/L'D'Q'	po:adv	di:*	fq:4
 bienveillance/S.()	po:nom	is:fem	di:*	fq:7
 bienveillant/F.()	po:adj	di:*	fq:7
-bienvenir/d'q'l'm't's'	po:v3_i____zz	po:infi	di:*	fq:4
+bienvenir/d'q'n'l'm't's'	po:v3_i____zz	po:infi	di:*	fq:4
 bienvenu/F.()	po:nom	po:adj	di:*	fq:6
 Bienvenüe/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:3
 bien-vivre/L'D'Q'	po:nom	is:mas	is:inv	lx:néo	se:soc	di:*	fq:2
@@ -10052,7 +10052,7 @@ blanchisserie/S.()	po:nom	is:fem	di:*	fq:5
 blanchisseur/Fs()	po:nom	di:*	fq:6
 blanchité/S.()	po:nom	is:fem	lx:néo	se:socio	di:*	fq:1
 blanchon/S.()	po:nom	is:mas	lx:québ	di:*	fq:3
-blanchoyer/a0p.()	po:v1_it____a	lx:rare	lx:vx	di:*	fq:3
+blanchoyer/a0p+()	po:v1_it____a	lx:rare	lx:vx	di:*	fq:3
 blanc-manger/L'D'Q'	po:nom	is:mas	is:sg	di:*	fq:2
 Blanc-Mesnil/L'D'Q'	po:nom	is:mas	is:inv	se:cité	di:*	fq:4
 blancs-becs/D'Q'	po:nom	is:mas	is:pl	lx:fam	di:*	fq:2
@@ -18611,7 +18611,7 @@ connexité/S.()	po:nom	is:fem	di:*	fq:6
 Connie/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:4
 connivence/S.()	po:nom	is:fem	di:*	fq:6
 connivent/F.()	po:adj	di:*	fq:5
-connobler/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+connobler/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 Connor/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
 connotatif/F.()	po:adj	se:lingu	se:philo	di:*	fq:5
 connotation/S.()	po:nom	is:fem	di:*	fq:6
@@ -19004,8 +19004,8 @@ contrebord	po:loc.adv	se:marin	di:*	fq:3
 contrebouter/a0p+()	po:v1__t___zz	di:*	fq:3
 contrebraquage/S.()	po:nom	is:mas	se:auto	di:*	fq:1
 contre-braquage/S.()	po:nom	is:mas	se:auto	di:C	fq:2
-contrebraquer/a0p.()	po:v1_it____a	se:auto	di:*	fq:1
-contre-braquer/a0p.()	po:v1_it____a	se:auto	di:C	fq:1
+contrebraquer/a0p+()	po:v1_it____a	se:auto	di:*	fq:1
+contre-braquer/a0p+()	po:v1_it____a	se:auto	di:C	fq:1
 contrebutement/S.()	po:nom	is:mas	di:*	fq:4
 contrebuter/a0p+()	po:v1__t___zz	di:*	fq:5
 contre-buter/a0p+()	po:v1__t___zz	di:C	fq:2
@@ -20228,7 +20228,7 @@ couronnement/S.()	po:nom	is:mas	di:*	fq:6
 couronner/a0p+()	po:v1__t_q_zz	di:*	fq:7
 couros/L'D'Q'	po:nom	is:mas	is:inv	et:grec	di:R	fq:3
 couroucou/S.()	po:nom	is:mas	se:zool	et:étr	di:*	fq:4
-courre/d'q'l'm't's'	po:v3__t_____	po:infi	di:*	fq:5
+courre/d'q'n'l'm't's'	po:v3__t_____	po:infi	di:*	fq:5
 courriel/S.()	po:nom	is:mas	di:*	fq:5
 courrielleur/S.()	po:nom	is:mas	di:*	fq:2
 courrier/F.()	po:nom	di:*	fq:7
@@ -20895,7 +20895,7 @@ cromlech/S.()	po:nom	is:mas	et:celt	di:*	fq:5
 cromoglycate/S.()	po:nom	is:mas	se:pharma	di:*	fq:3
 cromorne/S.()	po:nom	is:mas	se:mus	et:all	di:*	fq:4
 Cromwell/L'D'Q'	po:patr	is:epi	is:inv	se:polit	di:*	fq:6
-crônir/d'q'l'm't's'	po:v2_i____zz	po:infi	di:*	fq:0
+crônir/d'q'n'l'm't's'	po:v2_i____zz	po:infi	di:*	fq:0
 crooner/S.()	po:nom	is:epi	et:angl	di:M	fq:4
 crooneur/Fs()	po:nom	et:angl	di:R	fq:1
 croquant/F.()	po:nom	po:adj	di:*	fq:5
@@ -20942,7 +20942,7 @@ croulant/F.()	po:nom	po:adj	di:*	fq:5
 croule/S.()	po:nom	is:fem	se:zool	di:*	fq:5
 croulement/S.()	po:nom	is:mas	lx:alt	lx:vx	di:*	fq:3
 crouler/a0p.()	po:v1_i____zz	di:*	fq:6
-crounir/d'q'l'm't's'	po:v2_i____zz	po:infi	di:*	fq:0
+crounir/d'q'n'l'm't's'	po:v2_i____zz	po:infi	di:*	fq:0
 croup/S.()	po:nom	is:mas	lx:vx	se:méd	di:*	fq:6
 croupade/S.()	po:nom	is:fem	di:*	fq:3
 croupal/W.()	po:adj	lx:vx	se:méd	di:*	fq:5
@@ -21439,7 +21439,7 @@ cutback/S.()	po:nom	is:mas	et:angl	di:R	fq:3
 cut-back/L'D'Q'	po:nom	is:mas	is:inv	et:angl	di:M	fq:1
 Cu₂Te/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
 CuTeO₃/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
-cuter/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:5
+cuter/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:5
 cuti/S.()	po:nom	is:fem	lx:abr	lx:fam	di:*	fq:5
 cuticulaire/S.()	po:adj	is:epi	di:X	fq:5
 cuticule/S.()	po:nom	is:fem	se:anat	se:bot	se:zool	et:lat	di:*	fq:6
@@ -22557,7 +22557,7 @@ déconcentration/S.()	po:nom	is:fem	di:*	fq:6
 déconcentrer/a0p+()	po:v1__t_q_zz	di:*	fq:5
 déconcertant/F.()	po:adj	di:*	fq:6
 déconcerter/a0p+()	po:v1__t___zz	di:*	fq:6
-déconcubiner/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
+déconcubiner/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
 décondensation/S.()	po:nom	is:fem	lx:néo	di:*	fq:4
 décondenser/a0p+()	po:v1__t___zz	se:bio	di:*	fq:4
 déconditionnement/S.()	po:nom	is:mas	di:*	fq:4
@@ -22660,7 +22660,7 @@ découvrement/S.()	po:nom	is:mas	di:*	fq:4
 découvreur/Fs()	po:nom	di:*	fq:6
 découvrir/iC()	po:v3_it_q__a	di:*	fq:8
 décramponner/a0p+()	po:v1__t___zz	di:*	fq:3
-décrapouiller/d'q'l'm't's'	po:v1__t_q__a	po:infi	lx:rare	di:*	fq:0
+décrapouiller/d'q'n'l'm't's'	po:v1__t_q__a	po:infi	lx:rare	di:*	fq:0
 décrassage/S.()	po:nom	is:mas	di:*	fq:5
 décrassement/S.()	po:nom	is:mas	di:*	fq:3
 décrasser/a0p+()	po:v1__t_q_zz	di:*	fq:5
@@ -22815,7 +22815,7 @@ défalcation/S.()	po:nom	is:fem	di:*	fq:5
 défalquer/a0p+()	po:v1__t___zz	di:*	fq:5
 défanage/S.()	po:nom	is:mas	se:agri	di:*	fq:4
 défarder/a0p+()	po:v1__t___zz	di:*	fq:3
-défarguer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+défarguer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 défatiguer/a0p+()	po:v1_it_q_zz	di:*	fq:4
 défaufiler/a0p+()	po:v1__t___zz	di:*	fq:1
 défausse/S.()	po:nom	is:fem	di:*	fq:4
@@ -22982,7 +22982,7 @@ défroquage/S.()	po:nom	is:mas	lx:rare	se:reli	di:*	fq:1
 défroque/S.()	po:nom	is:fem	di:*	fq:5
 défroquer/a0p+()	po:v1_it_q_zz	di:*	fq:5
 défruiter/a0p+()	po:v1__t___zz	di:*	fq:3
-défrusquer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+défrusquer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 défunt/F.()	po:nom	po:adj	di:*	fq:7
 dégagement/S.()	po:nom	is:mas	di:*	fq:6
 dégager/a0p+()	po:v1_it_q_zz	di:*	fq:7
@@ -23064,8 +23064,8 @@ dégourdir/f0p+()	po:v2__t_q__a	di:*	fq:5
 dégourdissage/S.()	po:nom	is:mas	se:techni	di:*	fq:3
 dégourdissant/F.()	po:adj	di:*	fq:0
 dégourdissement/S.()	po:nom	is:mas	di:*	fq:3
-dégourer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
-dégourrer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+dégourer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+dégourrer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 dégout/S.()	po:nom	is:mas	di:R	fq:4
 dégoût/S.()	po:nom	is:mas	di:M	fq:6
 dégoutamment/L'D'Q'	po:adv	di:R	fq:0
@@ -23143,7 +23143,7 @@ déguster/a0p+()	po:v1__t___zz	di:*	fq:6
 dégyration/S.()	po:nom	is:fem	lx:néo	se:astronaut	di:*	fq:0
 déhalage/S.()	po:nom	is:mas	se:marin	di:*	fq:3
 déhaler/a0p+()	po:v1__t_q_zz	di:*	fq:4
-déhâler/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:3
+déhâler/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:3
 déhanchement/S.()	po:nom	is:mas	di:*	fq:5
 déhancher/a0p+()	po:v1__t_q_zz	di:*	fq:5
 déharder/a0p+()	po:v1__t___zz	di:*	fq:1
@@ -23254,10 +23254,9 @@ délibérant/F.()	po:adj	di:*	fq:6
 délibératif/F.()	po:adj	di:*	fq:6
 délibération/S.()	po:nom	is:fem	di:*	fq:7
 délibératoire/S.()	po:adj	is:epi	di:*	fq:4
-délibéré/F.()	po:adj	di:*	fq:6
 délibéré/S.()	po:nom	is:mas	di:*	fq:6
 délibérément/L'D'Q'	po:adv	di:*	fq:6
-délibérer/c0p.()	po:v1_it____a	di:*	fq:7
+délibérer/c0p+()	po:v1_it____a	di:*	fq:7
 délicat/F.()	po:nom	po:adj	di:*	fq:7
 délicatement/L'D'Q'	po:adv	di:*	fq:6
 délicatesse/S.()	po:nom	is:fem	di:*	fq:7
@@ -23522,7 +23521,7 @@ demi-sommeil/S.()	po:nom	is:mas	di:*	fq:3
 demi-soupir/S.()	po:nom	is:mas	di:*	fq:2
 démission/S.()	po:nom	is:fem	di:*	fq:7
 démissionnaire/S.()	po:nom	po:adj	is:epi	di:*	fq:6
-démissionner/a0p.()	po:v1_itx___a	di:*	fq:6
+démissionner/a0p+()	po:v1_itx___a	di:*	fq:6
 demi-succès/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:3
 demi-tarif/S.()	po:nom	is:mas	di:*	fq:2
 demi-teinte/S.()	po:nom	is:fem	di:*	fq:4
@@ -23946,7 +23945,7 @@ déployer/a0p+()	po:v1__t_q_zz	di:*	fq:7
 déplumer/a0p+()	po:v1__t_q_zz	di:*	fq:5
 dépocher/a0p+()	po:v1__t___zz	di:*	fq:3
 dépoétiser/a0p+()	po:v1__t___zz	di:*	fq:4
-dépoiler/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:1
+dépoiler/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:1
 dépointage/S.()	po:nom	is:mas	di:*	fq:4
 dépointer/a0p+()	po:v1__t___zz	di:*	fq:3
 dépoitrailler/a0p+()	po:v1__t_q_zz	lx:fam	lx:rare	di:*	fq:4
@@ -24106,7 +24105,7 @@ dérembourser/a0p+()	po:v1__t___zz	se:admin	di:*	fq:3
 dérépression/S.()	po:nom	is:fem	di:*	fq:4
 déresponsabilisation/S.()	po:nom	is:fem	di:*	fq:4
 déresponsabiliser/a0p+()	po:v1__t___zz	di:*	fq:4
-dérésumenter/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+dérésumenter/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 Derib/L'D'Q'	po:prn	is:mas	is:inv	di:X	fq:3
 déridage/S.()	po:nom	is:mas	se:chir	di:*	fq:2
 dérider/a0p+()	po:v1__t_q_zz	di:*	fq:5
@@ -24173,7 +24172,7 @@ dérogation/S.()	po:nom	is:fem	di:*	fq:6
 dérogatoire/S.()	po:adj	is:epi	di:*	fq:6
 dérogeance/S.()	po:nom	is:fem	di:*	fq:5
 déroger/a0p.()	po:v1___n___a	di:*	fq:6
-dérondir/d'q'l'm't's'	po:v2__t___zz	po:infi	lx:rare	di:*	fq:0
+dérondir/d'q'n'l'm't's'	po:v2__t___zz	po:infi	lx:rare	di:*	fq:0
 dérougir/f0p+()	po:v2_it_q__a	di:*	fq:4
 dérouiller/a0p+()	po:v1_it_q_zz	di:*	fq:5
 déroulage/S.()	po:nom	is:mas	di:*	fq:5
@@ -24657,7 +24656,7 @@ désodorisation/S.()	po:nom	is:fem	di:*	fq:4
 désodoriser/a0p+()	po:v1__t___zz	di:*	fq:4
 désœuvré/F.()	po:nom	po:adj	di:*	fq:6
 désœuvrement/S.()	po:nom	is:mas	di:*	fq:5
-désœuvrer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:3
+désœuvrer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:3
 désolant/F.()	po:adj	di:*	fq:6
 désolation/S.()	po:nom	is:fem	di:*	fq:6
 désoler/a0p+()	po:v1__t_q_zz	di:*	fq:7
@@ -24898,7 +24897,7 @@ déthéiner/a0p+()	po:v1__t____a	di:*	fq:1
 détimbré/F.()	po:adj	se:mus	di:*	fq:4
 détirer/a0p+()	po:v1__t_q_zz	di:*	fq:4
 détireuse/S.()	po:nom	is:fem	di:*	fq:0
-détiser/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:0
+détiser/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:0
 détisser/a0p+()	po:v1__t___zz	di:*	fq:4
 détonant/F.()	po:adj	di:*	fq:5
 détonateur/S.()	po:nom	is:mas	di:*	fq:5
@@ -25030,7 +25029,7 @@ devenir/S.()	po:nom	is:mas	di:*	fq:5
 déventer/a0p+()	po:v1__t___zz	di:*	fq:3
 déverbal/W.()	po:adj	di:*	fq:4
 déverbatif/S.()	po:nom	is:mas	se:lingu	di:*	fq:4
-déverdir/f0p.()	po:v2_it____a	di:*	fq:3
+déverdir/f0p+()	po:v2_it____a	di:*	fq:3
 dévergondage/S.()	po:nom	is:mas	di:*	fq:5
 dévergondé/F.()	po:nom	di:*	fq:5
 dévergonder/a0p+()	po:v1____p_e_	di:*	fq:4
@@ -25462,7 +25461,7 @@ différentiation/S.()	po:nom	is:fem	di:*	fq:5
 différentié/F.()	po:adj	di:*	fq:4
 différentiel/F+()	po:nom	po:adj	di:*	fq:7
 différentiellement/L'D'Q'	po:adv	di:*	fq:4
-différentier/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:4
+différentier/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:4
 différer/c0p+()	po:v1_it___zz	di:*	fq:7
 difficile/S.()	po:adj	is:epi	di:*	fq:8
 difficilement/L'D'Q'	po:adv	di:*	fq:7
@@ -25851,7 +25850,7 @@ disculper/a0p+()	po:v1_it_q__a	di:*	fq:6
 discuputer/a0p.()	po:v1_i____zz	lx:afr	di:*	fq:0
 discursif/F.()	po:adj	di:*	fq:6
 discursivement/L'D'Q'	po:adv	se:log	se:lingu	di:*	fq:4
-discursiviser/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+discursiviser/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 discursivité/S.()	po:nom	is:fem	se:log	se:lingu	di:*	fq:5
 discussion/S.()	po:nom	is:fem	di:*	fq:8
 discutable/S.()	po:adj	is:epi	di:*	fq:6
@@ -26485,7 +26484,7 @@ double/S.()	po:nom	is:mas	di:*	fq:7
 doublé/S.()	po:nom	is:mas	di:*	fq:6
 doubleau/X.()	po:nom	is:mas	di:*	fq:5
 double-clic/L'D'Q'	po:nom	is:mas	is:sg	lx:néo	se:info	et:angl	di:*	fq:2
-double-cliquer/a0()	po:v1_i____zz	lx:néo	se:info	et:angl	di:*	fq:2
+double-cliquer/a0p.()	po:v1_i____zz	lx:néo	se:info	et:angl	di:*	fq:2
 double-commande/L'D'Q'	po:nom	is:fem	is:sg	di:*	fq:1
 double-crème/L'D'Q'	po:nom	is:mas	is:sg	di:*	fq:1
 double-croche/L'D'Q'	po:nom	is:fem	is:sg	se:mus	di:*	fq:2
@@ -26529,7 +26528,7 @@ doudouisme/S.()	po:nom	is:mas	di:*	fq:3
 doudoune/S.()	po:nom	is:fem	di:*	fq:4
 doué/F.()	po:adj	di:*	fq:7
 douelle/S.()	po:nom	is:fem	di:*	fq:5
-douer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:5
+douer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:5
 Doug/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
 douglas/L'D'Q'	po:nom	is:mas	is:inv	se:bot	se:sylvi	di:*	fq:5
 Douglas/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:6
@@ -26818,7 +26817,7 @@ ductile/S.()	po:adj	is:epi	di:*	fq:5
 ductilité/S.()	po:nom	is:fem	di:*	fq:5
 ductus/L'D'Q'	po:nom	is:mas	is:inv	et:lat	di:*	fq:5
 Dudelange/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:4
-dudgeonner/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:3
+dudgeonner/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:3
 dudit	po:mg	po:det	is:mas	is:sg	se:@	di:*	fq:7
 duègne/S.()	po:nom	is:fem	di:*	fq:5
 duel/F+()	po:adj	di:*	fq:6
@@ -27158,7 +27157,7 @@ e-book/S.()	po:nom	is:mas	lx:néo	se:hitech	se:litt	et:angl	di:*	fq:3
 ébouleux/W.()	po:adj	di:*	fq:5
 éboulis/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:6
 ébouqueté/F.()	po:adj	di:*	fq:0
-ébouqueter/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	se:jard	di:*	fq:0
+ébouqueter/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	se:jard	di:*	fq:0
 ébourgeonnage/S.()	po:nom	is:mas	di:*	fq:4
 ébourgeonnement/S.()	po:nom	is:mas	di:*	fq:4
 ébourgeonner/a0p+()	po:v1__t___zz	di:*	fq:4
@@ -27169,7 +27168,7 @@ e-book/S.()	po:nom	is:mas	lx:néo	se:hitech	se:litt	et:angl	di:*	fq:3
 ébourrer/a0p+()	po:v1__t___zz	di:*	fq:3
 éboutage/S.()	po:nom	is:mas	di:*	fq:3
 ébouter/a0p+()	po:v1__t___zz	di:*	fq:3
-ébouzer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+ébouzer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 ébraiser/a0p+()	po:v1__t___zz	di:*	fq:1
 ébranchage/S.()	po:nom	is:mas	di:*	fq:4
 ébranchement/S.()	po:nom	is:mas	se:sylvi	di:*	fq:3
@@ -27860,7 +27859,7 @@ EFS/L'D'Q'	po:nom	is:epi	is:inv	lx:sig	di:X	fq:4
 églefin/S.()	po:nom	is:mas	di:*	fq:4
 église/S.()	po:nom	is:fem	se:chris	di:*	fq:8
 églogue/S.()	po:nom	is:fem	di:*	fq:5
-égnaffer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+égnaffer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 ego/S.()	po:nom	is:mas	et:lat	di:C	fq:6
 égo/S.()	po:nom	is:mas	et:lat	di:*	fq:5
 égocentré/F.()	po:adj	lx:alt	lx:néo	di:*	fq:4
@@ -27869,7 +27868,7 @@ ego/S.()	po:nom	is:mas	et:lat	di:C	fq:6
 égocentriste/S.()	po:nom	po:adj	is:epi	di:*	fq:4
 égoïne/S.()	po:adj	is:epi	di:*	fq:4
 égoïne/S.()	po:nom	is:fem	di:*	fq:4
-égoïner/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+égoïner/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 égoïsme/S.()	po:nom	is:mas	di:*	fq:7
 égoïste/S.()	po:nom	po:adj	is:epi	di:*	fq:6
 égoïstement/L'D'Q'	po:adv	di:*	fq:5
@@ -28361,7 +28360,7 @@ embaumement/S.()	po:nom	is:mas	di:*	fq:5
 embaumer/a0p+()	po:v1_it___zz	di:*	fq:6
 embaumeur/Fs()	po:nom	di:*	fq:4
 embecquer/a0p+()	po:v1__t___zz	di:*	fq:3
-embecqueter/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:1
+embecqueter/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:1
 embéguiner/a0p+()	po:v1____p_e_	di:*	fq:4
 embellie/S.()	po:nom	is:fem	di:*	fq:5
 embellir/f0p+()	po:v2_it_q__a	di:*	fq:6
@@ -28374,7 +28373,7 @@ embêter/a0p+()	po:v1__t_q_zz	di:*	fq:5
 embidonner/a0p+()	po:v1__t___zz	di:*	fq:0
 embiellage/S.()	po:nom	is:mas	se:méca	di:*	fq:4
 embioptère/S.()	po:nom	is:mas	lx:rare	se:zool	et:grec	di:*	fq:1
-embistrouiller/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+embistrouiller/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 emblavage/S.()	po:nom	is:mas	di:*	fq:3
 emblavement/S.()	po:nom	is:mas	se:agri	di:*	fq:4
 emblaver/a0p+()	po:v1__t___zz	di:*	fq:5
@@ -28850,7 +28849,7 @@ encalminé/F.()	po:adj	se:marin	di:*	fq:4
 encan/S.()	po:nom	is:mas	di:*	fq:5
 encanaillement/S.()	po:nom	is:mas	di:*	fq:4
 encanailler/a0p+()	po:v1__t_q_zz	di:*	fq:5
-encaper/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+encaper/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 encapsidation/S.()	po:nom	is:fem	lx:néo	se:bio	di:*	fq:3
 encapsulage/S.()	po:nom	is:mas	di:*	fq:3
 encapsulation/S.()	po:nom	is:fem	di:*	fq:4
@@ -28860,7 +28859,7 @@ encapuchonné/F.()	po:nom	di:*	fq:5
 encapuchonner/a0p+()	po:v1__t_q_zz	di:*	fq:4
 encaquement/S.()	po:nom	is:mas	di:*	fq:3
 encaquer/a0p+()	po:v1__t___zz	di:*	fq:4
-encarrer/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
+encarrer/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
 encart/S.()	po:nom	is:mas	di:*	fq:5
 encartage/S.()	po:nom	is:mas	di:*	fq:4
 encartement/S.()	po:nom	is:mas	di:*	fq:4
@@ -28916,7 +28915,7 @@ enchainement/S.()	po:nom	is:mas	di:R	fq:4
 enchaînement/S.()	po:nom	is:mas	di:M	fq:6
 enchainer/a0p+()	po:v1_it_q_zz	di:R	fq:5
 enchaîner/a0p+()	po:v1_it_q_zz	di:M	fq:6
-enchanteler/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+enchanteler/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 enchantement/S.()	po:nom	is:mas	di:*	fq:6
 enchanter/a0p+()	po:v1__t_q_zz	di:*	fq:6
 enchanteur/Fe()	po:nom	po:adj	di:*	fq:6
@@ -28934,7 +28933,7 @@ enchère/S.()	po:nom	is:fem	di:*	fq:6
 enchérir/f0p+()	po:v2_i_____a	di:*	fq:5
 enchérissement/S.()	po:nom	is:mas	di:*	fq:5
 enchérisseur/Fs()	po:nom	di:*	fq:5
-enchetarder/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+enchetarder/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 enchevalement/S.()	po:nom	is:mas	di:*	fq:1
 enchevaucher/a0p+()	po:v1__t___zz	di:*	fq:1
 enchevauchure/S.()	po:nom	is:fem	di:*	fq:2
@@ -28944,8 +28943,8 @@ enchevêtrure/S.()	po:nom	is:fem	di:*	fq:4
 enchifrènement/S.()	po:nom	is:mas	di:*	fq:4
 enchifrener/b0p+()	po:v1__t___zz	di:*	fq:4
 enchilada/S.()	po:nom	is:fem	se:cuis	et:esp	di:*	fq:3
-enchtiber/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
-enchtourber/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+enchtiber/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+enchtourber/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 encirer/a0p+()	po:v1__t___zz	di:*	fq:3
 enclave/S.()	po:nom	is:fem	di:*	fq:6
 enclavement/S.()	po:nom	is:mas	di:*	fq:5
@@ -28961,7 +28960,7 @@ enclise/S.()	po:nom	is:fem	se:lingu	et:grec	di:*	fq:4
 enclitique/S.()	po:adj	is:epi	di:*	fq:4
 encloitrer/a0p+()	po:v1__t___zz	di:R	fq:0
 encloîtrer/a0p+()	po:v1__t___zz	di:M	fq:3
-encloquer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+encloquer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 enclore/rA()	po:v3__t_q__a	di:*	fq:6
 enclos/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:6
 enclosure/S.()	po:nom	is:fem	di:X	fq:5
@@ -29015,9 +29014,9 @@ encrer/a0p+()	po:v1_it___zz	di:*	fq:5
 encreur/S.()	po:nom	is:mas	di:*	fq:4
 encrier/S.()	po:nom	is:mas	di:*	fq:5
 encrine/S.()	po:nom	is:fem	di:*	fq:5
-encrister/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+encrister/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 encroué/F.()	po:adj	di:*	fq:3
-encroumer/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
+encroumer/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
 encroutant/F.()	po:adj	di:R	fq:2
 encroûtant/F.()	po:adj	di:M	fq:4
 encroutement/S.()	po:nom	is:mas	di:R	fq:3
@@ -29060,7 +29059,7 @@ endettement/S.()	po:nom	is:mas	se:fin	di:*	fq:6
 endetter/a0p+()	po:v1__t_q_zz	se:fin	di:*	fq:5
 endeuiller/a0p+()	po:v1__t___zz	di:*	fq:5
 endêvé/F.()	po:adj	di:*	fq:1
-endêver/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:4
+endêver/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:4
 endiabler/a0p+()	po:v1_it___zz	di:*	fq:5
 endiamanté/F.()	po:adj	di:*	fq:4
 endigage/S.()	po:nom	is:mas	di:*	fq:4
@@ -29203,7 +29202,7 @@ enfermer/a0p+()	po:v1__t_q_zz	di:*	fq:7
 enferrer/a0p+()	po:v1__t_q_zz	di:*	fq:5
 enfeu/S.()	po:nom	is:mas	di:*	fq:5
 enficelé/F.()	po:adj	di:*	fq:1
-enficeler/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+enficeler/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 enfichable/S.()	po:adj	is:epi	di:*	fq:4
 enficher/a0p+()	po:v1__t___zz	di:*	fq:4
 enfieller/a0p+()	po:v1__t___zz	di:*	fq:4
@@ -29225,18 +29224,18 @@ enfleurage/S.()	po:nom	is:mas	di:*	fq:4
 enfleurer/a0p+()	po:v1__t___zz	di:*	fq:3
 enflure/S.()	po:nom	is:fem	di:*	fq:6
 enfoiré/F.()	po:nom	po:adj	di:*	fq:4
-enfoirer/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
+enfoirer/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:vx	di:*	fq:1
 enfonçage/S.()	po:nom	is:mas	lx:néo	di:*	fq:3
 enfoncement/S.()	po:nom	is:mas	di:*	fq:6
 enfoncer/a0p+()	po:v1_it_q_zz	di:*	fq:7
 enfonceur/Fs()	po:nom	di:*	fq:4
 enfonçure/S.()	po:nom	is:fem	di:*	fq:4
 enforcir/f0p+()	po:v2_it_q__a	di:*	fq:3
-enfouiller/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+enfouiller/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 enfouir/f0p+()	po:v2__t_q__a	di:*	fq:6
 enfouissement/S.()	po:nom	is:mas	di:*	fq:6
 enfouisseur/S.()	po:nom	is:mas	di:*	fq:4
-enfourailler/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:0
+enfourailler/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:0
 enfourchement/S.()	po:nom	is:mas	di:*	fq:4
 enfourcher/a0p+()	po:v1__t___zz	di:*	fq:5
 enfourchure/S.()	po:nom	is:fem	di:*	fq:4
@@ -29432,7 +29431,7 @@ enorgueillir/f0p+()	po:v2__t_q__a	di:*	fq:6
 énostose/S.()	po:nom	is:fem	di:*	fq:3
 énouer/a0p+()	po:v1__t___zz	lx:rare	di:*	fq:2
 enquérir/iK()	po:v3____p_e_	di:*	fq:6
-enquerre/d'q'l'm't's'	po:v3__t_____	po:infi	di:*	fq:4
+enquerre/d'q'n'l'm't's'	po:v3__t_____	po:infi	di:*	fq:4
 enquête/S.()	po:nom	is:fem	di:*	fq:7
 enquêté/F.()	po:adj	di:*	fq:6
 enquêter/a0p.()	po:v1_i_____a	di:*	fq:6
@@ -29469,7 +29468,7 @@ enrésinement/S.()	po:nom	is:mas	se:sylvi	di:*	fq:4
 enrésiner/a0p+()	po:v1__t___zz	di:*	fq:4
 enrhumé/F.()	po:nom	di:*	fq:5
 enrhumer/a0p+()	po:v1__t_q__a	di:*	fq:5
-enrhuner/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+enrhuner/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 enrichir/f0p+()	po:v2__t_q__a	di:*	fq:7
 enrichissant/F.()	po:adj	di:*	fq:5
 enrichissement/S.()	po:nom	is:mas	di:*	fq:6
@@ -29807,7 +29806,7 @@ entrevous/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:4
 entrevouter/a0p+()	po:v1__t___zz	di:R	fq:0
 entrevoûter/a0p+()	po:v1__t___zz	di:M	fq:3
 entrevue/S.()	po:nom	is:fem	di:*	fq:7
-entr’hiverner/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+entr’hiverner/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 entrisme/S.()	po:nom	is:mas	di:*	fq:4
 entropie/S.()	po:nom	is:fem	di:*	fq:6
 entropion/S.()	po:nom	is:mas	di:*	fq:5
@@ -30275,7 +30274,7 @@ EPL/L'D'Q'	po:nom	is:fem	is:inv	lx:sig	di:X	fq:4
 époxydé/F.()	po:adj	se:chim	di:*	fq:2
 époxydique/S.()	po:adj	is:epi	di:*	fq:4
 Eppendorf/L'D'Q'	po:npr	is:mas	is:inv	se:soc	di:X	fq:4
-épreindre/d'q'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:3
+épreindre/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:3
 épreinte/S.()	po:nom	is:fem	di:*	fq:5
 éprendre/tG()	po:v3____p_e_	di:*	fq:6
 épreuve/S.()	po:nom	is:fem	di:*	fq:7
@@ -30312,7 +30311,7 @@ Epstein/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:5
 équanime/S.()	po:adj	is:epi	di:*	fq:3
 équanimité/S.()	po:nom	is:fem	di:*	fq:4
 équant/S.()	po:nom	is:mas	lx:vx	di:*	fq:4
-équarrier/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+équarrier/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 équarrir/f0p+()	po:v2__t____a	di:*	fq:5
 équarrissage/S.()	po:nom	is:mas	di:*	fq:5
 équarrissement/S.()	po:nom	is:mas	di:*	fq:4
@@ -30636,7 +30635,7 @@ escarrifier/a0p+()	po:v1__t___zz	di:*	fq:3
 escarrotique/S.()	po:adj	is:epi	se:méd	di:*	fq:4
 Escaut/L'D'Q'	po:nom	is:mas	is:inv	se:rég	se:riv	di:*	fq:6
 eschare/S.()	po:nom	is:fem	di:C	fq:5
-escharifier/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:C	fq:3
+escharifier/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:C	fq:3
 eschatologie/S.()	po:nom	is:fem	di:*	fq:5
 eschatologique/S.()	po:adj	is:epi	di:*	fq:6
 eschatologiquement/L'D'Q'	po:adv	di:*	fq:4
@@ -30860,7 +30859,7 @@ estarie/S.()	po:nom	is:fem	di:*	fq:3
 este/S.()	po:nom	is:mas	di:*	fq:6
 Esteban/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
 Estelle/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:5
-ester/d'q'l'm't's'	po:v1_i____zz	po:infi	di:*	fq:6
+ester/d'q'n'l'm't's'	po:v1_i____zz	po:infi	di:*	fq:6
 ester/S.()	po:nom	is:mas	di:*	fq:6
 estérase/S.()	po:nom	is:fem	se:bioch	se:chim	di:*	fq:5
 Estérel/L'D'Q'	po:nom	is:mas	is:inv	se:mont	di:*	fq:5
@@ -31689,7 +31688,7 @@ excommunier/a0p+()	po:v1__t___zz	di:*	fq:6
 excoriation/S.()	po:nom	is:fem	di:*	fq:5
 excorier/a0p+()	po:v1__t___zz	di:*	fq:5
 excoriose/S.()	po:nom	is:fem	di:*	fq:4
-excracher/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+excracher/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 excrément/S.()	po:nom	is:mas	di:*	fq:6
 excrémenteux/W.()	po:adj	di:*	fq:3
 excrémentiel/F+()	po:adj	di:*	fq:5
@@ -32207,7 +32206,7 @@ extuber/a0p+()	po:v1_it____a	se:méd	di:*	fq:3
 extumescence/S.()	po:nom	is:fem	se:méd	et:lat	di:*	fq:3
 exubérance/S.()	po:nom	is:fem	di:*	fq:6
 exubérant/F.()	po:adj	di:*	fq:6
-exubérer/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:2
+exubérer/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:2
 exulcération/S.()	po:nom	is:fem	di:*	fq:4
 exulcérer/c0p+()	po:v1__t___zz	di:*	fq:4
 exultant/F.()	po:adj	di:*	fq:4
@@ -32450,7 +32449,7 @@ Fallope/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:5
 Fallouja/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:4
 falot/F.()	po:adj	di:*	fq:5
 falot/S.()	po:nom	is:mas	di:*	fq:5
-faloter/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
+faloter/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
 falourde/S.()	po:nom	is:fem	lx:vx	di:*	fq:4
 falsetto/S.()	po:nom	is:mas	se:mus	et:ita	di:*	fq:3
 falsifiabilité/S.()	po:nom	is:fem	di:*	fq:4
@@ -32579,7 +32578,7 @@ farfalle/S.()	po:nom	is:fem	se:cuis	et:ita	di:*	fq:1
 farfelu/F.()	po:nom	po:adj	di:*	fq:5
 farfouiller/a0p+()	po:v1_it___zz	lx:fam	di:*	fq:4
 farfouilleur/Fs()	po:nom	lx:fam	di:*	fq:3
-farguer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+farguer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 fargues/D'Q'	po:nom	is:fem	is:pl	di:*	fq:3
 faribole/S.()	po:nom	is:fem	di:*	fq:5
 Farid/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
@@ -32628,8 +32627,8 @@ fasciser/a0p+()	po:v1__t___zz	di:*	fq:4
 fascisme/S.()	po:nom	is:mas	di:*	fq:6
 fasciste/S.()	po:nom	po:adj	is:epi	di:*	fq:6
 fascistoïde/S.()	po:adj	is:epi	se:polit	di:*	fq:3
-faséier/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	se:marin	di:*	fq:0
-faseiller/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	se:marin	di:*	fq:0
+faséier/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	se:marin	di:*	fq:0
+faseiller/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	se:marin	di:*	fq:0
 faseyer/a0p.()	po:v1_i____zz	se:marin	di:*	fq:3
 faséyer/c0p.()	po:v1_i____zz	se:marin	di:*	fq:1
 fashionable/S.()	po:adj	is:epi	lx:vx	et:angl	di:*	fq:5
@@ -33797,7 +33796,7 @@ flicage/S.()	po:nom	is:mas	lx:fam	di:*	fq:4
 flicaille/S.()	po:nom	is:fem	lx:fam	di:*	fq:4
 flicard/F.()	po:nom	po:adj	lx:fam	di:*	fq:3
 flingot/S.()	po:nom	is:mas	di:*	fq:4
-flingoter/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+flingoter/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 flingue/S.()	po:nom	is:mas	di:*	fq:4
 flinguer/a0p+()	po:v1_it_q_zz	di:*	fq:4
 flingueur/Fs()	po:nom	di:*	fq:4
@@ -33951,7 +33950,7 @@ fluorure/S.()	po:nom	is:mas	di:*	fq:6
 fluosilicate/S.()	po:nom	is:mas	se:chim	di:*	fq:5
 fluotournage/S.()	po:nom	is:mas	di:*	fq:4
 flupyrsulfuron/S.()	po:nom	is:mas	di:X	fq:1
-flurer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+flurer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 flurochloridone/S.()	po:nom	is:mas	di:X	fq:1
 flush/A.()	po:nom	is:mas	et:angl	di:*	fq:4
 flustre/S.()	po:nom	is:fem	se:bot	di:*	fq:3
@@ -35027,7 +35026,7 @@ frisko/S.()	po:nom	is:mas	lx:dép	lx:belg	di:*	fq:0
 frisoir/S.()	po:nom	is:mas	di:*	fq:3
 frisolée/S.()	po:nom	is:fem	se:agri	di:*	fq:4
 frison/F+()	po:nom	po:adj	di:*	fq:5
-frisonner/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:3
+frisonner/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:3
 frisotant/F.()	po:adj	di:R	fq:1
 frisoter/a0p+()	po:v1_it___zz	di:R	fq:3
 frisotis/L'D'Q'	po:nom	is:mas	is:inv	di:R	fq:1
@@ -35508,7 +35507,7 @@ GAFAM/L'D'Q'	po:nom	is:epi	is:inv	lx:sig	di:X	fq:1
 gaffe/S.()	po:nom	is:fem	di:*	fq:5
 gaffer/a0p+()	po:v1_it___zz	di:*	fq:4
 gaffeur/Fs()	po:nom	po:adj	di:*	fq:4
-gafouiller/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+gafouiller/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 gag/S.()	po:nom	is:mas	di:*	fq:5
 gaga/S.()	po:nom	po:adj	is:epi	lx:fam	di:*	fq:4
 gage/S.()	po:nom	is:mas	di:*	fq:7
@@ -36839,7 +36838,7 @@ glaçure/S.()	po:nom	is:fem	di:*	fq:5
 gladiateur/Fc()	po:nom	di:*	fq:6
 gladiature/S.()	po:nom	is:fem	se:hist	di:*	fq:4
 Gladys/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:5
-glaglater/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:0
+glaglater/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:0
 glagolitique/S.()	po:adj	is:epi	di:*	fq:4
 glaïeul/S.()	po:nom	is:mas	di:*	fq:5
 glaire/S.()	po:nom	is:fem	di:*	fq:5
@@ -37316,7 +37315,7 @@ gorge/S.()	po:nom	is:fem	di:*	fq:6
 gorge-de-pigeon/L'D'Q'	po:adj	is:epi	is:inv	di:*	fq:2
 gorgée/S.()	po:nom	is:fem	di:*	fq:5
 gorgeon/S.()	po:nom	is:mas	lx:fam	di:*	fq:3
-gorgeonner/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
+gorgeonner/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
 gorger/a0p+()	po:v1__t_q_zz	di:*	fq:6
 gorgerette/S.()	po:nom	is:fem	di:*	fq:4
 gorgerin/S.()	po:nom	is:mas	di:*	fq:4
@@ -37366,9 +37365,9 @@ gougère/S.()	po:nom	is:fem	di:*	fq:3
 Gouges/L'D'Q'	po:patr	is:epi	is:inv	se:litt	se:polit	di:*	fq:5
 gougnafier/S.()	po:nom	is:mas	lx:fam	di:*	fq:3
 gougnote/S.()	po:nom	is:fem	di:R	fq:0
-gougnoter/d'q'l'm't's'	po:v1__t___zz	po:infi	di:R	fq:0
+gougnoter/d'q'n'l'm't's'	po:v1__t___zz	po:infi	di:R	fq:0
 gougnotte/S.()	po:nom	is:fem	di:M	fq:3
-gougnotter/d'q'l'm't's'	po:v1__t___zz	po:infi	di:M	fq:2
+gougnotter/d'q'n'l'm't's'	po:v1__t___zz	po:infi	di:M	fq:2
 Gouhier/L'D'Q'	po:patr	is:epi	is:inv	di:X	fq:5
 gouinasse/S.()	po:nom	is:fem	lx:péj	se:sexe	di:*	fq:0
 gouine/S.()	po:nom	is:fem	lx:fam	di:*	fq:4
@@ -37404,7 +37403,7 @@ gour/S.()	po:nom	is:mas	di:*	fq:5
 goura/S.()	po:nom	is:mas	et:étr	di:*	fq:3
 gourami/S.()	po:nom	is:mas	se:zool	et:étr	di:*	fq:4
 gourance/S.()	po:nom	is:fem	lx:fam	di:*	fq:3
-gourancer/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	lx:fam	di:*	fq:0
+gourancer/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	lx:fam	di:*	fq:0
 gourbi/S.()	po:nom	is:mas	et:ara	di:*	fq:5
 gourd/F.()	po:nom	po:adj	di:*	fq:6
 gourdin/S.()	po:nom	is:mas	di:*	fq:5
@@ -37518,7 +37517,7 @@ gradus/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:5
 Graeme/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:4
 grafcet/S.()	po:nom	is:mas	di:*	fq:3
 graff/S.()	po:nom	is:mas	di:*	fq:4
-graffer/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:3
+graffer/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:3
 graffeur/Fs()	po:nom	se:image	di:*	fq:4
 graffiter/a0p+()	po:v1_it___zz	lx:rare	et:ita	di:*	fq:5
 graffiteur/Fs()	po:nom	et:ita	di:*	fq:4
@@ -39480,8 +39479,7 @@ hérissonner/a0p+()	po:v1_it_q__a	lx:pel	di:*	fq:3
 héritabilité/S.()	po:nom	is:fem	lx:hm	di:*	fq:5
 héritable/S.()	po:adj	is:epi	lx:hm	di:*	fq:4
 héritage/S.()	po:nom	is:mas	lx:hm	di:*	fq:7
-hérité/F.()	po:adj	lx:hm	di:*	fq:6
-hériter/a0p.()	po:v1_itx___a	lx:hm	di:*	fq:6
+hériter/a0p+()	po:v1_itx___a	lx:hm	di:*	fq:6
 héritier/F.()	po:nom	lx:hm	di:*	fq:7
 hermandad/S.()	po:nom	is:fem	et:esp	di:*	fq:4
 Hermann/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:6
@@ -41303,7 +41301,7 @@ icoglan/S.()	po:nom	is:mas	di:*	fq:4
 icône/S.()	po:nom	is:fem	di:*	fq:6
 iconicité/S.()	po:nom	is:fem	lx:néo	se:info	et:grec	et:lat	di:*	fq:5
 iconique/S.()	po:adj	is:epi	di:*	fq:5
-iconiser/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:2
+iconiser/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:2
 iconoclasme/S.()	po:nom	is:mas	di:*	fq:5
 iconoclaste/S.()	po:nom	is:epi	di:*	fq:6
 iconoclastie/S.()	po:nom	is:fem	di:*	fq:4
@@ -44891,7 +44889,7 @@ jacquerie/S.()	po:nom	is:fem	di:*	fq:5
 jacques/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:5
 Jacques/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:8
 jacquet/S.()	po:nom	is:mas	di:*	fq:4
-jacqueter/d'q'l'm't's'	po:v1_it___zz	po:infi	lx:vx	di:*	fq:0
+jacqueter/d'q'n'l'm't's'	po:v1_it___zz	po:infi	lx:vx	di:*	fq:0
 jacquier/S.()	po:nom	is:mas	di:*	fq:4
 jacquot/S.()	po:nom	is:mas	di:*	fq:3
 jactance/S.()	po:nom	is:fem	di:*	fq:5
@@ -46438,7 +46436,7 @@ lac/S.()	po:nom	is:mas	di:*	fq:7
 laçage/S.()	po:nom	is:mas	di:*	fq:4
 Lacan/L'D'Q'	po:patr	is:epi	is:inv	se:psycho	di:*	fq:6
 lacanien/F+()	po:nom	po:adj	se:psycho	di:*	fq:5
-lacaniser/d'q'l'm't's'	po:v1_it___zz	po:infi	lx:rare	di:*	fq:0
+lacaniser/d'q'n'l'm't's'	po:v1_it___zz	po:infi	lx:rare	di:*	fq:0
 lacanisme/S.()	po:nom	is:mas	se:psycho	di:*	fq:4
 laccase/S.()	po:nom	is:fem	di:*	fq:5
 laccolite/S.()	po:nom	is:fem	di:*	fq:4
@@ -47636,11 +47634,11 @@ lichen/S.()	po:nom	is:mas	di:*	fq:6
 lichénification/S.()	po:nom	is:fem	se:méd	di:*	fq:4
 lichénique/S.()	po:adj	is:epi	di:*	fq:4
 licher/a0p+()	po:v1_it___zz	di:*	fq:4
-lichetrogner/d'q'l'm't's'	po:v1_it___zz	po:infi	lx:rare	di:*	fq:0
+lichetrogner/d'q'n'l'm't's'	po:v1_it___zz	po:infi	lx:rare	di:*	fq:0
 lichette/S.()	po:nom	is:fem	di:*	fq:4
 LiC₂H₅O/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
-lichoter/d'q'l'm't's'	po:v1_it___zz	po:infi	lx:rare	lx:fam	di:*	fq:1
-lichotter/d'q'l'm't's'	po:v1_it___zz	po:infi	lx:rare	lx:fam	di:*	fq:1
+lichoter/d'q'n'l'm't's'	po:v1_it___zz	po:infi	lx:rare	lx:fam	di:*	fq:1
+lichotter/d'q'n'l'm't's'	po:v1_it___zz	po:infi	lx:rare	lx:fam	di:*	fq:1
 licier/F.()	po:nom	di:*	fq:5
 licitation/S.()	po:nom	is:fem	di:*	fq:6
 licite/S.()	po:adj	is:epi	di:*	fq:6
@@ -48028,7 +48026,7 @@ lisage/S.()	po:nom	is:mas	di:*	fq:4
 Lisbeth/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:5
 lisboète/S.()	po:nom	po:adj	is:epi	se:gent	di:*	fq:4
 Lisbonne/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:7
-lisbroquer/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
+lisbroquer/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
 Lise/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:6
 Liselle/L'D'Q'	po:prn	is:fem	is:inv	di:X	fq:1
 Li₂SeO₃/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
@@ -48132,7 +48130,7 @@ litrage/S.()	po:nom	is:mas	di:*
 litre/S.()	po:nom	is:fem	lx:fxa	se:chris	se:hist	di:*	fq:7
 litre/Um()	po:nom	is:mas	lx:unit	di:*	fq:7
 litron/S.()	po:nom	is:mas	di:*	fq:4
-litroner/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
+litroner/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
 litt/L'D'Q'	po:adv	lx:abty	di:*	fq:6
 littéraire/S.()	po:nom	po:adj	is:epi	di:*	fq:7
 littérairement/L'D'Q'	po:adv	di:*	fq:5
@@ -48596,7 +48594,7 @@ loupiot/F.()	po:nom	lx:fam	di:*	fq:4
 loupiotte/S.()	po:nom	is:fem	lx:fam	di:C	fq:3
 loups-cerviers/D'Q'	po:nom	is:mas	is:pl	di:*	fq:2
 loups-garous/D'Q'	po:nom	is:mas	is:pl	se:myth	di:*	fq:3
-louquer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+louquer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 lourd/F.()	po:nom	po:adj	di:*	fq:7
 lourdaud/F.()	po:nom	di:*	fq:5
 lourdement/L'D'Q'	po:adv	di:*	fq:6
@@ -49028,7 +49026,7 @@ Maccabée/S.()	po:patr	is:epi	se:jud	se:chris	di:*
 maccarthisme/S.()	po:nom	is:mas	di:R	fq:3
 maccarthysme/S.()	po:nom	is:mas	di:*	fq:5
 macchabée/S.()	po:nom	is:mas	di:*	fq:4
-macchaber/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
+macchaber/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
 Macdonald/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:6
 macédoine/S.()	po:nom	is:fem	di:*	fq:5
 Macédoine/L'D'Q'	po:nom	is:fem	is:inv	se:pays	di:*	fq:6
@@ -50631,7 +50629,7 @@ massue/S.()	po:nom	is:fem	di:*	fq:6
 Massy/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:5
 mastaba/S.()	po:nom	is:mas	di:*	fq:5
 mastectomie/S.()	po:nom	is:fem	di:*	fq:4
-mastéguer/d'q'l'm't's'	po:v1_it___zz	po:infi	lx:rare	di:*	fq:1
+mastéguer/d'q'n'l'm't's'	po:v1_it___zz	po:infi	lx:rare	di:*	fq:1
 master/S.()	po:nom	is:mas	et:angl	di:*	fq:6
 MasterCard/L'D'Q'	po:npr	is:epi	is:inv	se:soc	se:biz	di:*	fq:4
 mastère/S.()	po:nom	is:mas	di:*	fq:4
@@ -51750,7 +51748,7 @@ mesurer/a0p+()	po:v1_itnq__a	di:*	fq:7
 mesurette/S.()	po:nom	is:fem	di:*	fq:4
 mesureur/Fs()	po:nom	di:*	fq:5
 mésusage/S.()	po:nom	is:mas	di:*	fq:4
-mésuser/a0p.()	po:v1__t____a	di:*	fq:5
+mésuser/a0p+()	po:v1__t____a	di:*	fq:5
 méta/S.()	po:nom	is:mas	lx:dép	di:*	fq:6
 métabole/S.()	po:adj	is:epi	di:*	fq:4
 métabole/S.()	po:nom	is:fem	di:*	fq:4
@@ -52812,7 +52810,7 @@ mitage/S.()	po:nom	is:mas	di:*	fq:4
 mitaine/S.()	po:nom	is:fem	di:*	fq:5
 mitan/S.()	po:nom	is:mas	di:*	fq:5
 mitard/S.()	po:nom	is:mas	lx:arg	di:*	fq:4
-mitarder/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+mitarder/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 Mitch/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
 mite/S.()	po:nom	is:fem	di:*	fq:5
 mi-temps/L'D'Q'	po:nom	is:epi	is:inv	di:*	fq:5
@@ -53901,7 +53899,7 @@ moudre/xP()	po:v3_it____a	di:*	fq:6
 moue/S.()	po:nom	is:fem	di:*	fq:5
 mouette/S.()	po:nom	is:fem	di:*	fq:5
 mouetter/a0p.()	po:v1_i____zz	di:*	fq:0
-moufeter/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:1
+moufeter/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:1
 moufette/S.()	po:nom	is:fem	di:*	fq:4
 mouffette/S.()	po:nom	is:fem	di:C	fq:4
 mouflage/S.()	po:nom	is:mas	di:*	fq:4
@@ -55039,7 +55037,7 @@ nautonier/F.()	po:nom	di:*	fq:5
 navaja/S.()	po:nom	is:fem	et:esp	di:*	fq:4
 navajo/S.()	po:nom	po:adj	is:epi	se:gent	di:*	fq:4
 naval/F.()	po:adj	di:*	fq:7
-navaler/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
+navaler/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
 navalisation/S.()	po:nom	is:fem	di:*	fq:3
 navarin/S.()	po:nom	is:mas	se:cuis	di:*	fq:3
 navarque/S.()	po:nom	is:mas	di:*	fq:4
@@ -55824,7 +55822,7 @@ nife/S.()	po:nom	is:epi	di:*	fq:3
 NiFe₂O₄/L'D'Q'	po:nom	is:mas	is:inv	lx:cc	se:chim	di:*	fq:0
 nigaud/F.()	po:nom	po:adj	di:*	fq:5
 nigaudement/L'D'Q'	po:adv	di:*	fq:2
-nigauder/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:1
+nigauder/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:1
 nigauderie/S.()	po:nom	is:fem	di:*	fq:4
 Nigel/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:5
 nigelle/S.()	po:nom	is:fem	di:*	fq:4
@@ -58233,7 +58231,7 @@ Oural/L'D'Q'	po:nom	is:mas	is:inv	se:mont	di:*	fq:6
 ouralien/F+()	po:nom	po:adj	di:*	fq:5
 ouralo-altaïque/S.()	po:adj	is:epi	di:*	fq:2
 Ouranos/L'D'Q'	po:prn	is:mas	is:inv	se:myth	di:*	fq:5
-ourder/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
+ourder/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
 ourdir/f0p+()	po:v2__t_x__a	et:lat	di:*	fq:6
 ourdissage/S.()	po:nom	is:mas	di:*	fq:4
 ourdisserie/S.()	po:nom	is:fem	di:*	fq:1
@@ -58607,7 +58605,7 @@ paisseler/d0p+()	po:v1__t___zz	di:*	fq:2
 paitre/wS()	po:v3_it____a	di:R	fq:5
 paître/wS()	po:v3_it____a	se:zool	di:M	fq:6
 paix/L'D'Q'	po:nom	is:fem	is:inv	di:*	fq:8
-pajoter/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:vx	lx:arg	di:*	fq:0
+pajoter/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:vx	lx:arg	di:*	fq:0
 Pakistan/L'D'Q'	po:nom	is:mas	is:inv	se:pays	di:*	fq:6
 pakistanais/F.()	po:nom	po:adj	se:gent	di:*	fq:6
 pakistano-afghan/F.()	po:nom	po:adj	di:*	fq:1
@@ -61097,7 +61095,7 @@ Pessac/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:5
 pessaire/S.()	po:nom	is:mas	di:*	fq:5
 pesse/S.()	po:nom	is:fem	se:bot	et:lat	di:*	fq:4
 pessière/S.()	po:nom	is:fem	di:*	fq:5
-pessigner/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+pessigner/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 pessimisme/S.()	po:nom	is:mas	di:*	fq:6
 pessimiste/S.()	po:nom	is:epi	di:*	fq:6
 peste/S.()	po:nom	is:fem	di:*	fq:6
@@ -61784,7 +61782,7 @@ phraséologie/S.()	po:nom	is:fem	di:*	fq:6
 phraséologique/S.()	po:adj	is:epi	di:*	fq:5
 phraser/a0p+()	po:v1_it___zz	di:*	fq:4
 phraseur/Fs()	po:nom	po:adj	di:*	fq:5
-phrasicoter/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
+phrasicoter/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:0
 phrastique/S.()	po:adj	is:epi	di:*	fq:5
 phratrie/S.()	po:nom	is:fem	di:*	fq:5
 phréatique/S.()	po:adj	is:epi	di:*	fq:6
@@ -62277,7 +62275,7 @@ pineau/X.()	po:nom	is:mas	di:*	fq:5
 pinède/S.()	po:nom	is:fem	di:*	fq:5
 piner/a0p+()	po:v1_it___zz	lx:fam	di:*	fq:4
 pineraie/S.()	po:nom	is:fem	di:*	fq:5
-pingler/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+pingler/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 pingouin/S.()	po:nom	is:mas	et:néer	di:*	fq:5
 pingpong/S.()	po:nom	is:mas	di:R	fq:4
 ping-pong/L'D'Q'	po:nom	is:mas	is:inv	di:C	fq:3
@@ -65901,7 +65899,7 @@ prunelier/S.()	po:nom	is:mas	di:R	fq:4
 prunelle/S.()	po:nom	is:fem	di:*	fq:6
 prunellidé/S.()	po:nom	is:mas	lx:rare	di:*	fq:0
 prunellier/S.()	po:nom	is:mas	di:M	fq:4
-pruner/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:2
+pruner/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:2
 pruniculture/S.()	po:nom	is:fem	se:arbo	di:*	fq:1
 prunier/S.()	po:nom	is:mas	di:*	fq:6
 prunus/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:4
@@ -66097,7 +66095,7 @@ psychostimulant/F.()	po:adj	se:psycho	di:*	fq:3
 psychostimulant/S.()	po:nom	is:mas	se:psycho	di:*	fq:4
 psychotechnicien/F+()	po:nom	se:psycho	di:*	fq:4
 psychotechnique/S.()	po:adj	is:epi	se:psycho	di:*	fq:5
-psychoter/a0()	po:v1_i____zz	lx:néo	lx:fam	se:psycho	di:*	fq:1
+psychoter/a0p.()	po:v1_i____zz	lx:néo	lx:fam	se:psycho	di:*	fq:1
 psychothérapeute/S.()	po:nom	is:epi	se:psycho	se:méd	di:*	fq:5
 psychothérapeutique/S.()	po:adj	is:epi	se:psycho	se:méd	di:*	fq:5
 psychothérapie/S.()	po:nom	is:fem	se:psycho	se:méd	di:*	fq:6
@@ -66859,7 +66857,7 @@ querelle/S.()	po:nom	is:fem	di:*	fq:7
 quereller/a0p+()	po:v1__t_q_zz	di:*	fq:6
 querelleur/Fs()	po:nom	po:adj	di:*	fq:5
 querelleux/L'D'Q'	po:adj	is:mas	is:inv	lx:alt	lx:vx	di:C	fq:4
-quérir/d'q'l'm't's'	po:v3__t____a	po:infi	di:*	fq:6
+quérir/d'q'n'l'm't's'	po:v3__t____a	po:infi	di:*	fq:6
 quérulence/S.()	po:nom	is:fem	se:méd	se:psychia	et:lat	di:*	fq:3
 quérulent/F.()	po:nom	po:adj	di:*	fq:3
 quesadilla/S.()	po:nom	is:fem	se:cuis	et:esp	di:*	fq:2
@@ -67009,7 +67007,7 @@ quizalofop/S.()	po:nom	is:mas	di:X	fq:2
 Qumran/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:5
 Qumrân/L'D'Q'	po:npr	is:mas	is:inv	se:jud	di:*	fq:5
 quo/L'D'Q'	po:loc.nom	is:mas	is:inv	et:lat	di:M	fq:7
-quoailler/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:1
+quoailler/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:1
 quocngu/S.()	po:nom	is:mas	lx:rare	et:étr	di:R	fq:2
 quoc-ngu/L'D'Q'	po:nom	is:mas	is:inv	et:étr	di:M	fq:0
 quôc-ngu/L'D'Q'	po:nom	is:mas	is:inv	et:étr	di:C	fq:1
@@ -67074,7 +67072,7 @@ rabbiniste/S.()	po:nom	is:epi	se:reli	et:héb	et:étr	di:*	fq:3
 rabdomancie/S.()	po:nom	is:fem	di:*	fq:3
 Rabelais/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:6
 rabelaisien/F+()	po:adj	di:*	fq:5
-rabiauter/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:0
+rabiauter/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:vx	di:*	fq:0
 rabibochage/S.()	po:nom	is:mas	di:*	fq:3
 rabibocher/a0p+()	po:v1__t_q_zz	di:*	fq:4
 rabiot/S.()	po:nom	is:mas	di:*	fq:4
@@ -67102,7 +67100,7 @@ rabouter/a0p+()	po:v1__t___zz	di:*	fq:4
 rabrouement/S.()	po:nom	is:mas	di:*	fq:3
 rabrouer/a0p+()	po:v1__t___zz	di:*	fq:5
 rabroueur/Fs()	po:nom	di:*	fq:3
-racabouillir/d'q'l'm't's'	po:v3_i____zz	po:infi	lx:belg	di:*	fq:0
+racabouillir/d'q'n'l'm't's'	po:v3_i____zz	po:infi	lx:belg	di:*	fq:0
 racage/S.()	po:nom	is:mas	se:marin	di:*	fq:4
 racagnac/S.()	po:nom	is:mas	lx:belg	se:méca	di:*	fq:3
 racahout/S.()	po:nom	is:mas	se:cuis	di:*	fq:4
@@ -67684,7 +67682,7 @@ ranimer/a0p+()	po:v1__t_q_zz	di:*	fq:6
 Ranst/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:4
 ranz/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:4
 Raoul/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:6
-raouster/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
+raouster/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:0
 raout/S.()	po:nom	is:mas	di:*	fq:4
 rap/S.()	po:nom	is:mas	et:angl	di:*	fq:6
 rapace/S.()	po:nom	is:epi	di:*	fq:6
@@ -67814,7 +67812,7 @@ rassis/F.()	po:adj	di:*	fq:5
 rassissement/S.()	po:nom	is:mas	di:*	fq:3
 rassoir/pS()	po:v3_it_q__a	di:R	fq:5
 rassortiment/S.()	po:nom	is:mas	di:*	fq:4
-rassortir/d'q'l'm't's'	po:v2__t___zz	po:infi	di:*	fq:3
+rassortir/d'q'n'l'm't's'	po:v2__t___zz	po:infi	di:*	fq:3
 rassoul/S.()	po:nom	is:mas	et:ara	di:*	fq:3
 rassurant/F.()	po:adj	di:*	fq:6
 rassurement/S.()	po:nom	is:mas	di:*	fq:3
@@ -67951,7 +67949,7 @@ ravitailleur/Fs()	po:nom	di:*	fq:5
 ravivage/S.()	po:nom	is:mas	di:*	fq:4
 ravivement/S.()	po:nom	is:mas	di:*	fq:4
 raviver/a0p+()	po:v1__t_q_zz	di:*	fq:6
-ravoir/d'q'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:5
+ravoir/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:5
 ravoirage/S.()	po:nom	is:mas	se:constr	di:*	fq:1
 rawette/S.()	po:nom	is:fem	lx:fam	lx:belg	di:*	fq:1
 Ray/L'D'Q'	po:prn	is:mas	is:inv	di:*	fq:6
@@ -68147,7 +68145,7 @@ rebecter/a0p+()	po:v1__t___zz	di:*	fq:0
 rebelle/S.()	po:nom	po:adj	is:epi	di:*	fq:7
 rebeller/a0p+()	po:v1____p_e_	di:*	fq:5
 rébellion/S.()	po:nom	is:fem	di:*	fq:6
-rébellionner/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:vx	di:*	fq:2
+rébellionner/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:vx	di:*	fq:2
 rebelote/L'D'Q'	po:interj	se:@	di:*	fq:4
 rebeu/F.()	po:nom	po:adj	lx:fam	lx:arg	lx:péj	di:*	fq:3
 rebibe/S.()	po:nom	is:fem	lx:rare	lx:helv	di:*	fq:1
@@ -68169,7 +68167,7 @@ rebondir/f0p+()	po:v2_i_____a	di:*	fq:6
 rebondissant/F.()	po:adj	di:*	fq:5
 rebondissement/S.()	po:nom	is:mas	di:*	fq:5
 rebonjour/L'D'Q'	po:interj	lx:fam	se:@	di:*	fq:3
-rebonneter/d'q'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
+rebonneter/d'q'n'l'm't's'	po:v1____p_e_	po:infi	lx:rare	di:*	fq:0
 rebooster/a0p+()	po:v1__t____a	et:angl	di:*	fq:2
 rebord/S.()	po:nom	is:mas	di:*	fq:6
 reborder/a0p+()	po:v1__t___zz	di:*	fq:5
@@ -68179,7 +68177,7 @@ reboucher/a0p+()	po:v1__t_q_zz	di:*	fq:5
 rebouclage/S.()	po:nom	is:mas	di:*	fq:3
 reboucler/a0p+()	po:v1__t___zz	di:*	fq:4
 rebouillage/S.()	po:nom	is:mas	di:X	fq:3
-rebouiser/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+rebouiser/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 rebours/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:6
 reboutage/S.()	po:nom	is:mas	se:méd	di:*	fq:3
 reboutement/S.()	po:nom	is:mas	se:méd	di:*	fq:3
@@ -69343,7 +69341,7 @@ remboursable/S.()	po:adj	is:epi	di:*	fq:6
 remboursement/S.()	po:nom	is:mas	di:*	fq:7
 rembourser/a0p+()	po:v1_it_q__a	di:*	fq:7
 Rembrandt/L'D'Q'	po:prn	is:mas	is:inv	se:hist	di:*	fq:6
-rembroquer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:1
+rembroquer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:1
 rembrunir/f0p+()	po:v2__t_q__a	di:*	fq:5
 rembrunissement/S.()	po:nom	is:mas	di:*	fq:3
 rembuchement/S.()	po:nom	is:mas	lx:rare	se:chass	di:*	fq:3
@@ -69363,7 +69361,7 @@ remerciement/S.()	po:nom	is:mas	di:*	fq:6
 remercier/a0p+()	po:v1__t___zz	di:*	fq:7
 réméré/S.()	po:nom	is:mas	di:*	fq:5
 remesurer/a0p+()	po:v1_itnq__a	di:*	fq:4
-remétrer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
+remétrer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:rare	di:*	fq:1
 remettage/S.()	po:nom	is:mas	di:*	fq:4
 remettant/F.()	po:adj	di:*	fq:3
 remettre/vA()	po:v3__tnq__a	di:*	fq:8
@@ -69440,7 +69438,7 @@ rempaillage/S.()	po:nom	is:mas	di:*	fq:4
 rempailler/a0p+()	po:v1__t___zz	di:*	fq:4
 rempailleur/Fs()	po:nom	di:*	fq:4
 rempaqueter/d0p+()	po:v1__t___zz	di:*	fq:3
-remparder/d'q'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:2
+remparder/d'q'n'l'm't's'	po:v1__t_q_zz	po:infi	lx:rare	di:*	fq:2
 remparer/a0p+()	po:v1__t___zz	di:*	fq:4
 rempart/S.()	po:nom	is:mas	di:*	fq:7
 rempiétement/S.()	po:nom	is:mas	di:M	fq:3
@@ -69639,7 +69637,7 @@ rentoilage/S.()	po:nom	is:mas	se:art	se:techni	di:*	fq:4
 rentoiler/a0p+()	po:v1__t___zz	di:*	fq:4
 rentoileur/Fs()	po:nom	lx:rare	di:*	fq:3
 rentrage/S.()	po:nom	is:mas	se:techni	di:*	fq:4
-rentraire/d'q'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:3
+rentraire/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:3
 rentraiture/S.()	po:nom	is:fem	se:techni	di:*	fq:3
 rentrant/F.()	po:nom	po:adj	di:*	fq:6
 rentrayer/a0p+()	po:v1__t___zz	di:*	fq:1
@@ -70147,7 +70145,7 @@ restrictivement/L'D'Q'	po:adv	di:*	fq:5
 restringent/F.()	po:adj	di:*	fq:2
 restructuration/S.()	po:nom	is:fem	di:*	fq:6
 restructurer/a0p+()	po:v1__t_q_zz	di:*	fq:6
-restyler/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:néo	di:*	fq:1
+restyler/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:néo	di:*	fq:1
 resucée/S.()	po:nom	is:fem	lx:fam	di:*	fq:4
 resuffixation/S.()	po:nom	is:fem	se:lingu	di:*	fq:3
 résultant/F.()	po:nom	po:adj	di:*	fq:7
@@ -70300,8 +70298,8 @@ rétrécir/f0p+()	po:v2_it_q__a	di:*	fq:6
 rétrécissable/S.()	po:adj	is:epi	di:*	fq:3
 rétrécissant/F.()	po:adj	di:*	fq:5
 rétrécissement/S.()	po:nom	is:mas	di:*	fq:6
-retreindre/d'q'l'm't's'	po:v3__t___zz	po:infi	di:C	fq:3
-rétreindre/d'q'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:3
+retreindre/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:C	fq:3
+rétreindre/d'q'n'l'm't's'	po:v3__t___zz	po:infi	di:*	fq:3
 retreint/F.()	po:nom	po:adj	di:C	fq:4
 rétreint/F.()	po:nom	po:adj	di:*	fq:4
 retrempe/S.()	po:nom	is:fem	di:*	fq:5
@@ -70918,7 +70916,7 @@ ripaille/S.()	po:nom	is:fem	lx:vx	lx:fam	se:cuis	di:*	fq:5
 ripailler/a0p.()	po:v1_i____zz	di:*	fq:4
 ripailleur/Fs()	po:nom	di:*	fq:3
 ripaton/S.()	po:nom	is:mas	di:*	fq:3
-ripatonner/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:vx	lx:arg	di:*	fq:0
+ripatonner/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:vx	lx:arg	di:*	fq:0
 ripe/S.()	po:nom	is:fem	di:*	fq:4
 ripement/S.()	po:nom	is:mas	lx:alt	se:techni	di:*	fq:3
 riper/a0p+()	po:v1_it___zz	di:*	fq:5
@@ -71086,7 +71084,7 @@ Rochefoucauld/L'D'Q'	po:patr	is:epi	is:inv	di:*	fq:6
 rochelais/F.()	po:nom	po:adj	se:gent	di:*	fq:5
 Roche-la-Molière/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:1
 Rochelle/L'D'Q'	po:nom	is:fem	is:inv	se:cité	di:*	fq:6
-rocher/d'q'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:6
+rocher/d'q'n'l'm't's'	po:v1_i____zz	po:infi	lx:rare	di:*	fq:6
 rocher/S.()	po:nom	is:mas	di:*	fq:7
 Rochester/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:5
 Roche-sur-Yon/L'D'Q'	po:nom	is:fem	is:sg	se:cité	di:*	fq:4
@@ -71786,7 +71784,7 @@ rut/S.()	po:nom	is:mas	di:*	fq:6
 rutabaga/S.()	po:nom	is:mas	di:*	fq:5
 rutacée/S.()	po:nom	is:fem	se:bot	di:*	fq:4
 ruter/a0p.()	po:v1_i____zz	lx:rare	lx:belg	di:R	fq:5
-rûter/a0()	po:v1_i____zz	lx:rare	lx:belg	di:M	fq:0
+rûter/a0p.()	po:v1_i____zz	lx:rare	lx:belg	di:M	fq:0
 Ruth/L'D'Q'	po:prn	is:fem	is:inv	di:*	fq:6
 ruthène/S.()	po:nom	po:adj	is:epi	di:*	fq:5
 ruthénium/S.()	po:nom	is:mas	di:*	fq:5
@@ -72931,7 +72929,7 @@ savart/S.()	po:nom	is:mas	di:*	fq:4
 savate/S.()	po:nom	is:fem	di:*	fq:5
 savater/a0p+()	po:v1__t___zz	di:*	fq:3
 Saverne/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:6
-saveter/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:3
+saveter/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:3
 savetier/S.()	po:nom	is:mas	di:*	fq:5
 saveur/S.()	po:nom	is:fem	di:*	fq:7
 Savigny-le-Temple/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:0
@@ -75649,7 +75647,7 @@ soulographe/S.()	po:nom	po:adj	is:epi	lx:fam	di:R	fq:2
 soûlographe/S.()	po:nom	po:adj	is:epi	lx:fam	di:M	fq:2
 soulographie/S.()	po:nom	is:fem	lx:fam	di:R	fq:3
 soûlographie/S.()	po:nom	is:fem	lx:fam	di:M	fq:3
-souloir/d'q'l'm't's'	po:v3_i____zz	po:infi	lx:vx	di:*	fq:3
+souloir/d'q'n'l'm't's'	po:v3_i____zz	po:infi	lx:vx	di:*	fq:3
 soulon/F+()	po:nom	lx:fam	lx:helv	di:R	fq:3
 soûlon/F+()	po:nom	lx:fam	lx:helv	di:M	fq:3
 soulot/F.()	po:nom	lx:alt	lx:rare	lx:fam	di:R	fq:2
@@ -81751,7 +81749,7 @@ tréfileur/Fs()	po:nom	di:*	fq:4
 trèfle/S.()	po:nom	is:mas	di:*	fq:6
 tréflé/F.()	po:adj	di:*	fq:5
 tréflière/S.()	po:nom	is:fem	di:*	fq:3
-tréfondre/d'q'l'm't's'	po:v3_i____zz	po:infi	lx:rare	se:techni	di:*	fq:0
+tréfondre/d'q'n'l'm't's'	po:v3_i____zz	po:infi	lx:rare	se:techni	di:*	fq:0
 tréfonds/L'D'Q'	po:nom	is:mas	is:inv	di:*	fq:5
 tréhalase/S.()	po:nom	is:fem	di:X	fq:4
 tréhalose/S.()	po:nom	is:mas	di:*	fq:4
@@ -85155,7 +85153,7 @@ Voisins-le-Bretonneux/L'D'Q'	po:npr	is:epi	is:inv	se:cité	di:*	fq:0
 voiturage/S.()	po:nom	is:mas	di:*	fq:4
 voiture/S.()	po:nom	is:fem	se:auto	di:*	fq:7
 voiturée/S.()	po:nom	is:fem	lx:vx	di:*	fq:4
-voiturer/d'q'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:5
+voiturer/d'q'n'l'm't's'	po:v1__t___zz	po:infi	lx:vx	di:*	fq:5
 voiture-restaurant/L'D'Q'	po:nom	is:fem	is:sg	di:*	fq:2
 voitures-restaurants/D'Q'	po:nom	is:fem	is:pl	di:*	fq:2
 voiturette/S.()	po:nom	is:fem	di:*	fq:5
@@ -86952,8 +86950,8 @@ digestat/S.()	po:nom	is:mas	se:bio	di:*
 directionnalité/S.()	po:nom	is:fem	di:*
 dominat/S.()	po:nom	is:mas	se:polit	se:hist	di:*
 doula/S.()	po:nom	is:fem	se:édu	se:méd	di:*
-débunker/a0()	po:v1__t____a	lx:néo	se:comm	di:*
-déconjugaliser/a0()	po:v1__t____a	lx:néo	se:droit	di:*
+débunker/a0p+()	po:v1__t____a	lx:néo	se:comm	di:*
+déconjugaliser/a0p+()	po:v1__t____a	lx:néo	se:droit	di:*
 décornage/S.()	po:nom	is:mas	di:*
 décorporiser/a0p+()	po:v1_it_q__a	se:occult	di:*
 délotage/S.()	po:nom	is:mas	se:biz	di:*
@@ -86963,6 +86961,7 @@ déploratoire/S.()	po:adj	is:epi	lx:rare	di:*
 déployeur/Fs()	po:nom	di:*
 désanctuariser/a0p+()	po:v1__t____a	di:*
 détransitionner/a0p+()	po:v1_i_____a	lx:néo	di:*
+draconique/S.()	po:adj	is:epi	se:sf	di:*
 écoanxiété/S.()	po:nom	is:fem	lx:néo	se:écolo	di:*
 écoforesterie/S.()	po:nom	is:fem	se:écolo	di:*
 écomatériau/X.()	po:nom	is:mas	se:écolo	di:*
@@ -86980,6 +86979,8 @@ enthéogène/S.()	po:adj	is:epi	se:pharma	se:reli	et:grec	di:*
 exclaustration/S.()	po:nom	is:fem	se:chris	di:*
 exsanguiner/a0p+()	po:v1__t_q__a	se:méd	di:*
 facio-scapulo-huméral/W.()	po:adj	se:méd	di:*
+filoguidage/S.()	po:nom	is:mas	se:techni	di:*
+filoguider/a0p+()	po:v1__t____a	se:techni	di:*
 Fourvière/L'D'Q'	po:npr	is:epi	is:inv	di:*
 fragmentable/S.()	po:adj	is:epi	di:*
 francocide/S.()	po:nom	is:mas	lx:néo	se:socio	di:*
@@ -87006,6 +87007,7 @@ intra-rectal/W.()	po:adj	se:méd	di:C
 intrathécal/W.()	po:adj	se:méd	di:*
 Isolde/L'D'Q'	po:prn	is:fem	is:inv	di:*
 jaserie/S.()	po:nom	is:fem	se:comm	di:*
+journalope/S.()	po:nom	is:epi	lx:péj	di:*
 kaliurie/S.()	po:nom	is:fem	se:méd	di:*
 kebbé/S.()	po:nom	is:mas	se:cuis	et:étr	di:*
 kikuyu/S.()	po:nom	po:adj	is:epi	se:gent	se:lang	di:*
@@ -87020,6 +87022,7 @@ lombalgique/S.()	po:adj	is:epi	se:méd	di:*
 lounge/S.()	po:nom	is:mas	di:*
 lysimètre/S.()	po:nom	is:mas	se:agri	di:*
 lysimétrie/S.()	po:nom	is:fem	se:agri	di:*
+marionnettisme/S.()	po:nom	is:mas	se:polit	di:*
 maudisseur/Fs()	po:nom	po:adj	se:reli	di:*
 merdification/S.()	po:nom	is:fem	di:*
 microfilament/S.()	po:nom	is:mas	di:*
@@ -87044,10 +87047,12 @@ narcobanditisme/S.()	po:nom	is:mas	se:crime	di:*
 narcoterrorisme/S.()	po:nom	is:mas	se:crime	di:*
 nasopharyngé/F.()	po:adj	se:méd	di:*
 noscapine/S.()	po:nom	is:fem	se:pharma	di:*
+odiosité/S.()	po:nom	is:fem	di:*
 oncohématologie/S.()	po:nom	is:fem	se:méd	di:R
 onco-hématologie/S.()	po:nom	is:fem	se:méd	di:M
 optogénétique/S.()	po:nom	is:fem	se:méd	di:*
 optométrique/S.()	po:adj	is:epi	se:méd	di:*
+orthant/S.()	po:nom	is:mas	se:math	di:*
 ossécaille/S.()	po:adj	is:epi	se:lingu	di:*
 ostéon/S.()	po:nom	is:mas	se:anat	di:*
 ostéome/S.()	po:nom	is:mas	se:méd	di:*
@@ -87073,6 +87078,7 @@ proxiphotographie/S.()	po:nom	is:fem	se:image	di:*
 punctiforme/S.()	po:adj	is:epi	di:*
 pyélographie/S.()	po:nom	is:fem	se:méd	di:*
 ramen/S.()	po:nom	is:mas	se:cuis	et:jap	di:*
+réattribuable/S.()	po:adj	is:epi	di:*
 recréditer/a0p+()	po:v1__t___zz	di:*
 rejouabilité/S.()	po:nom	is:fem	se:jeu	di:*
 riparien/F+()	po:adj	se:géogr	di:*
@@ -87080,6 +87086,9 @@ ripisylve/S.()	po:nom	is:fem	se:sylvi	di:*
 ronin/S.()	po:nom	is:mas	se:hist	et:jap	di:*
 Rosalinde/L'D'Q'	po:prn	is:fem	is:inv	di:*
 réduflation/S.()	po:nom	is:fem	se:écono	di:*
+réencodage/S.()	po:nom	is:mas	se:info	di:*
+réencoder/a0p+()	po:v1_it____a	di:*
+réenvisager/a0p+()	po:v1__t____a	di:*
 réflexologue/S.()	po:nom	is:epi	se:méd	di:*
 restauratif/F.()	po:adj	di:*
 résumable/S.()	po:adj	is:epi	se:litt	di:*
@@ -87113,6 +87122,7 @@ thermobarique/S.()	po:adj	is:epi	se:phys	di:*
 torsoplastie/S.()	po:nom	is:fem	se:chir	se:sexe	di:*
 trampoliniste/S.()	po:nom	is:epi	se:sport	di:*
 transdimensionnel/F+()	po:adj	se:sf	di:*
+transitique/S.()	po:nom	is:fem	se:techni	di:*
 transracial/W.()	po:adj	lx:néo	se:socio	di:*
 transracialisme/S.()	po:nom	is:mas	lx:néo	se:socio	di:*
 tritagoniste/S.()	po:nom	is:epi	se:théâ	et:grec	di:*
