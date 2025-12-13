@@ -1,0 +1,256 @@
+# DRAPEAUX DU DICTIONNAIRE FRANÇAIS
+
+Ce fichier est un mémo résumant la manière d’apposer les drapeaux du fichier des affixes sur les entrées du dictionnaire Hunspell pour le français.
+Il est bien sûr préférable de lire la documentation pour Hunspell pour comprendre le tout.
+Et de lire le fichier des affixes pour connaître le détail de toutes les règles.
+
+Ces drapeaux sont définis dans le fichier FRANCAIS_7.aff
+
+Pour le dictionnaire français, chaque drapeau est composé de deux lettres ASCII.
+Il existe deux catégories de drapeaux:
+    — ceux pour les noms et les adjectifs: ils commencent tous par une lettre majuscule,
+    — ceux pour les verbes: ils commencent tous par une lettre minuscule.
+
+Choix a été fait de ne pas utiliser de drapeau pour les mots grammaticaux.
+
+
+## DRAPEAUX SPÉCIAUX
+
+    || -> préserve la casse des mots. Utile surtout pour les symboles des unités de mesure.
+    () -> crée un lemme virtuel (dans les faits, le lemme est recréé parmi les formes fléchies)
+          Ce drapeau s’utilise sur presque toutes les entrées du dictionnaire français,
+          excepté les noms et adjectifs invariables, les mots grammaticaux, les verbes qu’on ne prend pas la peine de conjuguer.
+
+
+## DRAPEAUX POUR NOMS & ADJECTIFS & CAS DIVERS
+
+    AJOUT DE FORMES ÉLIDÉES
+
+        L' -> ajoute l’élision de “le/la”.
+        D' -> ajoute l’élision de “de”.
+        Q' -> ajoute l’élision de “que”.
+        Q* -> ajoute l’élision de “quoique”, “puisque”, “lorsque”.
+        Qj -> ajoute l’édision de “jusque”.
+        Si -> ajoute l’élision de “si”.
+
+        Pour les mots invariables.
+        Ces drapeaux ne s’utilisent pas sur les lemmes virtuels.
+
+        Pour tous les noms et adjectifs variables, ces drapeaux sont inclus dans les règles d’affixation pour le pluriel et les changements de genre.
+
+        EXEMPLES
+
+            absurdement/L'D'Q'
+            Illyrie/L'D'Q'
+            elle/D'Q'Q*Qj
+            ils/D'Q'Q*QjSi
+
+
+    VARIANTES PLURIELLES SIMPLES
+
+        S. -> pluriel en -s simple.
+        X. -> pluriel en -x simple.
+        A. -> pluriel pour mots anglais.
+        I. -> pluriel pour mots latins/italiens.
+            (Ces quatre drapeaux doivent être utilisés sur les lemmes virtuels.)
+
+        S= -> uniquement pour les cas particuliers
+            (Ne pas utiliser sur les lemmes virtuels.)
+
+        EXEMPLES
+
+            action/S.()
+            couteau/X.()
+            body/A.()
+            columbarium/I.()
+
+
+    NOMS & ADJECTIFS VARIABLES EN GENRE ET NOMBRE
+
+        F. -> masculins divers, formes féminines les plus courantes et pluriel en -s (sans doublement de consonnes)
+        F+ -> masculins divers, formes féminines les plus courantes et pluriel en -s (doublement de consonnes)
+        Fs -> masculin en -eur, féminin en -euse, pluriel en -s
+        Fc -> masculin en -eur, féminin en -rice, pluriel en -s
+        Fe -> masculin en -eur, féminin en -eresse, pluriel en -s
+        Fx -> masculins divers, formes féminines diverses, pluriels en -s (pour les cas exceptionnels)
+
+        (Pour les lemmes virtuels.)
+
+        EXEMPLES
+
+            combatif/F.()
+            immatériel/F+()
+            imprimeur/Fs()
+            médiateur/Fc()
+            vengeur/Fe()
+            ambigu/Fx()
+
+
+    DRAPEAUX COMPLÉMENTAIRES POUR VARIANTES FÉMININES
+
+        Gs -> féminin en -euse, pluriel en -s
+        Gc -> féminin en -rice, pluriel en -s
+        Ge -> féminin en -eresse, pluriel en -s
+        Go -> féminin en -oresse, pluriel en -s
+
+        (Pour les lemmes virtuels.)
+
+        EXEMPLES
+
+            assesseur/F.Gs()
+            auteur/F.Gc()
+            commandeur/FsGe()
+            docteur/F.Go()
+
+
+    FORMES FÉMININES & PLURIELS EN -X
+
+        W. -> masculins divers, formes féminines les plus courantes et pluriel en -x
+        Wx -> masculins divers, formes féminines diverses, pluriels en -s (pour les cas exceptionnels)
+
+        (Pour les lemmes virtuels.)
+
+        EXEMPLES
+
+            asocial/W.()
+            audacieux/W.()
+            beau/Wx()
+            doux/Wx()
+
+
+    UNITÉS DE MESURE
+
+        Um -> unités variables
+        Ui -> unités invariables
+
+            (Pour les lemmes virtuels.)
+
+        U. -> unités sous formes abrégées (invariables)
+
+            (Pas pour les lemmes virtuels.)
+
+        EXEMPLES
+
+            gramme/Um()
+            hertz/Ui()
+            V/U.||--
+
+
+
+## DRAPEAUX POUR LES VERBES
+
+    VERBES
+
+        d' -> élision de “de”
+        n' -> élision de “ne”
+        q' -> élision de “que”
+        j' -> élision de “je”
+        c' -> élision de “ça/ce”
+        l' -> élision de “le/la”
+        m' -> élision de “me”
+        t' -> élision de “te”
+        s' -> élision de “se”
+
+        Dans la grande majorité des cas, ces drapeaux ne sont pas utilisés sur les entrées des verbes du dictionnaire,
+        excepté ceux qui ont été inclus sans drapeau de conjugaison.
+        Si vous apposez un drapeau de conjugaison, les drapeaux d’élision sont déjà inclus parmi les formes conjuguées.
+
+        EXEMPLES
+
+            en/j'c'n'd'l'm't's'
+            y/L'D'Q'Q*Qjj'c'n'm't's'
+            ablatir/d'q'n'l'm't's'
+
+
+    VERBES DU PREMIER GROUPE
+
+        Contrairement à la croyance commune, les verbes du premier groupe ne sont pas aussi réguliers que ce que beaucoup affirment.
+        Il faut donc veiller, en ajoutant un verbe du premier groupe, à réfléchir si la racine subit des changements lors de la conjugaison
+        (modification ou ajout de diacritiques (é -> è, e -> è, c -> ç), doublement des consonnes, ajout de lettres, changement de lettres (y -> i)).
+
+        a0 -> cas général, y compris les verbes en -cer, -ger, -yer
+        a6 -> pour les verbes pronominaux réciproques (comme s’entre-tuer)
+        a8 -> verbes impersonnels (3ᵉ personne du singulier)
+        a9 -> verbes impersonnels (3ᵉ personne du pluriel)
+
+        b0 -> verbes en -ecer, -emer, -ener, -eper, -erer, -eser, -ever, -evrer
+              verbes en -eler, -eter (pas de doublement de la consonne, comme avec acheter, celer, ciseler, etc.)
+              changement du e en è avant syllabe muette
+
+        c0 -> verbes en -ébrer, -écer, -écher, -écrer, -éder, -éger, -égler, -égner, -égrer, -éguer,
+                        -éler, -émer, -éner, -éper, -équer, -érer, -éser, -éter, -étrer, -évrer, -éyer
+              changement du é en è (et gestion de c|ç et g|ge)
+
+        d0 -> verbes en -eler, -eter : doublement des consonnes l ou t
+
+        Tous les autres drapeaux commençant par “a” sont pour les exceptions et cas particuliers.
+        (aller, envoyer, jogger, etc.)
+
+        Quoiqu’irrégulier, il a été choisi d’étiqueter aller comme un verbe du 1ᵉʳ groupe
+        parce qu’il est beaucoup plus proche des verbes de ce groupe que n’importe quel autre du 3ᵉ groupe.
+
+        (Pour les lemmes virtuels.)
+
+        EXEMPLES
+
+            abaisser/a0p+()
+            vaciller/a0p.()
+            entraccorder/a6p+()
+            interfonctionner/a8p.()
+            percoler/a8a9p+()
+            crever/b0p+()
+            déceler/b0p+()
+            enfiévrer/c0p+()
+            étinceler/d0p.()
+
+
+    VERBES DU DEUXIÈME GROUPE
+
+        f0 -> pour presque tous les verbes du 2ᵉ groupe.
+
+        Les quelques verbes irréguliers du 2ᵉ groupe ont un drapeau commençant par “f”.
+
+        En théorie, tous les verbes du 2ᵉ groupe sont déjà présents dans le dictionnaire.
+        En pratique, il manque sans doute des verbes anciens obsolètes.
+
+        (Pour les lemmes virtuels.)
+
+        EXEMPLES
+
+            abolir/f0p+()
+            finir/f0p+()
+            frémir/f0p.()
+            périr/f0p.()
+
+
+    VERBES DU TROISIÈME GROUPE
+
+        Les verbes du 3ᵉ groupe sont très irréguliers.
+        Les verbes en -ir ont des drapeaux commençant par “i”.
+        Les verbes en -oir ont des drapeaux commençant par “p”.
+        Les verbes en -clore ont des drapeaux commençant par “r”.
+        Les verbes en -dre, -pre ont des drapeaux commençant par “t”.
+        Les verbes en -battre ont des drapeaux commençant par “u”.
+        Les verbes en -mettre ont des drapeaux commençant par “v”.
+        Les verbes en -eindre, -aire ont des drapeaux commençant par “w”.
+        Les verbes en -oire, -clure, -ou(r)dre, -vre ont des drapeaux commençant par “x”.
+        Les verbes en -ire ont des drapeaux commençant par “y”.
+
+        En théorie, tous les verbes du 3ᵉ groupe sont déjà présents dans le dictionnaire.
+        En pratique, il manque probablement des verbes anciens obsolètes.
+
+        (Pour les lemmes virtuels.)
+
+
+    PARTICIPES PASSÉS
+
+        p+ -> participes passés variables des verbes du 1ᵉʳ et 2ᵉ groupes.
+        p. -> participes passés invariables des verbes du 1ᵉʳ et 2ᵉ groupes.
+
+        q+ -> participes passés variables des verbes du 3ᵉ groupe.
+        q. -> participes passés invariables des verbes du 3ᵉ groupe.
+
+        Les drapeaux de conjugaison des verbes irréguliers incluent souvent déjà les
+        participes passés. Dans ce cas, il n’est pas nécessaire d’ajouter ces drapeaux.
+
+        (Pour les lemmes virtuels.)
