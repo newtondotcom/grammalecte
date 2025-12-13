@@ -344,8 +344,8 @@ class Dictionnaire:
 
     def checkEntries (self):
         echo(' * Dictionnaire - contrôle des entrées...')
-        for e in self.lEntry:
-            e.check()
+        for o in self.lEntry:
+            o.check()
 
     def generateFlexions (self):
         echo(' * Lexique - genèse des formes fléchies...')
@@ -696,10 +696,6 @@ class Entree:
             if len(elems[i]) > 3 and elems[i][2] == ':':
                 sAttr, sContent = elems[i].split(':', 1)
                 if sAttr in {"po", "is", "ds", "ts", "ip", "dp", "tp", "sp", "pa", "st", "al", "ph", "lx", "se", "et", "di", "fq", "id"}:
-                    # vérification
-                    if sAttr in {"po", "is", "lx", "se", "et"} \
-                        and ( sContent not in tags.dTags[sAttr] and not (sAttr == "po" and re.match("v[0123][ea_][ix_][tx_][nx_][pqrex_][mx_][eaz_]", sContent)) ):
-                        echo("  ## Étiquette inconnue pour le tag <{}>: {} @ {}/{}".format(sAttr, sContent, self.lemma, self.flags))
                     # renommage des attributs
                     if sAttr == "is":
                         sAttr = "iz"
@@ -711,13 +707,13 @@ class Entree:
                             sContent = getattr(self, sAttr) + " " + sContent
                         setattr(self, sAttr, sContent.strip())
                     except:
-                        echo('  ## Erreur. Attribut non attribuable: {}  @  {}/{}'.format(sAttr, self.lemma, self.flags))
+                        echo(f'  ## Erreur. Attribut non attribuable: {sAttr}  @  {self.lemma}/{self.flags}')
                 else:
-                    echo('  ## Champ inconnu: {} @ {}/{}'.format(sAttr, self.lemma, self.flags))
+                    echo(f'  ## Champ inconnu: {sAttr} @ {self.lemma}/{self.flags}')
             else:
                 self.err = self.err + elems[i]
         if self.err:
-            echo("\n## Erreur dans le dictionnaire : {}".format(self.err))
+            echo(f"\n## Erreur dans le dictionnaire : {self.err}")
             echo("   @ : " + self.lemma)
 
     def __str__ (self):
@@ -732,6 +728,20 @@ class Entree:
             sErr += ' > espace en début de lemme <' + self.lemma + '>'
         if re.search(r"\s$", self.lemma):
             sErr += ' > espace en fin de lemme <' + self.lemma + '>'
+        # détection des tags inconnus
+        if self.po:
+            for sTag in self.po.split():
+                if sTag not in tags.dTags["po"] and not re.match("v[0123]", sTag):
+                    sErr += f" > Étiquette inconnue pour l’attribut <po>: {sTag}"
+        if self.iz:
+            for sTag in self.iz.split():
+                if sTag not in tags.dTags["is"]:
+                    sErr += f" > Étiquette inconnue pour l’attribut <is>: {sTag}"
+        for sAttr in {"lx", "se", "et"}:
+            if getattr(self, sAttr):
+                for sTag in getattr(self, sAttr).split(" "):
+                    if sTag not in tags.dTags[sAttr] and not re.match("v[0123]", sTag):
+                        sErr += f" > Étiquette inconnue pour l’attribut <{sAttr}>: {sTag}"
         # verbe
         if re.match(r"v[0123]", self.po) and not re.match(r"[eas_][ix_][tx_][nx_][pqreuvx_][mx_][ex_z][ax_z]\b", self.po[2:]):
             sErr += ' > verbe mal étiqueté: ' + self.po
@@ -763,6 +773,7 @@ class Entree:
             sErr += ' > étiquettes <is> incomplètes'
         if re.match(r"[SXAIFGW](?!=)", self.flags) and "()" not in self.flags:
             sErr += ' > drapeau () manquant'
+        # print
         if sErr:
             echo(f"   erreur {sErr}   sur   " + self.__str__())
 

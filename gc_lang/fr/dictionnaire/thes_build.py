@@ -59,7 +59,7 @@ class ThesaurusBuilder ():
             if re.search(r"^[^|]+\|[1-9][0-9]*$", sLine):
                 # new entry
                 if nClass != nClassFound:
-                    print("Ligne:", iEntryLine, ", nombre de liste incorrect")
+                    print("   Erreur. Ligne:", iEntryLine, ", nombre de listes incorrect")
                 iEntryLine = i
                 sEntry, sNum = sLine.split("|")
                 self.dThesaurus[sEntry] = []
