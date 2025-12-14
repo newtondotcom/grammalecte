@@ -1,17 +1,15 @@
-# Writing rules for Grammalecte #
+# Writing rules for Grammalecte
 
 Note: This documentation is a __draft__. Information may be obsolete or incomplete.
 
-
-## FILES REQUIRED ##
+## FILES REQUIRED
 
 The rules file for your language must be named `rules.grx` in the folder `gc_lang/<lang>/`.
 The settings file must be named `config.ini`.
 
 These files are simple UTF-8 text files.
 
-
-## PRINCIPLES ##
+## PRINCIPLES
 
 Grammalecte is a bi-passes grammar checker engine. On the first pass, the
 engine checks the text paragraph by paragraph. On the second pass, the engine
@@ -42,7 +40,7 @@ A token rule is defined by:
 * rule name
 * [optional] priority number
 * one or several lists of tokens
-* a list of actions (the action is active only if the option defined by user or config is active)
+* a list of actions (an action is active only if the option defined by user or config is active)
 
 Token rules must be defined within a graph.
 
@@ -59,17 +57,16 @@ launch. Each action has its own condition to be triggered.
 
 There are several kinds of actions:
 
-* Error warning, with a message, and optionally suggestions, and optionally a URL
+* Error warning, with a message, and optionally suggestions, and optionally an URL
 * Text transformation, modifying internally the checked text
 * Disambiguation action
 * [second pass only] Tagging token
 * [second pass only] Immunity rules
 
 On the first pass, you can only write regex rules.
-On the second pass, you can write regex rules and token rules. All tokens rules must be written within a graph.
+On the second pass, you can write regex rules and token rules. All token rules must be written within a graph.
 
-
-## REGEX RULE SYNTAX ##
+## REGEX RULE SYNTAX
 
     __LCR/option(rulename)!priority__
         pattern
@@ -112,11 +109,11 @@ Case sensitiveness (C):
 
 >   `u`     uppercase allowed for lowercase characters
 
->>          i.e.:  "Word"  becomes  "W[oO][rR][dD]"
+> >          i.e.:  "Word"  becomes  "W[oO][rR][dD]"
 
 Examples: `[i]`, `<s]`, `[u>`, `<s>`
 
-User option activating/deactivating is possible with an option name placed
+User option activating/disactivating is possible with an option name placed
 just after the LCR flags, i.e.:
 
     __[i]/option1(rulename1)__
@@ -135,7 +132,6 @@ with the hyphen:
             <<- ->> foo-bar     && Missing hyphen.
             <<- ~>> foo-bar
 
-
 ### Simple-line or multi-line rules
 
 Rules can be break to multiple lines by leading spaces.
@@ -144,7 +140,7 @@ You should use 4 spaces.
 Examples:
 
     __<s>(rulename)__ pattern <<- condition ->> replacement  && message
-
+    
     __<s>(rulename)__
         pattern
             <<- condition ->> replacement
@@ -153,7 +149,6 @@ Examples:
             <<- condition ~>> text_rewriting
             <<- =>> disambiguation
 
-
 ### Whitespaces at the border of patterns or suggestions
 
 Example: Recognize double or more spaces and suggests a single space:
@@ -161,7 +156,6 @@ Example: Recognize double or more spaces and suggests a single space:
     __<s>(rulename)__  "  +" <<- ->> " "      && Remove extra space(s).
 
 Characters `"` protect spaces in the pattern and in the replacement text.
-
 
 ### Pattern groups and back references
 
@@ -179,7 +173,6 @@ Example. Suggest the missing space after the signs `!`, `?` or `.`:
 Example. Back reference in messages.
 
     (fooo) bar <<- ->> foo      && “\1” should be:
-
 
 ### Group positioning codes for JavaScript:
 
@@ -201,7 +194,6 @@ Examples:
     ([A-ZÉÈÂÎ][\w-]+) [A-ZÉÈÂ]([.]) ([A-ZÉÈÂ][\w-]+)  @@0,*,$
     " ([?!;])"  @@1
 
-
 ### Pattern matching
 
 Repeating pattern matching of a single rule continues after the previous matching, so instead of general multiword patterns, like
@@ -212,8 +204,7 @@ use
 
     (\w+) <<- some_check(\1, word(1)) ->> \1, && foo
 
-
-## TOKEN RULES ##
+## TOKEN RULES
 
 Token rules must be defined within a graph.
 
@@ -250,10 +241,10 @@ Tokens can be defined in several ways:
 * Regex: `~pattern`, `~pattern¬antipattern`.
 * Regex on morphologies: `@pattern`, `@pattern¬antipattern`.
 * Tags: `/tag`.
-* Metatags: *NAME. Examples: `*WORD`, `*NUM`, `*SIGN`, etc.
+* Metatags: `*METATAG`. Examples: `*WORD`, `*NUM`, `*SIGN`, etc.
 * Jump over token: `<>`
 
-Selection of tokens: `[value1|value2||>lemma|~pattern|@pattern|*META|/tag|…]`
+Selection of tokens: `[value1|value2|>lemma|~pattern|@pattern|*META|/tag|…]`
 
 Conditional token: `?token¿`
 
@@ -273,17 +264,16 @@ Examples:
     tokens:             alpha       beta        gamma       delta       epsilon
     positive refs:      1           2           3           4           5
     negative refs:      -5          -4          -3          -2          -1
-
+    
     tokens:             alpha       (beta)      gamma       (delta)     epsilon
     positive refs:                  1                       2
     negative refs:      -5          -4          -3          -2          -1
-
+    
     tokens:             alpha       (beta)      ?gamma¿     (delta)     epsilon
     positive refs:                  1                       2
     negative refs:      (-5/-4)     (-4/-3)     (-3/none)   -2          -1
 
-
-## CONDITIONS ##
+## CONDITIONS
 
 Conditions are Python expressions, they must return a value, which will be
 evaluated as boolean. You can use the usual Python syntax and libraries.
@@ -303,7 +293,6 @@ Example:
 
     foo [really|often|sometimes] bar
         <<- ->> \1 \-1                  && We say “foo bar”.
-
 
 ### Functions for regex rules
 
@@ -368,11 +357,13 @@ Example:
 `__also__`
 
 >   Returns True if the previous condition returned True.
+>   Example: `<<- __also__ ->>`
 >   Example: `<<- __also__ and condition2 ->>`
 
 `__else__`
 
 >   Returns False if the previous condition returned False.
+>   Example: `<<- __else__ ->>`
 >   Example: `<<- __else__ and condition2 ->>`
 
 `option(option_name)`
@@ -401,22 +392,20 @@ Note: the analysis is done on the preprocessed text.
 
 >   The name of the application running (Python, Writer…)
 
-
-## ACTIONS ##
+## ACTIONS
 
 There are 5 kinds of actions:
 
 1. Suggestions. The grammar checker suggests corrections.
 2. Text processor. A internal process to modify the text internally. This is used to simplify grammar checking.
-     * text rewriting
-     * text deletion
-     * token rewriting
-     * token merging
-     * token deletion
+   * text rewriting
+   * text deletion
+   * token rewriting
+   * token merging
+   * token deletion
 3. Disambiguation. Select, exclude or define morphologies of tokens.
 4. Tagging. Add information on token.
 5. Immunity. Prevent suggestions to be triggered.
-
 
 ### Positioning
 
@@ -431,9 +420,8 @@ group. Actually,  `->>`  is similar to  `-0>>`.
 Example:
 
     (ying) and yang <<- -1>> yin   && Did you mean:
-
+    
     __[s]__ (Mr.) [A-Z]\w+ <<- ~1>> Mr
-
 
 **Comparison**
 
@@ -454,7 +442,6 @@ With the rule B, only the first group is underlined:
 
     ying and yang
     ^^^^
-
 
 ### Errors and suggestions
 
@@ -494,7 +481,6 @@ Example:
     <<- ->> ='"' + \1.upper() + '"'      && With uppercase letters and quotation marks
     <<- ~>> =\1.upper()
 
-
 ### Text rewriting
 
 **WARNING**: The replacing text must be shorter than the replaced text or have the same length. Breaking this rule will misplace following error reports.
@@ -529,7 +515,6 @@ You can use positioning with text rewriting actions.
 You can also call Python expressions.
 
     __[s]__ Mr. ([a-z]\w+) <<- ~1>> =\1.upper()
-
 
 The text processor is useful to simplify texts and write simpler checking
 rules.
@@ -585,7 +570,6 @@ You can also replace any text as you wish.
 
     Mister <<- ~>> Mr
     (Mrs?)[.] <<- ~>> \1
-
 
 ### Disambiguation
 
@@ -645,8 +629,7 @@ Example: `!>>` means all tokens will be considered as correct.
 
 The immunity rules are useful to create simple antipattern that will simplify writing of other rules.
 
-
-## OTHER COMMANDS ##
+## OTHER COMMANDS
 
 ### Comments
 
@@ -672,8 +655,8 @@ Example:
     DEF: word_3_letters     \w\w\w+
     DEF: uppercase_token    ~^[A-Z]+$
     DEF: month_token        [January|February|March|April|May|June|July|August|September|October|November|december]
-
+    
     ({word_3_letters}) (\w+) <<- condition ->> suggestion     && message|URL
-
+    
     {uppercase_token} {month_token}
         <<- condition ->> message                             && message|URL
