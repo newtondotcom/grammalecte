@@ -1,11 +1,13 @@
 # CHANGELOG (FR)
 
-## Grammalecte 2.3 (septembre 2025)
+## Grammalecte 2.3 (15 décembre 2025)
 
 - Nouvelles règles de contrôle.
 - Suppression de faux positifs.
 - Quelques bugs supprimés.
-- [Thésaurus] Mise à jour (Merci à Algoo).
+- [Thésaurus] Mise à jour (Merci à Algoo) + régularisation de nombreuses entrées.
+- [Firefox/Thunderbird] Ajout du thésaurus de LibreOffice dans la WebExtension.
+- [CLI] Thésaurus consultable depuis la CLI.
 - [Conjugueur] Corrections concernant les participes passés.
 - [Dictionnaire] Mise à jour (v7.7), et contrôle strict sur les entrées (de nombreuses erreurs d’étiquetage corrigées).
 - [Graphspell] Amélioration du moteur de suggestions (plus rapide, plus précis).
@@ -13,12 +15,25 @@
 - [LibreOffice] Formateur de texte: peut dorénavant agir sur une sélection de texte (Merci à Jean-Marc Zambon).
 - [LibreOffice] Ajustement de la couleur de l’UI pour être lisible pour ceux qui utilisent un thème sombre.
 - [LibreOffice] Correction: normalisation des URL de l’import/export des fichiers.
-- [Serveur] Mise à jour vers Bottle.py v0.13.4
+- [Serveur] Mise à jour vers Bottle.py v0.13.4.
+- [Build] Meilleur contrôle des entrées du dictionnaire Hunspell.
+- [Build] Suppression de la dépendance à distutils (pour conformité avec les dernières versions de Python).
 
 
 ## Grammalecte 2.2 (mars 2023)
 
 - Mise à jour pour satisfaire les prérequis de Firefox.
+
+
+## décembre 2022
+
+Perte de la base de données de Dicollecte, qui servait de forum à Grammalecte et de site de conception du dictionnaire pour Hunspell.
+
+Cause: L’hébergeur de Grammalecte a été racheté par une grosse compagnie qui a mis fin aux services d’hébergement que nous utilisions.
+Aucun des messages envoyés par cette compagnie ne m’étant parvenu, je n’ai pu procéder à la sauvegarde de la base de données avant l’extinction définitive des services d’hébergement.
+La dernière sauvegarde de la base de données en ma possession était trop vieille pour relancer cette partie du site web.
+
+Cette perte n’a pas impacté le code de Grammalecte directement, mais ont été perdues les discussions sur le forum ainsi que les dernières propositions d’ajout de nouveaux mots pour le dictionnaire Hunspell.
 
 
 ## Grammalecte 2.1.2 (08 mars 2021)
