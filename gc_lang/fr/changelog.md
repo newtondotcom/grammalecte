@@ -15,6 +15,7 @@
 - [LibreOffice] Formateur de texte: peut dorénavant agir sur une sélection de texte (Merci à Jean-Marc Zambon).
 - [LibreOffice] Ajustement de la couleur de l’UI pour être lisible pour ceux qui utilisent un thème sombre.
 - [LibreOffice] Correction: normalisation des URL de l’import/export des fichiers.
+- [LibreOffice] Bug concernant la fermeture et la relance de l’éditeur lexical.
 - [Serveur] Mise à jour vers Bottle.py v0.13.4.
 - [Build] Meilleur contrôle des entrées du dictionnaire Hunspell.
 - [Build] Suppression de la dépendance à distutils (pour conformité avec les dernières versions de Python).
