@@ -18,9 +18,14 @@ var thesaurus = {
     _dWord: new Map(),
 
     bInit: false,
-    init: function (sJSONData) {
+    init: function (sJSONData1, sJSONData2) {
         try {
-            let _oData = JSON.parse(sJSONData);
+            // As addons.mozilla.org doesn’t accept file bigger than 5 Mb,
+            // we had to split the thesaurus in two parts. And now we merge them.
+            let _oData1 = JSON.parse(sJSONData1);
+            let _oData2 = JSON.parse(sJSONData2);
+            let _oData = { ..._oData1, ..._oData2 };
+            // convert to Map
             this._dWord = helpers.objectToMap(_oData);
             this.bInit = true;
             //console.log(this._dWord);
@@ -53,13 +58,13 @@ var thesaurus = {
 // Initialization
 if (!thesaurus.bInit && typeof(process) !== 'undefined') {
     // NodeJS
-    thesaurus.init(helpers.loadFile(__dirname+"/thesaurus_data.json"));
+    thesaurus.init(helpers.loadFile(__dirname+"/thesaurus1_data.json"), helpers.loadFile(__dirname+"/thesaurus2_data.json"));
 } else if (!thesaurus.bInit && typeof(browser) !== 'undefined') {
     // WebExtension Standard (but not in Worker)
-    thesaurus.init(helpers.loadFile(browser.runtime.getURL("grammalecte/fr/thesaurus_data.json")));
+    thesaurus.init(helpers.loadFile(browser.runtime.getURL("grammalecte/fr/thesaurus1_data.json")), helpers.loadFile(browser.runtime.getURL("grammalecte/fr/thesaurus2_data.json")));
 } else if (!thesaurus.bInit && typeof(chrome) !== 'undefined') {
     // WebExtension Chrome (but not in Worker)
-    thesaurus.init(helpers.loadFile(chrome.runtime.getURL("grammalecte/fr/thesaurus_data.json")));
+    thesaurus.init(helpers.loadFile(chrome.runtime.getURL("grammalecte/fr/thesaurus1_data.json")), helpers.loadFile(chrome.runtime.getURL("grammalecte/fr/thesaurus2_data.json")));
 } else if (thesaurus.bInit){
     console.log("Module thesaurus déjà initialisé");
 } else {

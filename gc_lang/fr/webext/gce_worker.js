@@ -178,7 +178,7 @@ function init (sExtensionPath, dOptions=null, sContext="JavaScript", oInfo={}) {
             conj.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/conj_data.json"));
             phonet.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/phonet_data.json"));
             mfsp.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/mfsp_data.json"));
-            thesaurus.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/thesaurus_data.json"));
+            thesaurus.init(helpers.loadFile(sExtensionPath + "/grammalecte/fr/thesaurus1_data.json"), helpers.loadFile(sExtensionPath + "/grammalecte/fr/thesaurus2_data.json"));
             //console.log("[Worker] Modules have been initialized…");
             gc_engine.load(sContext, "aHSL", sExtensionPath+"grammalecte/graphspell/_dictionaries");
             oSpellChecker = gc_engine.getSpellChecker();

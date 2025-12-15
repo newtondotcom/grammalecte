@@ -58,6 +58,8 @@ def loadDictionary ():
 
 
 def makeDictionaries (sp, sVersion):
+    print("> Exécution du script dans gc_lang/fr/dictionnaire:")
+    print("  genfrdic.py -s -gl -v "+sVersion)
     with cd(sp+"/dictionnaire"):
         if platform.system() == "Windows":
             os.system("python genfrdic.py -s -gl -v "+sVersion)
@@ -65,22 +67,8 @@ def makeDictionaries (sp, sVersion):
             os.system("python3 ./genfrdic.py -s -gl -v "+sVersion)
 
 
-def makeThesaurusFiles (sp, bJS=False):
-    dThesaurus = {}
-    sContent = open(sp+'/data/thes_fr.json', "r", encoding="utf-8").read()
-    dThesaurus = json.loads(sContent)
-    ## write file for Python
-    sCode = "# generated data (do not edit)\n\n" + \
-            "dThesaurus = " + str(dThesaurus) + "\n"
-    open(sp+"/modules/thesaurus_data.py", "w", encoding="utf-8", newline="\n").write(sCode)
-    if bJS:
-        ## write file for JavaScript
-        shutil.copy2(sp+'/data/thes_fr.json', sp+"/modules-js/thesaurus_data.json")
-
-
 def makeConj (sp, bJS=False):
-    print("> Conjugaisons ", end="")
-    print("(Python et JavaScript)"  if bJS  else "(Python seulement)")
+    print("> Fichier des conjugaisons pour Grammalecte")
     dVerb = {}
     lVinfo = []; dVinfo = {}; nVinfo = 0
     lTags = []; dTags = {}; nTags = 0
@@ -210,8 +198,7 @@ def makeConj (sp, bJS=False):
 
 
 def makeMfsp (sp, bJS=False):
-    print("> Pluriel/singulier/masculin/féminin ", end="")
-    print("(Python et JavaScript)"  if bJS  else "(Python seulement)")
+    print("> Fichier des pluriels/singuliers/masculins/féminins pour Grammalecte")
     aPlurS = set()      # pluriels en -s
     dTag = {}
     lTagFemForm = []
@@ -299,8 +286,7 @@ def makeMfsp (sp, bJS=False):
 
 
 def makePhonetTable (sp, bJS=False):
-    print("> Correspondances phonétiques ", end="")
-    print("(Python et JavaScript)"  if bJS  else "(Python seulement)")
+    print("> Fichier des correspondances phonétiques pour Grammalecte")
 
     loadDictionary()
 
@@ -359,14 +345,37 @@ def makePhonetTable (sp, bJS=False):
         open(sp+"/modules-js/phonet_data.json", "w", encoding="utf-8", newline="\n").write(sCode)
 
 
+def makeThesaurusFiles (sp, bJS=False):
+    print("> Fichiers du Thésaurus pour Grammalecte")
+    dThesaurus = {}
+    sContent = open(sp+'/data/thes_fr.json', "r", encoding="utf-8").read()
+    dThesaurus = json.loads(sContent)
+    ## write file for Python
+    sCode = "# generated data (do not edit)\n\n" + \
+            "dThesaurus = " + str(dThesaurus) + "\n"
+    open(sp+"/modules/thesaurus_data.py", "w", encoding="utf-8", newline="\n").write(sCode)
+    if bJS:
+        ## write file for JavaScript
+        #shutil.copy2(sp+'/data/thes_fr.json', sp+"/modules-js/thesaurus_data.json")
+
+        # thes_fr.json is too big, we have to split it.
+        # Addons.mozilla.org doesn’t a file that big. 5 Mo maximum.
+        nHalfSize = len(dThesaurus) // 2
+        dThes1 = { k: v  for i, (k, v) in enumerate(dThesaurus.items())  if i < nHalfSize  }
+        dThes2 = { k: v  for i, (k, v) in enumerate(dThesaurus.items())  if i >= nHalfSize }
+        open(sp+"/modules-js/thesaurus1_data.json", "w", encoding="utf-8").write(json.dumps(dThes1, ensure_ascii=False))
+        open(sp+"/modules-js/thesaurus2_data.json", "w", encoding="utf-8").write(json.dumps(dThes2, ensure_ascii=False))
+
+
 def before (spLaunch, dVars, bJS=False):
-    print("========== Build Hunspell dictionaries / Thesaurus ==========")
+    print("========== Construction des dictionnaires Hunspell et du Thesaurus ==========")
     makeDictionaries(spLaunch, dVars['oxt_version'])
-    makeThesaurusFiles(spLaunch, bJS)
+
 
 def after (spLaunch, dVars, bJS=False):
-    print("========== Build French data ==========")
+    print("========== Création des fichiers de données pour Grammalecte ==========")
+    print("(Python et JavaScript)"  if bJS  else "(Python seulement)")
     makeMfsp(spLaunch, bJS)
     makeConj(spLaunch, bJS)
     makePhonetTable(spLaunch, bJS)
-
+    makeThesaurusFiles(spLaunch, bJS)

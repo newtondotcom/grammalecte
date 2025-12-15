@@ -178,7 +178,7 @@ def copyGrammalectePyPackageInZipFile (hZip, spLangPack, sAddPath=""):
 
 def create (sLang, xConfig, bInstallOXT, bJavaScript, bUseCache):
     "make Grammalecte for project <sLang>"
-    print(f">>>> MAKE GC ENGINE: {sLang} <<<<")
+    print(f"========== MAKE GC ENGINE: {sLang} ==========")
 
     #### READ CONFIGURATION
     print("> read configuration...")
@@ -283,7 +283,7 @@ def create (sLang, xConfig, bInstallOXT, bJavaScript, bUseCache):
 
 def copyGraphspellCore (bJavaScript=False):
     "copy Graphspell package in Grammalecte package"
-    print("> Copy Graphspell package in Grammalecte package")
+    print("===== Copy Graphspell package in Grammalecte package =====")
     helpers.createCleanFolder("grammalecte/graphspell")
     os.makedirs("grammalecte/graphspell/_dictionaries", exist_ok=True)
     for sf in os.listdir("graphspell"):
@@ -303,7 +303,7 @@ def copyGraphspellCore (bJavaScript=False):
 
 def copyGraphspellDictionaries (dVars, bJavaScript=False, bCommunityDict=False, bPersonalDict=False):
     "copy requested Graphspell dictionaries in Grammalecte package"
-    print("> Copy requested Graphspell dictionaries in Grammalecte package")
+    print("===== Copy requested Graphspell dictionaries in Grammalecte package =====")
     dVars["dic_main_filename_py"] = ""
     dVars["dic_main_filename_js"] = ""
     dVars["dic_community_filename_py"] = ""
@@ -415,7 +415,7 @@ def main ():
     xArgs = xParser.parse_args()
 
     oNow = datetime.datetime.now()
-    print("============== MAKE GRAMMALECTE at {0.hour:>2} h {0.minute:>2} min {0.second:>2} s ==============".format(oNow))
+    print("#################### MAKE GRAMMALECTE at {0.hour:>2} h {0.minute:>2} min {0.second:>2} s ####################".format(oNow))
 
     if xArgs.build_data:
         xArgs.build_data_before = True
