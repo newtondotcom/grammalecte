@@ -984,6 +984,7 @@ class GrammalecteGrammarChecker extends GrammalectePanel {
                 if (lSyns.length == 0) {
                     this.xParent.getElementById('grammalecte_thes_word').style = "color: #BB4411;";
                     this.xParent.getElementById('grammalecte_thes_word_info').style = "display: block";
+                    this.xParent.getElementById('grammalecte_thes_word_info').textContent = "Aucun synonyme trouvé";
                 } else {
                     this.xParent.getElementById('grammalecte_thes_word').style = "";
                     this.xParent.getElementById('grammalecte_thes_word_info').style = "display: none";

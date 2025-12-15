@@ -169,7 +169,7 @@ const sGrammalecteThesaurusHTML = `
     <h1 class="grammalecte_thes_title" id="grammalecte_thes_title" class="center">&nbsp;</h1>
 
     <div id="grammalecte_separator">❦</div>
-    <div id="grammalecte_thes_word_info" class="center" style="display: none;">Aucun synonyme trouvé</div>
+    <div id="grammalecte_thes_word_info" class="center">Entrez un mot pour rechercher des synonymes</div>
 
     <div id="grammalecte_synonyms_list">
 
