@@ -20,6 +20,13 @@
 - [Build] Meilleur contrôle des entrées du dictionnaire Hunspell.
 - [Build] Suppression de la dépendance à distutils (pour conformité avec les dernières versions de Python).
 
+Note à propos du Thésaurus:
+
+Le thésaurus proposé dans l’extension pour Firefox/Thunderbird, ainsi que dans la CLI, est le même que celui de LibreOffice.
+Hélas, ce dictionnaire est loin d’être parfait et nécessiterait d’être nettoyé et complété de manière méthodique.
+Tâche colossale qui a été commencée, mais est très loin d’être achevée.
+
+
 
 ## Grammalecte 2.2 (mars 2023)
 
