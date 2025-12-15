@@ -11,6 +11,7 @@ import itertools
 import traceback
 import platform
 import importlib
+import shutil
 
 import graphspell.ibdawg as ibdawg
 from graphspell.echo import echo
@@ -64,7 +65,7 @@ def makeDictionaries (sp, sVersion):
             os.system("python3 ./genfrdic.py -s -gl -v "+sVersion)
 
 
-def makeThesaurusFiles (sp):
+def makeThesaurusFiles (sp, bJS=False):
     dThesaurus = {}
     sContent = open(sp+'/data/thes_fr.json', "r", encoding="utf-8").read()
     dThesaurus = json.loads(sContent)
@@ -74,7 +75,7 @@ def makeThesaurusFiles (sp):
     open(sp+"/modules/thesaurus_data.py", "w", encoding="utf-8", newline="\n").write(sCode)
     if bJS:
         ## write file for JavaScript
-        file_util.copy_file(sp+'/data/thes_fr.json', sp+"/modules-js/thesaurus_data.json")
+        shutil.copy2(sp+'/data/thes_fr.json', sp+"/modules-js/thesaurus_data.json")
 
 
 def makeConj (sp, bJS=False):
@@ -359,12 +360,13 @@ def makePhonetTable (sp, bJS=False):
 
 
 def before (spLaunch, dVars, bJS=False):
-    print("========== Build Hunspell dictionaries ==========")
+    print("========== Build Hunspell dictionaries / Thesaurus ==========")
     makeDictionaries(spLaunch, dVars['oxt_version'])
-
+    makeThesaurusFiles(spLaunch, bJS)
 
 def after (spLaunch, dVars, bJS=False):
     print("========== Build French data ==========")
     makeMfsp(spLaunch, bJS)
     makeConj(spLaunch, bJS)
     makePhonetTable(spLaunch, bJS)
+
