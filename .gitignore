@@ -1,0 +1,6 @@
+graphspell-js/_dictionaries/
+graphspell/_dictionaries/
+grammalecte-js/
+grammalecte/
+**/__pycache__/
+_build/
