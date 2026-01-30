@@ -1,11 +1,12 @@
 FROM python:3-alpine AS src
 
-ENV VERSION ${version}
+ARG version
+ENV VERSION=${version}
 
 RUN apk add --update --no-cache \
       unzip \
       wget \
- && wget https://grammalecte.net/grammalecte/zip/Grammalecte-fr-v${VERSION}.zip \
+ && wget https://grammalecte.net/zip/Grammalecte-fr-v${VERSION}.zip \
  && unzip Grammalecte-fr-v${VERSION}.zip -d /srv
 
 FROM python:3-alpine
