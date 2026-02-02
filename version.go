@@ -13,8 +13,8 @@ var (
 	// ErrVersionNotFound signals no version assignment was detected.
 	ErrVersionNotFound = errors.New("version not found")
 
-	dunderVersionRe = regexp.MustCompile(`^\s*__version__\s*=\s*(['"])([^'"]+)\1`)
-	versionRe       = regexp.MustCompile(`^\s*version\s*=\s*(['"])([^'"]+)\1`)
+	dunderVersionRe = regexp.MustCompile(`^\s*__version__\s*=\s*["']([^"']+)["']`)
+	versionRe       = regexp.MustCompile(`^\s*version\s*=\s*["']([^"']+)["']`)
 )
 
 // VersionFromPythonFile extracts the version string from a Python source file.
