@@ -71,7 +71,7 @@ func findVersion(lines []string, regex *regexp.Regexp) string {
 			continue
 		}
 		if match := regex.FindStringSubmatch(line); match != nil {
-			return match[2]
+			return match[len(match)-1]
 		}
 	}
 	return ""
